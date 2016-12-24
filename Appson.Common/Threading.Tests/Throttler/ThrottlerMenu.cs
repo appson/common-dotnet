@@ -9,6 +9,7 @@ namespace Appson.Common.Threading.Tests.Throttler
         {
             WriteLine("Please select throttler test scenario:");
             WriteLine("    1. simple test");
+            WriteLine("    2. multi-threaded test");
             WriteLine();
 
             var choice = ReadLine();
@@ -16,6 +17,9 @@ namespace Appson.Common.Threading.Tests.Throttler
             {
                 case "1":
                     new ThrottlerSimpleTest().Run();
+                    break;
+                case "2":
+                    new ThrottlerMultiThreadedTest().Run();
                     break;
             }
         }
