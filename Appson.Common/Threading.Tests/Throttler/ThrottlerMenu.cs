@@ -1,5 +1,4 @@
-﻿using Appson.Common.Threading.Tests.General;
-using static System.Console;
+﻿using static System.Console;
 
 namespace Appson.Common.Threading.Tests.Throttler
 {
@@ -8,8 +7,9 @@ namespace Appson.Common.Threading.Tests.Throttler
         public void Run()
         {
             WriteLine("Please select throttler test scenario:");
-            WriteLine("    1. simple test");
-            WriteLine("    2. multi-threaded test");
+            WriteLine("    1. Simple test");
+            WriteLine("    2. Multi-threaded test");
+            WriteLine("    4. TPL Dataflow async test");
             WriteLine();
 
             var choice = ReadLine();
@@ -20,6 +20,9 @@ namespace Appson.Common.Threading.Tests.Throttler
                     break;
                 case "2":
                     new ThrottlerMultiThreadedTest().Run();
+                    break;
+                case "4":
+                    new ThrottlerTplDataflowAsyncTest().Run();
                     break;
             }
         }

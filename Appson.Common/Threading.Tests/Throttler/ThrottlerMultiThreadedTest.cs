@@ -8,8 +8,6 @@ namespace Appson.Common.Threading.Tests.Throttler
 {
     public class ThrottlerMultiThreadedTest
     {
-        private readonly object _lockObject = new object();
-
         public void Run()
         {
             var options = new ThrottlerOptions
