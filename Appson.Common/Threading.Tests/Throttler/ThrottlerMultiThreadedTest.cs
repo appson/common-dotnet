@@ -22,8 +22,7 @@ namespace Appson.Common.Threading.Tests.Throttler
             throttler.Start();
 
             var count = 0;
-            var threadIds = "12345";
-//            var threadIds = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            var threadIds = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
             var counts = new int[threadIds.Length];
 
             for (var i = 0; i < threadIds.Length; i++)
@@ -37,11 +36,10 @@ namespace Appson.Common.Threading.Tests.Throttler
                     {
                         throttler.Throttle();
 
-                        var myCount = Interlocked.Increment(ref count);
+                        var totalCount = Interlocked.Increment(ref count);
                         Interlocked.Increment(ref counts[ii]);
 
-//                        var myCount = counts[ii];
-                        if (myCount % 20 == 0)
+                        if (totalCount % 20 == 0)
                             Write(id);
                     }
                 });

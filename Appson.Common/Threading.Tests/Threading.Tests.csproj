@@ -52,6 +52,7 @@
     <Compile Include="General\GeneralMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Throttler\ThrottlerSimpleAsyncTest.cs" />
     <Compile Include="Throttler\ThrottlerTplDataflowAsyncTest.cs" />
     <Compile Include="Throttler\ThrottlerMenu.cs" />
     <Compile Include="Throttler\ThrottlerMultiThreadedTest.cs" />
