@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DynamicSemaphoreSlim.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Throttler.cs" />
     <Compile Include="ThrottlerOptions.cs" />
