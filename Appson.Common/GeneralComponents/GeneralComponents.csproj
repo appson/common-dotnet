@@ -40,7 +40,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BinaryStorageComponent.cs" />
+    <Compile Include="Cache\Components\AutoLoadCache.cs" />
+    <Compile Include="Cache\Components\AutoLoadItemCache.cs" />
+    <Compile Include="Cache\ICache.cs" />
+    <Compile Include="Cache\ICacheItemLoader.cs" />
+    <Compile Include="Cache\ICacheKeyMapper.cs" />
+    <Compile Include="Cache\ICacheLoader.cs" />
+    <Compile Include="Cache\ICacheValueCopier.cs" />
+    <Compile Include="Cache\IWritableCache.cs" />
+    <Compile Include="Configuration\ApplicationEnvironmentType.cs" />
+    <Compile Include="Configuration\ApplicationEnvironmentUtil.cs" />
+    <Compile Include="Configuration\ApplicationRevisionInfo.cs" />
+    <Compile Include="Configuration\ApplicationSettingKeys.cs" />
+    <Compile Include="Configuration\ApplicationSettings.cs" />
+    <Compile Include="Configuration\ApplicationSettingsExtensions.cs" />
+    <Compile Include="Configuration\IApplicationSettings.cs" />
+    <Compile Include="Configuration\IApplicationSettingsLoader.cs" />
+    <Compile Include="DomainServiceContracts\IEntityContentSerializer.cs" />
+    <Compile Include="DomainServiceContracts\IObjectIndexMapper.cs" />
+    <Compile Include="DomainServiceContracts\ITwoWayObjectIndexMapper.cs" />
+    <Compile Include="DomainServiceContracts\ObjectIndexMapperBase.cs" />
+    <Compile Include="IEagerComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduledTasks\DefaultScheduledTaskManager.cs" />
+    <Compile Include="ScheduledTasks\IScheduledTask.cs" />
+    <Compile Include="ScheduledTasks\IScheduledTaskManager.cs" />
+    <Compile Include="ScheduledTasks\IScheduledTaskStore.cs" />
+    <Compile Include="ScheduledTasks\RecurringTaskStartupMode.cs" />
+    <Compile Include="ScheduledTasks\ScheduledTaskIterationResult.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

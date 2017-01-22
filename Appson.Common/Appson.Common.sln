@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlGeo", "SqlGeo\SqlGeo.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stimulstoft", "Stimulstoft\Stimulstoft.csproj", "{911BFC18-3601-43CA-9D08-3907A4C8FCC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{0894555E-0CC7-426E-970E-0AC77545E6A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{911BFC18-3601-43CA-9D08-3907A4C8FCC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{911BFC18-3601-43CA-9D08-3907A4C8FCC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{911BFC18-3601-43CA-9D08-3907A4C8FCC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0894555E-0CC7-426E-970E-0AC77545E6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0894555E-0CC7-426E-970E-0AC77545E6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0894555E-0CC7-426E-970E-0AC77545E6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0894555E-0CC7-426E-970E-0AC77545E6A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
