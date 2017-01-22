@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using Appson.Common.Lucene.PersianAnalyzer;
 using Appson.Composer;
 using log4net;
 using Lucene.Net.Index;
