@@ -5,9 +5,9 @@ using System.Data.Entity.Spatial;
 using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
-using JahanJooy.Common.Util.Web.Attributes;
+using Appson.Common.Web.Attributes;
 
-namespace JahanJooy.Common.Util.Web.Validation
+namespace Appson.Common.Web.Validation
 {
 	public class ExtendedModelBinder : DefaultModelBinder
 	{

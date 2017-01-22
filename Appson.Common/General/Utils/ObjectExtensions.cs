@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace JahanJooy.Common.Util
+namespace Appson.Common
 {
     /// <summary>
     /// Contains most generic extension methods that can be applied to any object type

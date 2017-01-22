@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace JahanJooy.Common.Util.Web.Captcha.Image
+namespace Appson.Common.Web.Captcha.Image
 {
 	public class CaptchaImageToken
 	{

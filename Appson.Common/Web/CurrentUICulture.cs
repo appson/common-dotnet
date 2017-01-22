@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace JahanJooy.Common.Util.Web
+namespace Appson.Common.Web
 {
     public static class CurrentUICulture
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace JahanJooy.Common.Util.Collections
+namespace Appson.Common.General.Collections
 {
     public static class CollectionExtensions
     {

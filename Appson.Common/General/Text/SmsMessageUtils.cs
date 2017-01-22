@@ -1,4 +1,4 @@
-﻿namespace JahanJooy.Common.Util.Sms
+﻿namespace Appson.Common.Sms
 {
 	public static class SmsMessageUtils
 	{

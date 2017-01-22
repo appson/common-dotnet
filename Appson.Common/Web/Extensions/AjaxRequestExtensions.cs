@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web;
 
-namespace JahanJooy.Common.Util.Web.Extensions
+namespace Appson.Common.Web.Extensions
 {
     /// <summary>
     /// Copy of AjaxRequestExtensions from System.Web.Mvc, but replaced HttpRequestBase with HttpRequest

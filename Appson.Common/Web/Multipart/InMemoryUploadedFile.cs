@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Net.Http.Headers;
 
-namespace JahanJooy.Common.Util.Web.Multipart
+namespace Appson.Common.Web.Multipart
 {
     public class InMemoryUploadedFile
     {

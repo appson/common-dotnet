@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace JahanJooy.Common.Util.Security
+namespace Appson.Common.Security
 {
     public class CryptoRandomNumberUtil
     {

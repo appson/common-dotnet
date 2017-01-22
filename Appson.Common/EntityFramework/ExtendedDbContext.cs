@@ -3,10 +3,10 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
-using JahanJooy.Common.Util.Collections;
-using JahanJooy.Common.Util.DomainModel;
+using Appson.Common.Collections;
+using Appson.Common.DomainModel;
 
-namespace JahanJooy.Common.Util.EF
+namespace Appson.Common.EntityFramework
 {
 	public abstract class ExtendedDbContext : DbContext
 	{

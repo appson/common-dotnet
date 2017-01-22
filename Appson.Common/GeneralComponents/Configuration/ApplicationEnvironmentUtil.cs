@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Web;
 using System.Web.WebPages;
 
-namespace JahanJooy.Common.Util.Configuration
+namespace Appson.Common.Configuration
 {
 	public static class ApplicationEnvironmentUtil
 	{

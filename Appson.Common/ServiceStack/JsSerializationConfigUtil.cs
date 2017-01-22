@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity.Spatial;
-using JahanJooy.Common.Util.Spatial;
+using Appson.Common.Spatial;
 using ServiceStack.Text;
 
-namespace JahanJooy.Common.Util.Serialization
+namespace Appson.Common.Serialization
 {
 	public static class JsSerializationConfigUtil
 	{

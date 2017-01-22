@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace JahanJooy.Common.Util.Configuration
+namespace Appson.Common.Configuration
 {
     public static class ApplicationSettingKeys
     {

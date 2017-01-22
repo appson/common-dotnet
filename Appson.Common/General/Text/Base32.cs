@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JahanJooy.Common.Util.Text
+namespace Appson.Common.Text
 {
     public class Base32
     {

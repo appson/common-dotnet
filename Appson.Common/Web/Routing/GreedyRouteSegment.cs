@@ -1,4 +1,4 @@
-﻿namespace JahanJooy.Common.Util.Web.Routing
+﻿namespace Appson.Common.Web.Routing
 {
 	/// <summary>
 	/// Represents a route segment that may as well be greedy (catch-all).

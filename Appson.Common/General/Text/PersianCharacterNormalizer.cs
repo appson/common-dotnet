@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JahanJooy.Common.Util.Text
+namespace Appson.Common.Text
 {
 	/// <summary>
 	/// Source code copied from PersianNormalizer class within Lucene.Net

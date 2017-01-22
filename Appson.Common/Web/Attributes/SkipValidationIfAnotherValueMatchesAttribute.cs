@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using System.Web.Mvc;
 
-namespace JahanJooy.Common.Util.Web.Attributes
+namespace Appson.Common.Web.Attributes
 {
 	[AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
 	public class SkipValidationIfAnotherValueMatchesAttribute : SkipValidationIfAttribute

@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 
-namespace JahanJooy.Common.Util.Streams
+namespace Appson.Common.Streams
 {
 	public static class ManifestResourceUtil
 	{

@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace JahanJooy.Common.Util.Web.Result
+namespace Appson.Common.Web.Result
 {
     public class BinaryResult : IHttpActionResult
     {

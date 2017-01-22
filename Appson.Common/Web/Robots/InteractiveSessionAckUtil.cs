@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Security;
 
-namespace JahanJooy.Common.Util.Web.Robots
+namespace Appson.Common.Web.Robots
 {
 	public static class InteractiveSessionAckUtil
 	{

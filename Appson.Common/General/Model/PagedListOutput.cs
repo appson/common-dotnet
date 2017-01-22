@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace JahanJooy.Common.Util.ApiModel.Pagination
+namespace Appson.Common.ApiModel.Pagination
 {
     public class PagedListOutput<T>
     {

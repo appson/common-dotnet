@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JahanJooy.Common.Util.Web.Attributes
+namespace Appson.Common.Web.Attributes
 {
 	/// <summary>
 	/// Validates the model field to contain (or exactly match) an international phone number.

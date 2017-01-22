@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Compositional.Composer;
 
-namespace JahanJooy.Common.Util.Configuration
+namespace Appson.Common.Configuration
 {
     [Component]
     public class ApplicationSettings : IApplicationSettings

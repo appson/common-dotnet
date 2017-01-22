@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace JahanJooy.Common.Util.Web.Attributes
+namespace Appson.Common.Web.Attributes
 {
 	[AttributeUsage(AttributeTargets.All, Inherited = false, AllowMultiple = false)]
 	public class BindingExceptionMessageAttribute : Attribute

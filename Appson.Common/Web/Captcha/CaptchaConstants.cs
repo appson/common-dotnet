@@ -1,4 +1,4 @@
-﻿namespace JahanJooy.Common.Util.Web.Captcha
+﻿namespace Appson.Common.Web.Captcha
 {
 	public static class CaptchaConstants
 	{

@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Web;
 
-namespace JahanJooy.Common.Util.EF
+namespace Appson.Common.EntityFramework
 {
 	public static class QueryExtensions
 	{

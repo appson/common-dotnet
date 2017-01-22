@@ -2,7 +2,7 @@
 using System.Web;
 using System.Web.Security.AntiXss;
 
-namespace JahanJooy.Common.Util.Text
+namespace Appson.Common.Text
 {
 	public class HtmlStringUtil
 	{

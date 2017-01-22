@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Compositional.Composer;
-using JahanJooy.Common.Util.Log4Net;
+using Appson.Common.Log4Net;
 using log4net;
 
-namespace JahanJooy.Common.Util.ScheduledTasks
+namespace Appson.Common.ScheduledTasks
 {
 	[Component]
 	public class DefaultScheduledTaskManager : IScheduledTaskManager

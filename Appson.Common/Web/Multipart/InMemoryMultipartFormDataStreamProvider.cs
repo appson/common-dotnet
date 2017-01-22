@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace JahanJooy.Common.Util.Web.Multipart
+namespace Appson.Common.Web.Multipart
 {
     /// <summary>
     /// A MultipartStreamProvider that keeps everything (including file contents) in the memory (using MemoryStream)

@@ -3,9 +3,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using JahanJooy.Common.Util.Web.Captcha.Image;
+using Appson.Common.Web.Captcha.Image;
 
-namespace JahanJooy.Common.Util.Web.Captcha
+namespace Appson.Common.Web.Captcha
 {
 	[AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
 	public class ValidateCaptchaAttribute : FilterAttribute, IAuthorizationFilter

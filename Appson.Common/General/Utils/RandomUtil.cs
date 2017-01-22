@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace JahanJooy.Common.Util.General
+namespace Appson.Common.General
 {
 	/// <summary>
 	/// Provides thread-based random number generators, and guarantees unique seeds for their initialization.

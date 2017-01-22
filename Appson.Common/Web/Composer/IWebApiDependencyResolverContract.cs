@@ -1,6 +1,6 @@
 ﻿using Compositional.Composer;
 
-namespace JahanJooy.Common.Util.Composer
+namespace Appson.Common.Composer
 {
 	[Contract]
 	public interface IWebApiDependencyResolverContract : System.Web.Http.Dependencies.IDependencyResolver

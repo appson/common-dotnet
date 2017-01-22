@@ -2,7 +2,7 @@
 using System.Web;
 using System.Web.Mvc;
 
-namespace JahanJooy.Common.Util.Web.Result
+namespace Appson.Common.Web.Result
 {
 	public class TransferResult : ActionResult
 	{

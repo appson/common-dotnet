@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using System.Web.Mvc;
 
-namespace JahanJooy.Common.Util.Web.Attributes.MethodSelector
+namespace Appson.Common.Web.Attributes.MethodSelector
 {
 	public class SubmitButtonAttribute : ActionMethodSelectorAttribute
 	{

@@ -5,7 +5,7 @@ using System.Linq;
 using Compositional.Composer;
 using Compositional.Composer.Cache;
 
-namespace JahanJooy.Common.Util.Cache.Components
+namespace Appson.Common.Cache.Components
 {
 	[Component]
 	[ComponentCache(typeof(DefaultComponentCache))]

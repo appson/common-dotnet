@@ -1,7 +1,7 @@
 ﻿using Compositional.Composer;
 using Lucene.Net.Documents;
 
-namespace JahanJooy.Common.Util.DomainServiceContracts
+namespace Appson.Common.DomainServiceContracts
 {
 	[Contract]
 	public interface ITwoWayObjectIndexMapper<in TInput, out TOutput> : IObjectIndexMapper<TInput>

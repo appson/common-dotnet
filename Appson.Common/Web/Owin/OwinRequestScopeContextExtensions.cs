@@ -1,4 +1,4 @@
-﻿namespace JahanJooy.Common.Util.Owin
+﻿namespace Appson.Common.Owin
 {
     public static class OwinRequestScopeContextExtensions
     {

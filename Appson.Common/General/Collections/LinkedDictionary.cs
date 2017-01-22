@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JahanJooy.Common.Util.Collections
+namespace Appson.Common.General.Collections
 {
     /// <summary>
     /// Linked-list backend IDictionary implementation. 

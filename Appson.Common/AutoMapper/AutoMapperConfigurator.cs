@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using JahanJooy.Common.Util.Collections;
 
-namespace JahanJooy.Common.Util.AutoMapper
+namespace Appson.Common.AutoMapper
 {
 	public static class AutoMapperConfigurator
 	{

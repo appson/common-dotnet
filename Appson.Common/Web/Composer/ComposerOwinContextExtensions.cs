@@ -1,8 +1,8 @@
 ﻿using Compositional.Composer;
-using JahanJooy.Common.Util.Owin;
+using Appson.Common.Owin;
 using Microsoft.Owin;
 
-namespace JahanJooy.Common.Util.Composer
+namespace Appson.Common.Composer
 {
     public static class ComposerOwinContextExtensions
     {

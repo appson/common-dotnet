@@ -1,4 +1,4 @@
-﻿namespace JahanJooy.Common.Util.ScheduledTasks
+﻿namespace Appson.Common.ScheduledTasks
 {
 	public enum RecurringTaskStartupMode
 	{

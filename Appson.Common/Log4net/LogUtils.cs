@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace JahanJooy.Common.Util.Log4Net
+namespace Appson.Common.Log4Net
 {
 	public static class LogUtils
 	{

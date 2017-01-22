@@ -3,7 +3,7 @@ using System.Data.Entity.Spatial;
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Types;
 
-namespace JahanJooy.Common.Util.Spatial
+namespace Appson.Common.Spatial
 {
 	public static class DbGeographyUtil
 	{

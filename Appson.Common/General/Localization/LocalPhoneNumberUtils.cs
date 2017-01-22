@@ -1,7 +1,7 @@
-﻿using JahanJooy.Common.Util.PhoneNumbers;
-using JahanJooy.Common.Util.Validation;
+﻿using Appson.Common.PhoneNumbers;
+using Appson.Common.Validation;
 
-namespace JahanJooy.Common.Util.Localization
+namespace Appson.Common.Localization
 {
 	public static class LocalPhoneNumberUtils
 	{

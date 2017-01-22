@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Reflection;
 
-namespace JahanJooy.Common.Util.Web.Attributes
+namespace Appson.Common.Web.Attributes
 {
 	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
 	public class CompareToPropertyValueAttribute : ValidationAttribute

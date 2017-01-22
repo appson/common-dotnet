@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Web.Mvc;
 
-namespace JahanJooy.Common.Util.Web.Upload
+namespace Appson.Common.Web.Upload
 {
 	[ModelBinder(typeof(FineUploadModelBinder))]
 	public class FineUpload

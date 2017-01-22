@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace JahanJooy.Common.Util.Collections
+namespace Appson.Common.General.Collections
 {
     public class ReadOnlyDictionary<TKey, TValue> : IDictionary<TKey, TValue>
     {
@@ -22,10 +22,7 @@ namespace JahanJooy.Common.Util.Collections
             return _dict.ContainsKey(key);
         }
 
-        public ICollection<TKey> Keys
-        {
-            get { return _dict.Keys; }
-        }
+        public ICollection<TKey> Keys => _dict.Keys;
 
         public bool Remove(TKey key)
         {
@@ -37,10 +34,7 @@ namespace JahanJooy.Common.Util.Collections
             return _dict.TryGetValue(key, out value);
         }
 
-        public ICollection<TValue> Values
-        {
-            get { return _dict.Values; }
-        }
+        public ICollection<TValue> Values => _dict.Values;
 
         public TValue this[TKey key]
         {
@@ -68,15 +62,9 @@ namespace JahanJooy.Common.Util.Collections
             _dict.CopyTo(array, arrayIndex);
         }
 
-        public int Count
-        {
-            get { return _dict.Count; }
-        }
+        public int Count => _dict.Count;
 
-        public bool IsReadOnly
-        {
-            get { return true; }
-        }
+        public bool IsReadOnly => true;
 
         public bool Remove(KeyValuePair<TKey, TValue> item)
         {

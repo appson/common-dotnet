@@ -1,8 +1,8 @@
 ﻿using Compositional.Composer;
-using JahanJooy.Common.Util.DomainModel;
+using Appson.Common.DomainModel;
 using ServiceStack;
 
-namespace JahanJooy.Common.Util.DomainServiceContracts
+namespace Appson.Common.DomainServiceContracts
 {
 	[Contract]
 	public interface IEntityContentSerializer<TContent> where TContent : class, IEntityContent

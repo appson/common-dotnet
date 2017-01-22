@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
-namespace JahanJooy.Common.Util.EF
+namespace Appson.Common.EntityFramework
 {
 	public class EntityChangeExtractor
 	{

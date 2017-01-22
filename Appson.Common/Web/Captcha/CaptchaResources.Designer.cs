@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JahanJooy.Common.Util.Web.Captcha {
+namespace Appson.Common.Web.Captcha {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace JahanJooy.Common.Util.Web.Captcha {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("JahanJooy.Common.Util.Web.Captcha.CaptchaResources", typeof(CaptchaResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Appson.Common.Web.Captcha.CaptchaResources", typeof(CaptchaResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

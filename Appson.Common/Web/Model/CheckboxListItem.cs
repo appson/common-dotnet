@@ -1,4 +1,4 @@
-﻿namespace JahanJooy.Common.Util.Web.Model
+﻿namespace Appson.Common.Web.Model
 {
 	public class CheckboxListItem
 	{

@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Routing;
 
-namespace JahanJooy.Common.Util.Web.Routing
+namespace Appson.Common.Web.Routing
 {
 	/// <summary>
 	/// This route is used for cases where we want greedy route segments anywhere in the route URL definition

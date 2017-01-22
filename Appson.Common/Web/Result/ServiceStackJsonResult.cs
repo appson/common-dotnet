@@ -4,7 +4,7 @@ using System.Web;
 using System.Web.Mvc;
 using ServiceStack;
 
-namespace JahanJooy.Common.Util.Web.Result
+namespace Appson.Common.Web.Result
 {
 	public class ServiceStackJsonResult : ActionResult
 	{

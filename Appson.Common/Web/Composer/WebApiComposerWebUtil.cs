@@ -1,7 +1,7 @@
 ﻿using System.Web.Http;
 using Compositional.Composer;
 
-namespace JahanJooy.Common.Util.Composer
+namespace Appson.Common.Composer
 {
 	public class WebApiComposerWebUtil
 	{

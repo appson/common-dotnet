@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JahanJooy.Common.Util.Collections
+namespace Appson.Common.General.Collections
 {
 	public static class EnumerableExtensions
 	{
@@ -29,7 +29,7 @@ namespace JahanJooy.Common.Util.Collections
 		public static void ForEach<TSource>(this IEnumerable<TSource> source, Action<TSource> action)
 		{
 			if (action == null)
-				throw new ArgumentNullException("action");
+				throw new ArgumentNullException(nameof(action));
 
 			foreach (var item in source)
 			{
@@ -39,32 +39,32 @@ namespace JahanJooy.Common.Util.Collections
 
 		public static bool SafeAny<TSource>(this IEnumerable<TSource> source, bool nullResult = false)
 		{
-			return source != null ? source.Any() : nullResult;
+			return source?.Any() ?? nullResult;
 		}
 
 		public static bool SafeAny<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate, bool nullResult = false)
 		{
-			return source != null ? source.Any(predicate) : nullResult;
+			return source?.Any(predicate) ?? nullResult;
 		}
 
 		public static List<TSource> SafeToList<TSource>(this IEnumerable<TSource> source, List<TSource> nullResult = null)
 		{
-			return source != null ? source.ToList() : nullResult;
+			return source?.ToList() ?? nullResult;
 		}
 
 		public static TSource[] SafeToArray<TSource>(this IEnumerable<TSource> source, TSource[] nullResult = null)
 		{
-			return source != null ? source.ToArray() : nullResult;
+			return source?.ToArray() ?? nullResult;
 		}
 
 		public static IEnumerable<TSource> SafeWhere<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate, IEnumerable<TSource> nullResult = null)
 		{
-			return source != null ? source.Where(predicate) : nullResult;
+			return source?.Where(predicate) ?? nullResult;
 		}
 
 		public static IEnumerable<TResult> SafeSelect<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, TResult> selector, IEnumerable<TResult> nullResult = null)
 		{
-			return source != null ? source.Select(selector) : nullResult;
+			return source?.Select(selector) ?? nullResult;
 		}
 
 		public static void SafeForEach<TSource>(this IEnumerable<TSource> source, Action<TSource> action)

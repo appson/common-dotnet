@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JahanJooy.Common.Util.Owin
+namespace Appson.Common.Owin
 {
     internal class UnsubscribeDisposable : IDisposable
     {

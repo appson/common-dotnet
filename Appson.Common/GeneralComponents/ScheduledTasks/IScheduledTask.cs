@@ -1,6 +1,6 @@
 ﻿using Compositional.Composer;
 
-namespace JahanJooy.Common.Util.ScheduledTasks
+namespace Appson.Common.ScheduledTasks
 {
 	[Contract]
 	public interface IScheduledTask

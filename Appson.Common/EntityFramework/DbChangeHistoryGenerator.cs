@@ -2,7 +2,7 @@
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 
-namespace JahanJooy.Common.Util.EF
+namespace Appson.Common.EntityFramework
 {
     public class DbChangeHistoryGenerator
     {

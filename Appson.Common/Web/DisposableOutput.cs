@@ -3,7 +3,7 @@ using System.IO;
 using System.Web;
 using System.Web.Mvc;
 
-namespace JahanJooy.Common.Util.Web
+namespace Appson.Common.Web
 {
 	public class DisposableOutput : IDisposable
 	{

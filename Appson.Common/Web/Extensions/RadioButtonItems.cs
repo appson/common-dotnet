@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace JahanJooy.Common.Util.Web
+namespace Appson.Common.Web
 {
 	public class RadioButtonItems<T>
 	{

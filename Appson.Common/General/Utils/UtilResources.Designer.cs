@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JahanJooy.Common.Util {
+namespace Appson.Common {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace JahanJooy.Common.Util {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("JahanJooy.Common.Util.UtilResources", typeof(UtilResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Appson.Common.UtilResources", typeof(UtilResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

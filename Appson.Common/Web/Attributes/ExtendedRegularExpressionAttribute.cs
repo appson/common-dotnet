@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Runtime;
 using System.Text.RegularExpressions;
 
-namespace JahanJooy.Common.Util.Web.Attributes
+namespace Appson.Common.Web.Attributes
 {
 	/// <summary>
 	/// Modified version of ResularExpressionAttribute from MVC3 framework.

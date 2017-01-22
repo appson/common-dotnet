@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace JahanJooy.Common.Util.Owin
+namespace Appson.Common.Owin
 {
     using AppFunc = Func<IDictionary<string, object>, Task>;
 

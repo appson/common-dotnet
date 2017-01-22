@@ -3,48 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JahanJooy.Common.Util.Collections
+namespace Appson.Common.General.Collections
 {
 	public class PagedList<T> : IEnumerable<T>
 	{
 		private PaginationStats _paginationStats;
 
-		public PaginationStats Stats
-		{
-			get { return _paginationStats; }
-		}
+		public PaginationStats Stats => _paginationStats;
 
-		public int PageSize
-		{
-			get { return _paginationStats.PageSize; }
-		}
+	    public int PageSize => _paginationStats.PageSize;
 
-		public int PageNumber
-		{
-			get { return _paginationStats.PageNumber; }
-		}
+	    public int PageNumber => _paginationStats.PageNumber;
 
-		public int TotalNumberOfPages
-		{
-			get { return _paginationStats.TotalNumberOfPages; }
-		}
+	    public int TotalNumberOfPages => _paginationStats.TotalNumberOfPages;
 
-		public int TotalNumberOfItems
-		{
-			get { return _paginationStats.TotalNumberOfItems; }
-		}
+	    public int TotalNumberOfItems => _paginationStats.TotalNumberOfItems;
 
-		public int FirstItemIndex
-		{
-			get { return _paginationStats.FirstItemIndex; }
-		}
+	    public int FirstItemIndex => _paginationStats.FirstItemIndex;
 
-		public int LastItemIndex
-		{
-			get { return _paginationStats.FirstItemIndex + (PageItems == null ? 0 : PageItems.Count) - 1; }
-		}
+	    public int LastItemIndex => _paginationStats.FirstItemIndex + (PageItems?.Count ?? 0) - 1;
 
-		public List<T> PageItems { get; set; }
+	    public List<T> PageItems { get; set; }
 
 		#region Initialization
 

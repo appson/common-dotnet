@@ -1,6 +1,6 @@
 ﻿using System.Web;
 
-namespace JahanJooy.Common.Util.Web.Extensions
+namespace Appson.Common.Web.Extensions
 {
 	public static class HtmlStringExtensions
 	{

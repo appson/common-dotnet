@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Compositional.Composer.Cache;
-using JahanJooy.Common.Util.Owin;
+using Appson.Common.Owin;
 
 // ReSharper disable once CheckNamespace - Will be moved to the appropriate library project
 namespace Compositional.Composer.Web.Cache

@@ -3,9 +3,9 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Globalization;
-using JahanJooy.Common.Util.Security;
+using Appson.Common.Security;
 
-namespace JahanJooy.Common.Util.Web.Captcha.Image
+namespace Appson.Common.Web.Captcha.Image
 {
 	public class CaptchaImage
 	{

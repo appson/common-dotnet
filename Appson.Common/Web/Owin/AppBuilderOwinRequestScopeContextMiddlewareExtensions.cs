@@ -1,6 +1,6 @@
 ﻿using Owin;
 
-namespace JahanJooy.Common.Util.Owin
+namespace Appson.Common.Owin
 {
     public static class AppBuilderOwinRequestScopeContextMiddlewareExtensions
     {

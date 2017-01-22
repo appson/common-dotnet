@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using JahanJooy.Common.Util.Validation;
+using Appson.Common.Validation;
 using TypeLite;
 
 namespace AppsOn.Automation.Web.Models.Shared

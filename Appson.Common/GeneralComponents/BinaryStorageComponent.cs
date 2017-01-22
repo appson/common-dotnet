@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using Compositional.Composer;
-using JahanJooy.Common.Util.Configuration;
+using Appson.Common.Configuration;
 
-namespace JahanJooy.Common.Util.Components
+namespace Appson.Common.Components
 {
     [Contract]
     [Component]

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JahanJooy.Common.Util.Localization
+namespace Appson.Common.Localization
 {
 	public static class TimeSpanLocalizationExtensions
 	{

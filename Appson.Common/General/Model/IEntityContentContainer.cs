@@ -1,4 +1,4 @@
-﻿namespace JahanJooy.Common.Util.DomainModel
+﻿namespace Appson.Common.DomainModel
 {
 	public interface IEntityContentContainer<TContent> where TContent : class, IEntityContent
 	{

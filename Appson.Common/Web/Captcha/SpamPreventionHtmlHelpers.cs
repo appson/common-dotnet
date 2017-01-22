@@ -3,7 +3,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
-namespace JahanJooy.Common.Util.Web.Captcha
+namespace Appson.Common.Web.Captcha
 {
 	/// <summary>
 	/// HTML Helpers for PoliteCaptcha' spam prevention.

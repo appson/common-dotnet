@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Web;
 
-namespace JahanJooy.Common.Util.Web.Session
+namespace Appson.Common.Web.Session
 {
 	public static class SubSessionContext
 	{

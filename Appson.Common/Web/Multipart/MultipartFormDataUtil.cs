@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace JahanJooy.Common.Util.Web.Multipart
+namespace Appson.Common.Web.Multipart
 {
     public static class MultipartFormDataUtil
     {

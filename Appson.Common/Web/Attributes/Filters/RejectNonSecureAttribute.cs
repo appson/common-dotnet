@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 
-namespace JahanJooy.Common.Util.Web.Attributes.Filters
+namespace Appson.Common.Web.Attributes.Filters
 {
 	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = false)]
 	public class RejectNonSecureAttribute : RequireHttpsAttribute

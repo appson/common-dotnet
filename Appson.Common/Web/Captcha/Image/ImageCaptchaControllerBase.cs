@@ -5,9 +5,9 @@ using System.IO;
 using System.Text;
 using System.Web.Mvc;
 using System.Web.Security;
-using JahanJooy.Common.Util.Security;
+using Appson.Common.Security;
 
-namespace JahanJooy.Common.Util.Web.Captcha.Image
+namespace Appson.Common.Web.Captcha.Image
 {
 	public abstract class ImageCaptchaControllerBase : Controller
 	{

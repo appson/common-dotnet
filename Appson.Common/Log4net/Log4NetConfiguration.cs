@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml;
 using log4net.Config;
 
-namespace JahanJooy.Common.Util.Log4Net
+namespace Appson.Common.Log4Net
 {
 	public class Log4NetConfiguration
 	{

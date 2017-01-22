@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace JahanJooy.Common.Util.Web.Attributes
+namespace Appson.Common.Web.Attributes
 {
 	public class PropertyValidationComparisonUtil
 	{

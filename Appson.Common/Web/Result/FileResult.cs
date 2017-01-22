@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 
-namespace JahanJooy.Common.Util.Web.Result
+namespace Appson.Common.Web.Result
 {
     public class FileResult : IHttpActionResult
     {

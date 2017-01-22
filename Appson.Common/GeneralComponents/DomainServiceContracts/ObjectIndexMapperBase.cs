@@ -1,7 +1,7 @@
 ﻿using System;
 using Lucene.Net.Documents;
 
-namespace JahanJooy.Common.Util.DomainServiceContracts
+namespace Appson.Common.DomainServiceContracts
 {
 	public abstract class ObjectIndexMapperBase<T> : IObjectIndexMapper<T>
 	{

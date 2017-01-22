@@ -6,7 +6,7 @@ using System.Text;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 
-namespace JahanJooy.Common.Util.Web.Extensions
+namespace Appson.Common.Web.Extensions
 {
 	public static class RadioButtonHtmlExtensions
 	{

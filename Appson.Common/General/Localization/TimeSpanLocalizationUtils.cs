@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace JahanJooy.Common.Util.Localization
+namespace Appson.Common.Localization
 {
 	public static class TimeSpanLocalizationUtils
 	{

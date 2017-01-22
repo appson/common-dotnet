@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using JahanJooy.Common.Util.AutoMapper;
-using JahanJooy.Common.Util.Validation;
+using Appson.Common.AutoMapper;
+using Appson.Common.Validation;
 
 namespace AppsOn.Automation.Web.Models.Shared
 {

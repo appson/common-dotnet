@@ -1,6 +1,6 @@
 ﻿using System.Web.Routing;
 
-namespace JahanJooy.Common.Util.Web.Routing
+namespace Appson.Common.Web.Routing
 {
 	/// <summary>
 	/// Represents a generated route URL with route data.

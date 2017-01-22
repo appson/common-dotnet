@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace JahanJooy.Common.Util.Text
+namespace Appson.Common.Text
 {
     /// <summary>
     /// Modified Base64 for URL applications ('base64url' encoding)

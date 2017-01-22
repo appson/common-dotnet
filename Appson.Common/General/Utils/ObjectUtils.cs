@@ -1,4 +1,4 @@
-﻿namespace JahanJooy.Common.Util.General
+﻿namespace Appson.Common.General
 {
 	public static class ObjectUtils
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JahanJooy.Common.Util.Collections
+namespace Appson.Common.General.Collections
 {
 	public class PaginationStats
 	{
@@ -10,32 +10,17 @@ namespace JahanJooy.Common.Util.Collections
 		private int _totalNumberOfPages;
 		private int _firstItemIndex;
 
-		public int PageSize
-		{
-			get { return _pageSize; }
-		}
+		public int PageSize => _pageSize;
 
-		public int PageNumber
-		{
-			get { return _pageNumber; }
-		}
+	    public int PageNumber => _pageNumber;
 
-		public int TotalNumberOfPages
-		{
-			get { return _totalNumberOfPages; }
-		}
+	    public int TotalNumberOfPages => _totalNumberOfPages;
 
-		public int TotalNumberOfItems
-		{
-			get { return _totalNumberOfItems; }
-		}
+	    public int TotalNumberOfItems => _totalNumberOfItems;
 
-		public int FirstItemIndex
-		{
-			get { return _firstItemIndex; }
-		}
+	    public int FirstItemIndex => _firstItemIndex;
 
-		#region Initialization
+	    #region Initialization
 
 		private PaginationStats()
 		{

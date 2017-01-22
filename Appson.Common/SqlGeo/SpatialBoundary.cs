@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity.Spatial;
 
-namespace JahanJooy.Common.Util.Spatial
+namespace Appson.Common.Spatial
 {
 	public class SpatialBoundary
 	{

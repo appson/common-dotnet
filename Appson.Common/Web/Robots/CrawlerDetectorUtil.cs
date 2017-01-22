@@ -2,10 +2,10 @@
 using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 using System.Web;
-using JahanJooy.Common.Util.Log4Net;
-using JahanJooy.Common.Util.Web.UserAgent;
+using Appson.Common.Log4Net;
+using Appson.Common.Web.UserAgent;
 
-namespace JahanJooy.Common.Util.Web.Robots
+namespace Appson.Common.Web.Robots
 {
 	public static class CrawlerDetectorUtil
 	{

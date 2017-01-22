@@ -1,6 +1,6 @@
 ﻿using log4net;
 
-namespace JahanJooy.Common.Util.Log4Net
+namespace Appson.Common.Log4Net
 {
     public static class CommonStaticLogs
     {

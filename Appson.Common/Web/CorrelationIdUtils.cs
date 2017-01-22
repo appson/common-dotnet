@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using JahanJooy.Common.Util.General;
-using JahanJooy.Common.Util.Owin;
-using JahanJooy.Common.Util.Text;
+using Appson.Common.General;
+using Appson.Common.Owin;
+using Appson.Common.Text;
 using Microsoft.Owin;
 
-namespace JahanJooy.Common.Util.Web
+namespace Appson.Common.Web
 {
     public static class CorrelationIdUtils
     {

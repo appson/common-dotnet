@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Web.Mvc;
-using JahanJooy.Common.Util.Text;
+using Appson.Common.Text;
 
-namespace JahanJooy.Common.Util.Web.Validation
+namespace Appson.Common.Web.Validation
 {
 	public class NumericModelBinder : IModelBinder
 	{

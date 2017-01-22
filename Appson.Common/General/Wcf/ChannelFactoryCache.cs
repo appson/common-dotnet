@@ -3,10 +3,10 @@ using System.Collections.Concurrent;
 using System.Reflection;
 using System.ServiceModel;
 using Compositional.Composer;
-using JahanJooy.Common.Util.Configuration;
+using Appson.Common.Configuration;
 using log4net;
 
-namespace JahanJooy.Common.Util.Wcf
+namespace Appson.Common.Wcf
 {
     [Contract]
     [Component]

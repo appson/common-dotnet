@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JahanJooy.Common.Util.DomainModel
+namespace Appson.Common.DomainModel
 {
     public interface IStateTime
     {

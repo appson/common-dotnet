@@ -5,7 +5,7 @@ using System.Web.Http;
 using System.Web.Http.Dependencies;
 using Compositional.Composer;
 
-namespace JahanJooy.Common.Util.Composer
+namespace Appson.Common.Composer
 {
 	[Component]
 	public class WebApiComposerDependencyResolver : IWebApiDependencyResolverContract

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 
-namespace JahanJooy.Common.Util.EF
+namespace Appson.Common.EntityFramework
 {
     public static class DbSetExtensions
     {

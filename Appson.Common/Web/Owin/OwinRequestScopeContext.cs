@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using Microsoft.Owin;
 
-namespace JahanJooy.Common.Util.Owin
+namespace Appson.Common.Owin
 {
     public class OwinRequestScopeContext
     {

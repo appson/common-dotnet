@@ -4,11 +4,11 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
-using JahanJooy.Common.Util.Collections;
-using JahanJooy.Common.Util.DomainModel;
+using Appson.Common.Collections;
+using Appson.Common.DomainModel;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace JahanJooy.Common.Util.EF
+namespace Appson.Common.EntityFramework
 {
     public abstract class ExtendedIdentityDbContext<TUser, TRole, TKey, TUserLogin, TUserRole, TUserClaim> 
         : IdentityDbContext<TUser, TRole, TKey, TUserLogin, TUserRole, TUserClaim>

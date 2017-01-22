@@ -1,6 +1,6 @@
 ﻿using Compositional.Composer;
 
-namespace JahanJooy.Common.Util.Configuration
+namespace Appson.Common.Configuration
 {
 	[Contract]
 	[Component]

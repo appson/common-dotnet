@@ -4,7 +4,7 @@ using System.Collections.Specialized;
 using System.Web;
 using System.Web.Configuration;
 
-namespace JahanJooy.Common.Util.Web.UserAgent
+namespace Appson.Common.Web.UserAgent
 {
 	public static class HttpBrowserCapabilitiesUtil
 	{

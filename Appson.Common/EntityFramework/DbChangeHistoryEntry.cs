@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
-using JahanJooy.Common.Util.DomainModel;
+using Appson.Common.Model;
 
-namespace JahanJooy.Common.Util.EF
+namespace Appson.Common.EntityFramework
 {
     public class DbChangeHistoryEntry
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JahanJooy.Common.Util.ScheduledTasks
+namespace Appson.Common.ScheduledTasks
 {
 	public class ScheduledTaskIterationResult
 	{

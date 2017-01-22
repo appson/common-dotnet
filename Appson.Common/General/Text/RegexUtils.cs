@@ -1,4 +1,4 @@
-﻿namespace JahanJooy.Common.Util.Text
+﻿namespace Appson.Common.Text
 {
     public static class RegexUtils
     {

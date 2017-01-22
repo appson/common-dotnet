@@ -1,6 +1,6 @@
 ﻿using Compositional.Composer;
 
-namespace JahanJooy.Common.Util.Components
+namespace Appson.Common.Components
 {
     [Contract]
     public interface IEagerComponent

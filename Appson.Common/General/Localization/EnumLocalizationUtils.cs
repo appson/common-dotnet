@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Resources;
-using JahanJooy.Common.Util.Text;
+using Appson.Common.Text;
 
-namespace JahanJooy.Common.Util.Localization
+namespace Appson.Common.Localization
 {
     public static class EnumLocalizationUtils
     {

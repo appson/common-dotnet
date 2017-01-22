@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JahanJooy.Common.Util.Localization {
+namespace Appson.Common.Localization {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace JahanJooy.Common.Util.Localization {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("JahanJooy.Common.Util.Localization.TimeSpanLocalizationResources", typeof(TimeSpanLocalizationResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Appson.Common.Localization.TimeSpanLocalizationResources", typeof(TimeSpanLocalizationResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

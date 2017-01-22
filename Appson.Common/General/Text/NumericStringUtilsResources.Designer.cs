@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace JahanJooy.Common.Util.Text {
+namespace Appson.Common.Text {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace JahanJooy.Common.Util.Text {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("JahanJooy.Common.Util.Text.NumericStringUtilsResources", typeof(NumericStringUtilsResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Appson.Common.Text.NumericStringUtilsResources", typeof(NumericStringUtilsResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

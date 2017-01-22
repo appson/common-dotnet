@@ -2,7 +2,7 @@
 using System.Web;
 using System.Web.Configuration;
 
-namespace JahanJooy.Common.Util.Web.Session
+namespace Appson.Common.Web.Session
 {
 	public static class SessionStateExtensions
 	{

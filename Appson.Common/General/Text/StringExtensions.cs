@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Security.AntiXss;
 
-namespace JahanJooy.Common.Util.Text
+namespace Appson.Common.Text
 {
 	public static class StringExtensions
 	{

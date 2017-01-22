@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace JahanJooy.Common.Util.Validation
+namespace Appson.Common.Validation
 {
 	public class ValidatedResult<T> : ValidationResult
 	{

@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace JahanJooy.Common.Util.Localization
+namespace Appson.Common.Localization
 {
 	public class DateTimeLocalizationUtils
 	{

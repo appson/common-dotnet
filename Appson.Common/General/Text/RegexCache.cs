@@ -1,9 +1,9 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Linq;
-using JahanJooy.Common.Util.Collections;
+using Appson.Common.Collections;
 
-namespace JahanJooy.Common.Util.Text
+namespace Appson.Common.Text
 {
     public class RegexCache
     {
