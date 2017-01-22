@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Appson.Common.Lucene
+namespace Appson.Common.Lucene.IndexManagement
 {
     public class LuceneIndexHealthStatus
 	{

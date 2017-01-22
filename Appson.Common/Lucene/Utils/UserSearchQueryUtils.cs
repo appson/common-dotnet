@@ -1,7 +1,6 @@
-﻿using JahanJooy.Common.Util.Text;
-using log4net;
+﻿using log4net;
 
-namespace JahanJooy.Common.Util.Search
+namespace Appson.Common.Lucene.Utils
 {
 	public static class UserSearchQueryUtils
 	{

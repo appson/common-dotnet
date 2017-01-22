@@ -5,7 +5,7 @@ using Lucene.Net.Documents;
 using Lucene.Net.Index;
 using Lucene.Net.Search;
 
-namespace Appson.Common.Lucene
+namespace Appson.Common.Lucene.IndexManagement
 {
     public class LuceneIndexWriterRef : IDisposable
 	{

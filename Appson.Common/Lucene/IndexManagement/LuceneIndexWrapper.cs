@@ -10,7 +10,7 @@ using Lucene.Net.Search;
 using Lucene.Net.Store;
 using ServiceStack;
 
-namespace Appson.Common.Lucene
+namespace Appson.Common.Lucene.IndexManagement
 {
     internal class LuceneIndexWrapper
 	{

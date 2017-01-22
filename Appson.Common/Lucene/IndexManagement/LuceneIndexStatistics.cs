@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Appson.Common.Lucene
+namespace Appson.Common.Lucene.IndexManagement
 {
     public class LuceneIndexStatistics : LuceneIndexHealthStatus
 	{

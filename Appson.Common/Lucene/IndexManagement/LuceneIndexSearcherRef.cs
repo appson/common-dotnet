@@ -3,7 +3,7 @@ using log4net;
 using Lucene.Net.Documents;
 using Lucene.Net.Search;
 
-namespace Appson.Common.Lucene
+namespace Appson.Common.Lucene.IndexManagement
 {
     public class LuceneIndexSearcherRef : IDisposable
 	{

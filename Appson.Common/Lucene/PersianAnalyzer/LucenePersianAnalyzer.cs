@@ -2,7 +2,7 @@
 using Lucene.Net.Analysis.Standard;
 using Lucene.Net.Util;
 
-namespace Appson.Common.Lucene
+namespace Appson.Common.Lucene.PersianAnalyzer
 {
     public class LucenePersianAnalyzer : StandardAnalyzer
 	{

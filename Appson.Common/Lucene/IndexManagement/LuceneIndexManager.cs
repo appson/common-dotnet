@@ -5,7 +5,7 @@ using Appson.Composer;
 using Appson.Composer.Cache;
 using log4net;
 
-namespace Appson.Common.Lucene
+namespace Appson.Common.Lucene.IndexManagement
 {
     [Contract]
     [Component]

@@ -56,20 +56,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LuceneExtensions.cs" />
-    <Compile Include="LuceneIndexHealthStatus.cs" />
-    <Compile Include="LuceneIndexManager.cs" />
-    <Compile Include="LuceneIndexSearcherRef.cs" />
-    <Compile Include="LuceneIndexStatistics.cs" />
-    <Compile Include="LuceneIndexWrapper.cs" />
-    <Compile Include="LuceneIndexWriterRef.cs" />
-    <Compile Include="LucenePersianAnalyzer.cs" />
+    <Compile Include="Utils\LuceneExtensions.cs" />
+    <Compile Include="IndexManagement\LuceneIndexHealthStatus.cs" />
+    <Compile Include="IndexManagement\LuceneIndexManager.cs" />
+    <Compile Include="IndexManagement\LuceneIndexSearcherRef.cs" />
+    <Compile Include="IndexManagement\LuceneIndexStatistics.cs" />
+    <Compile Include="IndexManagement\LuceneIndexWrapper.cs" />
+    <Compile Include="IndexManagement\LuceneIndexWriterRef.cs" />
+    <Compile Include="PersianAnalyzer\LucenePersianAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserSearchQueryUtils.cs" />
+    <Compile Include="Utils\UserSearchQueryUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
