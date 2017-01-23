@@ -14,7 +14,7 @@ namespace Appson.Common.AutoMapper
 
 		public static IMappingExpression<TSource, TDestination> IgnoreUnmappedProperties<TSource, TDestination>(this IMappingExpression<TSource, TDestination> expression)
 		{
-			var typeMap = Mapper.FindTypeMapFor<TSource, TDestination>();
+			var typeMap = Mapper.Configuration.FindTypeMapFor<TSource, TDestination>();
 			if (typeMap != null)
 			{
 				foreach (var unmappedPropertyName in typeMap.GetUnmappedPropertyNames())
