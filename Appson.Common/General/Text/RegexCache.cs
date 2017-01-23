@@ -1,60 +1,60 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
-using System.Linq;
-using Appson.Common.Collections;
+using Appson.Common.General.Collections;
 
-namespace Appson.Common.Text
+namespace Appson.Common.General.Text
 {
     public class RegexCache
     {
-        private LRUCache<string, Regex> cache;
+        private readonly LruCache<string, Regex> _cache;
 
         public RegexCache(int size)
         {
-            cache = new LRUCache<string, Regex>(size);
+            _cache = new LruCache<string, Regex>(size);
         }
 
-        public Regex getPatternForRegex(string regex)
+        public Regex GetPatternForRegex(string regex)
         {
-            Regex pattern = cache.get(regex);
+            Regex pattern = _cache.Get(regex);
             if (pattern == null)
             {
                 pattern = new Regex(regex);
-                cache.put(regex, pattern);
+                _cache.Put(regex, pattern);
             }
             return pattern;
         }
 
         // This method is used for testing.
-        public bool containsRegex(string regex)
+        public bool ContainsRegex(string regex)
         {
-            return cache.containsKey(regex);
+            return _cache.ContainsKey(regex);
         }
 
-        private class LRUCache<K, V>
+        private class LruCache<TK, TV>
         {
             // LinkedHashMap offers a straightforward implementation of LRU cache.
-            private readonly LRUDictionary<K, V> _map;
+            private readonly LruDictionary<TK, TV> _map;
             private readonly int _size;
 
-            public LRUCache(int size)
+            public LruCache(int size)
             {
                 _size = size;
-                _map = new LRUDictionary<K, V>();
+                _map = new LruDictionary<TK, TV>();
             }
 
             [MethodImpl(MethodImplOptions.Synchronized)]
-            public V get(K key)
+            public TV Get(TK key)
             {
-                V result;
+                TV result;
                 if (!_map.TryGetValue(key, out result))
-                    return default(V);
+                    return default(TV);
 
                 return result;
             }
 
             [MethodImpl(MethodImplOptions.Synchronized)]
-            public void put(K key, V value)
+            public void Put(TK key, TV value)
             {
                 _map[key] = value;
                 if (_map.Count > _size)
@@ -65,7 +65,7 @@ namespace Appson.Common.Text
             }
 
             [MethodImpl(MethodImplOptions.Synchronized)]
-            public bool containsKey(K key)
+            public bool ContainsKey(TK key)
             {
                 return _map.ContainsKey(key);
             }

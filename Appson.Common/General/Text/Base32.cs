@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Appson.Common.Text
+namespace Appson.Common.General.Text
 {
     public class Base32
     {

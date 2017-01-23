@@ -1,8 +1,8 @@
 ﻿using System.Text;
 
-namespace Appson.Common.Text
+namespace Appson.Common.General.Text
 {
-	public static class StringBuilderExtensions
+    public static class StringBuilderExtensions
 	{
 		public static StringBuilder AppendSeparator(this StringBuilder builder, string separator)
 		{

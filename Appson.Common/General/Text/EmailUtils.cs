@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Appson.Common.Text
+namespace Appson.Common.General.Text
 {
     public static class EmailUtils
     {

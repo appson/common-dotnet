@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Appson.Common.Spatial
+namespace Appson.Common.General.Geo
 {
-	public class LatLngPath
+    public class LatLngPath
 	{
 		public LatLngPath()
 		{

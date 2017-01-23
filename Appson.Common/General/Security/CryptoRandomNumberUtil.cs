@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Appson.Common.Security
+namespace Appson.Common.General.Security
 {
     public class CryptoRandomNumberUtil
     {

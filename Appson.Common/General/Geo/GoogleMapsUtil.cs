@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Appson.Common.Spatial
+namespace Appson.Common.General.Geo
 {
 	public static class GoogleMapsUtil
 	{

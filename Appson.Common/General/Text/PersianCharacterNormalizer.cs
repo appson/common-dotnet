@@ -1,21 +1,21 @@
 ﻿using System;
 
-namespace Appson.Common.Text
+namespace Appson.Common.General.Text
 {
-	/// <summary>
-	/// Source code copied from PersianNormalizer class within Lucene.Net
-	/// </summary>
-	public class PersianCharacterNormalizer
+    /// <summary>
+    /// Source code copied from PersianNormalizer class within Lucene.Net
+    /// </summary>
+    public class PersianCharacterNormalizer
 	{
-		public const char YEH = 'ي';
-		public const char FARSI_YEH = 'ی';
-		public const char YEH_BARREE = 'ے';
-		public const char KEHEH = 'ک';
-		public const char KAF = 'ك';
-		public const char HAMZA_ABOVE = 'ٔ';
-		public const char HEH_YEH = 'ۀ';
-		public const char HEH_GOAL = 'ہ';
-		public const char HEH = 'ه';
+		public const char Yeh = 'ي';
+		public const char FarsiYeh = 'ی';
+		public const char YehBarree = 'ے';
+		public const char Keheh = 'ک';
+		public const char Kaf = 'ك';
+		public const char HamzaAbove = 'ٔ';
+		public const char HehYeh = 'ۀ';
+		public const char HehGoal = 'ہ';
+		public const char Heh = 'ه';
 
 		public static int Normalize(char[] s, int len)
 		{

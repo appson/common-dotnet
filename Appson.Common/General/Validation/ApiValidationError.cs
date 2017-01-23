@@ -1,12 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
-using Appson.Common.AutoMapper;
-using Appson.Common.Validation;
 
-namespace AppsOn.Automation.Web.Models.Shared
+namespace Appson.Common.General.Validation
 {
-	[AutoMapperConfig]
 	public class ApiValidationError
 	{
 		#region Initialization
@@ -44,10 +40,5 @@ namespace AppsOn.Automation.Web.Models.Shared
 		public string PropertyPath { get; set; }
 		public string ErrorKey { get; set; }
 		public List<string> ErrorParameters { get; set; }
-
-		public static void ConfigureAutoMapper()
-		{
-			Mapper.CreateMap<ValidationError, ApiValidationError>();
-		}
 	}
 }

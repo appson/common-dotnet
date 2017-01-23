@@ -2,9 +2,9 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace Appson.Common.Localization
+namespace Appson.Common.General.Localization
 {
-	public class DateTimeLocalizationUtils
+    public class DateTimeLocalizationUtils
 	{
 		private static readonly PersianCalendar PersianCalendar = new PersianCalendar();
 		private static readonly Regex ShamsiDateRegex = new Regex(@"^(1[34][0-9][0-9])/(0?[1-9]|10|11|12)/(0?[1-9]|[12][0-9]|30|31)$");
@@ -26,12 +26,12 @@ namespace Appson.Common.Localization
 
 		public static string ToLocalizedDateString(DateTime? dateTime)
 		{
-			return dateTime.HasValue ? dateTime.Value.ToLocalizedDateString() : null;
+			return dateTime?.ToLocalizedDateString();
 		}
 
 		public static string ToLocalizedTimeString(DateTime? dateTime)
 		{
-			return dateTime.HasValue ? dateTime.Value.ToLocalizedTimeString() : null;
+			return dateTime?.ToLocalizedTimeString();
 		}
 
 		public static DateTime? FromLocalizedDateString(string input)

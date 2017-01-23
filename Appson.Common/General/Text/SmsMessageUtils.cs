@@ -1,6 +1,6 @@
-﻿namespace Appson.Common.Sms
+﻿namespace Appson.Common.General.Text
 {
-	public static class SmsMessageUtils
+    public static class SmsMessageUtils
 	{
 		public const int MaxUnicodeFirstSegmentLength = 70;
 		public const int MaxUnicodeSegmentLength = 67;

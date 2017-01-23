@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Appson.Common.Text
+namespace Appson.Common.General.Text
 {
     /// <summary>
     /// Modified Base64 for URL applications ('base64url' encoding)

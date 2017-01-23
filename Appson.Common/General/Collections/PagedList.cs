@@ -46,35 +46,42 @@ namespace Appson.Common.General.Collections
 
 		public static PagedList<T> BuildFromCompleteList(List<T> allItems)
 		{
-			var result = new PagedList<T>();
+		    var result = new PagedList<T>
+		    {
+		        PageItems = allItems,
+		        _paginationStats = PaginationStats.SinglePage(allItems.Count)
+		    };
 
-			result.PageItems = allItems;
-			result._paginationStats = PaginationStats.SinglePage(allItems.Count);
-
-			return result;
+		    return result;
 		}
 
 		public static PagedList<T> BuildUsingPageNumber(int totalNumberOfItems, int pageSize, int pageNumber)
 		{
-			var result = new PagedList<T>();
+		    var result = new PagedList<T>
+		    {
+		        _paginationStats = PaginationStats.FromPageNumber(totalNumberOfItems, pageSize, pageNumber)
+		    };
 
-			result._paginationStats = PaginationStats.FromPageNumber(totalNumberOfItems, pageSize, pageNumber);
-			return result;
+		    return result;
 		}
 
 		public static PagedList<T> BuildUsingStartIndex(int totalNumberOfItems, int pageSize, int startIndex)
 		{
-			var result = new PagedList<T>();
+		    var result = new PagedList<T>
+		    {
+		        _paginationStats = PaginationStats.FromStartIndex(totalNumberOfItems, pageSize, startIndex)
+		    };
 
-			result._paginationStats = PaginationStats.FromStartIndex(totalNumberOfItems, pageSize, startIndex);
-			return result;
+		    return result;
 		}
 
 	    public static PagedList<T> BuildUsingPagedList<TSource>(PagedList<TSource> source)
 	    {
-            var result = new PagedList<T>();
+	        var result = new PagedList<T>
+	        {
+	            _paginationStats = PaginationStats.FromPaginationStats(source._paginationStats)
+	        };
 
-		    result._paginationStats = PaginationStats.FromPaginationStats(source._paginationStats);
 	        return result;
 	    }
 

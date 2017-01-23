@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
+using Appson.Common.General.Collections;
 
 namespace Appson.Common.AutoMapper
 {

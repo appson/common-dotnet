@@ -55,9 +55,12 @@
     <Compile Include="Localization\DateTimeLocalizationExtensions.cs" />
     <Compile Include="Localization\DateTimeLocalizationUtils.cs" />
     <Compile Include="Localization\EnumLocalizationUtils.cs" />
-    <Compile Include="Localization\LocalPhoneNumberUtils.cs" />
     <Compile Include="Localization\TimeSpanLocalizationExtensions.cs" />
-    <Compile Include="Localization\TimeSpanLocalizationResources.Designer.cs" />
+    <Compile Include="Localization\TimeSpanLocalizationResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeSpanLocalizationResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Localization\TimeSpanLocalizationUtils.cs" />
     <Compile Include="Model\IChangeHistoryEntity.cs" />
     <Compile Include="Model\ICreationTime.cs" />
@@ -76,9 +79,12 @@
     <Compile Include="Text\Base64Url.cs" />
     <Compile Include="Text\DigitLocalizationUtils.cs" />
     <Compile Include="Text\EmailUtils.cs" />
-    <Compile Include="Text\HtmlStringUtil.cs" />
     <Compile Include="Text\NumericStringUtils.cs" />
-    <Compile Include="Text\NumericStringUtilsResources.Designer.cs" />
+    <Compile Include="Text\NumericStringUtilsResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NumericStringUtilsResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Text\PersianCharacterNormalizer.cs" />
     <Compile Include="Text\RegexCache.cs" />
     <Compile Include="Text\RegexExtensions.cs" />
@@ -93,19 +99,29 @@
     <Compile Include="Utils\ObjectExtensions.cs" />
     <Compile Include="Utils\ObjectUtils.cs" />
     <Compile Include="Utils\RandomUtil.cs" />
-    <Compile Include="Utils\UtilResources.Designer.cs" />
+    <Compile Include="Utils\UtilResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UtilResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Validation\ApiValidationError.cs" />
     <Compile Include="Validation\ApiValidationResult.cs" />
-    <Compile Include="Validation\ValidatedResult.cs" />
-    <Compile Include="Validation\ValidationError.cs" />
-    <Compile Include="Validation\ValidationResult.cs" />
-    <Compile Include="Wcf\ChannelFactoryCache.cs" />
+    <Compile Include="Validation\ApiValidatedResult.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Localization\TimeSpanLocalizationResources.resx" />
-    <EmbeddedResource Include="Text\NumericStringUtilsResources.resx" />
-    <EmbeddedResource Include="Utils\UtilResources.resx" />
+    <EmbeddedResource Include="Localization\TimeSpanLocalizationResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TimeSpanLocalizationResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Text\NumericStringUtilsResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NumericStringUtilsResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\UtilResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UtilResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

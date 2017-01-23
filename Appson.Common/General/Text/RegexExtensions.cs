@@ -1,8 +1,8 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace Appson.Common.Text
+namespace Appson.Common.General.Text
 {
-	public static class RegexExtensions
+    public static class RegexExtensions
 	{
 		public static bool IsMatchWhole(this Regex regex, string input)
 		{

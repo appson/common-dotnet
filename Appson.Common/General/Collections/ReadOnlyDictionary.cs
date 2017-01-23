@@ -76,8 +76,7 @@ namespace Appson.Common.General.Collections
             return _dict.GetEnumerator();
         }
 
-        System.Collections.IEnumerator
-               System.Collections.IEnumerable.GetEnumerator()
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
         {
             return ((System.Collections.IEnumerable)_dict).GetEnumerator();
         }

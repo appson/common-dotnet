@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Resources;
-using Appson.Common.Text;
+using Appson.Common.General.Text;
+using Appson.Common.General.Utils;
 
-namespace Appson.Common.Localization
+namespace Appson.Common.General.Localization
 {
     public static class EnumLocalizationUtils
     {
         public static string ToLocalizedString(string fullName, ResourceManager resourceManager = null)
         {
-            return resourceManager == null
-                ? null
-                : resourceManager.GetString(fullName);
+            return resourceManager?.GetString(fullName);
         }
 
         public static string ToLocalizedString(string enumTypeName, string enumItemName,
@@ -45,7 +44,7 @@ namespace Appson.Common.Localization
         public static string ToLocalizedString<TEnum>(this TEnum? enumObject, ResourceManager resourceManager = null)
             where TEnum : struct
         {
-            return enumObject.HasValue ? enumObject.Value.ToLocalizedString(resourceManager) : null;
+            return enumObject?.ToLocalizedString(resourceManager);
         }
     }
 }

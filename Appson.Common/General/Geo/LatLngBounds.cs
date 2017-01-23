@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.Spatial;
 
-namespace Appson.Common.Spatial
+namespace Appson.Common.General.Geo
 {
-	public class LatLngBounds
+    public class LatLngBounds
 	{
 		public LatLng NorthEast { get; set; }
 		public LatLng SouthWest { get; set; }
@@ -91,19 +90,9 @@ namespace Appson.Common.Spatial
 			};
 		}
 
-		public double GetArea()
-		{
-			return ToDbGeography().Area.GetValueOrDefault();
-		}
-
 		public string ToGoogleApi()
 		{
-			return string.Format("new google.maps.LatLngBounds({0}, {1})", SouthWest.ToGoogleApi(), NorthEast.ToGoogleApi());
-		}
-
-		public DbGeography ToDbGeography()
-		{
-			return DbGeographyUtil.CreatePolygon(string.Format("POLYGON(({0} {1}, {0} {2}, {3} {2}, {3} {1}, {0} {1}))", EastLng, NorthLat, SouthLat, WestLng));
+			return $"new google.maps.LatLngBounds({SouthWest.ToGoogleApi()}, {NorthEast.ToGoogleApi()})";
 		}
 
 		public static LatLngBounds BoundsOf(LatLng point)

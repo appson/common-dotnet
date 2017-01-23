@@ -1,4 +1,4 @@
-﻿namespace Appson.Common.General
+﻿namespace Appson.Common.General.Utils
 {
 	public static class ObjectUtils
 	{

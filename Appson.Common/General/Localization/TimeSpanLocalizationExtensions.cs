@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Appson.Common.Localization
+namespace Appson.Common.General.Localization
 {
-	public static class TimeSpanLocalizationExtensions
+    public static class TimeSpanLocalizationExtensions
 	{
 		public static string ToLocalizedDurationString(this TimeSpan timeSpan, int maxNumberOfParts = 2, string zeroDurationString = null)
 		{

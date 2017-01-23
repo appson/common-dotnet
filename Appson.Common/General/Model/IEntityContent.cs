@@ -1,6 +1,6 @@
-﻿namespace Appson.Common.DomainModel
+﻿namespace Appson.Common.General.Model
 {
-	public interface IEntityContent
+    public interface IEntityContent
 	{
 	}
 }

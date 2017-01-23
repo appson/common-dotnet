@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Appson.Common.General
+namespace Appson.Common.General.Utils
 {
     public static class CsvUtils
     {

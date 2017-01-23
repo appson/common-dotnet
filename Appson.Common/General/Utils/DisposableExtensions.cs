@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Appson.Common.General
+namespace Appson.Common.General.Utils
 {
-	public static class DisposableExtensions
+    public static class DisposableExtensions
 	{
 		public static void Use<TDisposable>(this TDisposable disposable, Action<TDisposable> a) where TDisposable : IDisposable
 		{

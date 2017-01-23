@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stimulstoft", "Stimulstoft\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{0894555E-0CC7-426E-970E-0AC77545E6A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumbers", "PhoneNumbers\PhoneNumbers.csproj", "{8BC17F59-AF31-4546-AF6E-E43C1DC2FFB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{0894555E-0CC7-426E-970E-0AC77545E6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0894555E-0CC7-426E-970E-0AC77545E6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0894555E-0CC7-426E-970E-0AC77545E6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC17F59-AF31-4546-AF6E-E43C1DC2FFB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC17F59-AF31-4546-AF6E-E43C1DC2FFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC17F59-AF31-4546-AF6E-E43C1DC2FFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC17F59-AF31-4546-AF6E-E43C1DC2FFB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

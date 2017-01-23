@@ -1,9 +1,9 @@
-﻿using Appson.Common.PhoneNumbers;
-using Appson.Common.Validation;
+﻿using Appson.Common.Validation;
+using PhoneNumbers;
 
-namespace Appson.Common.Localization
+namespace Appson.Common.PhoneNumbers
 {
-	public static class LocalPhoneNumberUtils
+    public static class LocalPhoneNumberUtils
 	{
 		private const string NationalLocaleSymbol = "IR";
         private const int NationalLocaleCode = 98;
@@ -19,13 +19,13 @@ namespace Appson.Common.Localization
 		{
 			try
 			{
-				var phoneNumberUtil = PhoneNumberUtil.getInstance();
-				if (phoneNumberUtil.isPossibleNumber(input, NationalLocaleSymbol))
+			    var phoneNumberUtil = PhoneNumberUtil.GetInstance();
+				if (phoneNumberUtil.IsPossibleNumber(input, NationalLocaleSymbol))
 					return true;
 
-				return phoneNumberUtil.isPossibleNumber(DefaultCityPrefix + input, NationalLocaleSymbol);
+				return phoneNumberUtil.IsPossibleNumber(DefaultCityPrefix + input, NationalLocaleSymbol);
 			}
-			catch (PhoneNumberParseException)
+			catch (NumberParseException)
 			{
 				return false;
 			}
@@ -35,19 +35,19 @@ namespace Appson.Common.Localization
 		{
 			try
 			{
-				var phoneNumberUtil = PhoneNumberUtil.getInstance();
-				var originalResult = phoneNumberUtil.parse(input, NationalLocaleSymbol);
+				var phoneNumberUtil = PhoneNumberUtil.GetInstance();
+				var originalResult = phoneNumberUtil.Parse(input, NationalLocaleSymbol);
 
-				if (phoneNumberUtil.isValidNumber(originalResult))
+				if (phoneNumberUtil.IsValidNumber(originalResult))
 					return originalResult;
 
-				var prefixedResult = phoneNumberUtil.parse(DefaultCityPrefix + input, NationalLocaleSymbol);
-				if (phoneNumberUtil.isValidNumber(prefixedResult))
+				var prefixedResult = phoneNumberUtil.Parse(DefaultCityPrefix + input, NationalLocaleSymbol);
+				if (phoneNumberUtil.IsValidNumber(prefixedResult))
 					return prefixedResult;
 
 				return originalResult;
 			}
-			catch (PhoneNumberParseException)
+			catch (NumberParseException)
 			{
 				return null;
 			}
@@ -57,19 +57,19 @@ namespace Appson.Common.Localization
 		{
 			try
 			{
-				var phoneNumberUtil = PhoneNumberUtil.getInstance();
-				var originalResult = phoneNumberUtil.parse(input, NationalLocaleSymbol);
+				var phoneNumberUtil = PhoneNumberUtil.GetInstance();
+				var originalResult = phoneNumberUtil.Parse(input, NationalLocaleSymbol);
 
-				if (phoneNumberUtil.isValidNumber(originalResult))
+				if (phoneNumberUtil.IsValidNumber(originalResult))
 					return originalResult;
 
-				var prefixedResult = phoneNumberUtil.parse(DefaultCityPrefix + input, NationalLocaleSymbol);
-				if (phoneNumberUtil.isValidNumber(prefixedResult))
+				var prefixedResult = phoneNumberUtil.Parse(DefaultCityPrefix + input, NationalLocaleSymbol);
+				if (phoneNumberUtil.IsValidNumber(prefixedResult))
 					return prefixedResult;
 
 				return null;
 			}
-			catch (PhoneNumberParseException)
+			catch (NumberParseException)
 			{
 				return null;
 			}
@@ -80,8 +80,8 @@ namespace Appson.Common.Localization
 			if (input == null)
 				return null;
 
-			var phoneNumberUtil = PhoneNumberUtil.getInstance();
-			return phoneNumberUtil.format(input, PhoneNumberFormat.INTERNATIONAL);
+			var phoneNumberUtil = PhoneNumberUtil.GetInstance();
+			return phoneNumberUtil.Format(input, PhoneNumberFormat.INTERNATIONAL);
 		}
 
 		public static PhoneNumberType GetNumberType(PhoneNumber input)
@@ -89,8 +89,8 @@ namespace Appson.Common.Localization
 			if (input == null)
 				return PhoneNumberType.UNKNOWN;
 
-			var phoneNumberUtil = PhoneNumberUtil.getInstance();
-			return phoneNumberUtil.getNumberType(input);
+			var phoneNumberUtil = PhoneNumberUtil.GetInstance();
+			return phoneNumberUtil.GetNumberType(input);
 		}
 
 	    public static ValidatedResult<string> ValidateAndFormat(string number, bool allowNationalNumberOnly, bool allowSmsTargetOnly)

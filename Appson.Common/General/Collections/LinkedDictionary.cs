@@ -53,25 +53,13 @@ namespace Appson.Common.General.Collections
             return new LinkedDictionaryEnumerator(this, false);
         }
 
-        public ICollection<TValue> ValuesForward
-        {
-            get { return new DictionaryValues(this, true); }
-        }
+        public ICollection<TValue> ValuesForward => new DictionaryValues(this, true);
 
-        public ICollection<TValue> ValuesBackward
-        {
-            get { return new DictionaryValues(this, false); }
-        }
+        public ICollection<TValue> ValuesBackward => new DictionaryValues(this, false);
 
-        public ICollection<TKey> KeysForward
-        {
-            get { return new DictionaryKeys(this, true); }
-        }
+        public ICollection<TKey> KeysForward => new DictionaryKeys(this, true);
 
-        public ICollection<TKey> KeysBackward
-        {
-            get { return new DictionaryKeys(this, false); }
-        }
+        public ICollection<TKey> KeysBackward => new DictionaryKeys(this, false);
 
         #endregion
 
@@ -127,15 +115,9 @@ namespace Appson.Common.General.Collections
             return false;
         }
 
-        public int Count
-        {
-            get { return Backend.Count; }
-        }
+        public int Count => Backend.Count;
 
-        public bool IsReadOnly
-        {
-            get { return Backend.IsReadOnly; }
-        }
+        public bool IsReadOnly => Backend.IsReadOnly;
 
         #endregion
 
@@ -184,15 +166,9 @@ namespace Appson.Common.General.Collections
             }
         }
 
-        public virtual ICollection<TKey> Keys
-        {
-            get { return KeysForward; }
-        }
+        public virtual ICollection<TKey> Keys => KeysForward;
 
-        public virtual ICollection<TValue> Values
-        {
-            get { return ValuesForward; }
-        }
+        public virtual ICollection<TValue> Values => ValuesForward;
 
         #endregion
 
@@ -201,18 +177,12 @@ namespace Appson.Common.General.Collections
         public class LinkedKeyValuePair
         {
             public LinkedKeyValuePair Previous { get; set; }
-            public KeyValuePair<TKey, TValue> KeyValuePair { get; private set; }
+            public KeyValuePair<TKey, TValue> KeyValuePair { get; }
             public LinkedKeyValuePair Next { get; set; }
 
-            public TKey Key
-            {
-                get { return KeyValuePair.Key; }
-            }
+            public TKey Key => KeyValuePair.Key;
 
-            public TValue Value
-            {
-                get { return KeyValuePair.Value; }
-            }
+            public TValue Value => KeyValuePair.Value;
 
             public LinkedKeyValuePair(TKey key, TValue value, LinkedKeyValuePair prev, LinkedKeyValuePair next)
             {
@@ -244,15 +214,9 @@ namespace Appson.Common.General.Collections
                 _current = null;
             }
 
-            public KeyValuePair<TKey, TValue> Current
-            {
-                get { return new KeyValuePair<TKey, TValue>(_current.Key, _current.Value); }
-            }
+            public KeyValuePair<TKey, TValue> Current => new KeyValuePair<TKey, TValue>(_current.Key, _current.Value);
 
-            object IEnumerator.Current
-            {
-                get { return Current; }
-            }
+            object IEnumerator.Current => Current;
 
             public bool MoveNext()
             {
@@ -354,15 +318,9 @@ namespace Appson.Common.General.Collections
                 throw new NotSupportedException();
             }
 
-            public int Count
-            {
-                get { return _parent.Backend.Count; }
-            }
+            public int Count => _parent.Backend.Count;
 
-            public bool IsReadOnly
-            {
-                get { return true; }
-            }
+            public bool IsReadOnly => true;
 
             #endregion
 
@@ -384,10 +342,7 @@ namespace Appson.Common.General.Collections
                     _enumerator.Reset();
                 }
 
-                public TKey Current
-                {
-                    get { return _enumerator.Key; }
-                }
+                public TKey Current => _enumerator.Key;
 
                 public bool MoveNext()
                 {
@@ -398,10 +353,7 @@ namespace Appson.Common.General.Collections
                 {
                 }
 
-                object IEnumerator.Current
-                {
-                    get { return Current; }
-                }
+                object IEnumerator.Current => Current;
 
                 #endregion
             }
@@ -466,15 +418,9 @@ namespace Appson.Common.General.Collections
                 throw new NotSupportedException();
             }
 
-            public int Count
-            {
-                get { return _parent.Count; }
-            }
+            public int Count => _parent.Count;
 
-            public bool IsReadOnly
-            {
-                get { return true; }
-            }
+            public bool IsReadOnly => true;
 
             #endregion
 
@@ -496,20 +442,14 @@ namespace Appson.Common.General.Collections
                     _enumerator.Reset();
                 }
 
-                object IEnumerator.Current
-                {
-                    get { return Current; }
-                }
+                object IEnumerator.Current => Current;
 
                 public bool MoveNext()
                 {
                     return _enumerator.MoveNext();
                 }
 
-                public TValue Current
-                {
-                    get { return _enumerator.Value; }
-                }
+                public TValue Current => _enumerator.Value;
 
                 public void Dispose()
                 {
@@ -552,7 +492,7 @@ namespace Appson.Common.General.Collections
         protected override void AddItem(TKey key, TValue value)
         {
             if (Backend.ContainsKey(key))
-                throw new ArgumentException(String.Format("Key \"{0}\" already present in dictionary", key));
+                throw new ArgumentException($"Key \"{key}\" already present in dictionary");
 
             var l = new LinkedKeyValuePair(key, value, Last, null);
             if (Last != null)
@@ -608,14 +548,14 @@ namespace Appson.Common.General.Collections
         }
     }
 
-    public class LRUDictionary<TKey, TValue> : UpdateLinkedDictionary<TKey, TValue>
+    public class LruDictionary<TKey, TValue> : UpdateLinkedDictionary<TKey, TValue>
     {
-        public LRUDictionary() 
+        public LruDictionary() 
             : this(new Dictionary<TKey, LinkedKeyValuePair>())
         {    
         }
 
-        public LRUDictionary(IDictionary<TKey, LinkedKeyValuePair> backend) 
+        public LruDictionary(IDictionary<TKey, LinkedKeyValuePair> backend) 
             : base(backend)
         {
         }
@@ -651,14 +591,14 @@ namespace Appson.Common.General.Collections
         }
     }
 
-    public class MRUDictionary<TKey, TValue> : LRUDictionary<TKey, TValue>
+    public class MruDictionary<TKey, TValue> : LruDictionary<TKey, TValue>
     {
-        public MRUDictionary()
+        public MruDictionary()
             : this(new Dictionary<TKey, LinkedKeyValuePair>())
         {
         }
 
-        public MRUDictionary(IDictionary<TKey, LinkedKeyValuePair> backend) 
+        public MruDictionary(IDictionary<TKey, LinkedKeyValuePair> backend) 
             : base(backend)
         {
         }
@@ -668,14 +608,8 @@ namespace Appson.Common.General.Collections
             return GetEnumeratorForward();
         }
 
-        public override ICollection<TKey> Keys
-        {
-            get { return KeysBackward; }
-        }
+        public override ICollection<TKey> Keys => KeysBackward;
 
-        public override ICollection<TValue> Values
-        {
-            get { return ValuesBackward; }
-        }
+        public override ICollection<TValue> Values => ValuesBackward;
     }
 }

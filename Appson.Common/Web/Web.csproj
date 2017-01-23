@@ -83,6 +83,7 @@
     <Compile Include="Extensions\RadioButtonItems.cs" />
     <Compile Include="Extensions\ScriptExtensions.cs" />
     <Compile Include="Extensions\SelectHtmlExtensions.cs" />
+    <Compile Include="HtmlStringUtil.cs" />
     <Compile Include="Model\CheckboxListItem.cs" />
     <Compile Include="Multipart\InMemoryMultipartFormDataStreamProvider.cs" />
     <Compile Include="Multipart\InMemoryUploadedFile.cs" />

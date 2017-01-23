@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 
-namespace Appson.Common.Text
+namespace Appson.Common.General.Text
 {
-	public static class StringUtils
+    public static class StringUtils
 	{
 		public static string JoinNonEmpty(string separator, params string[] strings)
 		{

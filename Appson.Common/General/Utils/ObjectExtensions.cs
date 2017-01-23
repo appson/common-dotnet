@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Appson.Common
+namespace Appson.Common.General.Utils
 {
     /// <summary>
     /// Contains most generic extension methods that can be applied to any object type

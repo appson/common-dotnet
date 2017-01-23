@@ -1,8 +1,7 @@
-﻿using System.Data.Entity.Spatial;
-
-namespace Appson.Common.Spatial
+﻿
+namespace Appson.Common.General.Geo
 {
-	public class LatLng
+    public class LatLng
 	{
         public static readonly LatLng Zero = new LatLng {Lat = 0, Lng = 0};
 
@@ -11,22 +10,12 @@ namespace Appson.Common.Spatial
 
 		public string ToGoogleApi()
 		{
-			return string.Format("new google.maps.LatLng({0}, {1})", Lat, Lng);
+			return $"new google.maps.LatLng({Lat}, {Lng})";
 		}
 
 		public string ToWkt()
 		{
-			return string.Format("POINT({0} {1})", Lng, Lat);
-		}
-
-		public DbGeography ToDbGeography()
-		{
-			return DbGeographyUtil.CreatePoint(ToWkt());
-		}
-
-		public static LatLng FromWkt(string wkt)
-		{
-			return DbGeographyUtil.CreatePoint(wkt).ToLatLng();
+			return $"POINT({Lng} {Lat})";
 		}
 	}
 }

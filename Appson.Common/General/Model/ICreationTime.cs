@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Appson.Common.DomainModel
+namespace Appson.Common.General.Model
 {
-	public interface ICreationTime
+    public interface ICreationTime
 	{
 		DateTime CreationTime { get; set; }
 	}

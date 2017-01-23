@@ -49,6 +49,7 @@
     <Compile Include="Cache\ICacheLoader.cs" />
     <Compile Include="Cache\ICacheValueCopier.cs" />
     <Compile Include="Cache\IWritableCache.cs" />
+    <Compile Include="ChannelFactoryCache.cs" />
     <Compile Include="Configuration\ApplicationEnvironmentType.cs" />
     <Compile Include="Configuration\ApplicationEnvironmentUtil.cs" />
     <Compile Include="Configuration\ApplicationRevisionInfo.cs" />

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Appson.Common.Localization
+namespace Appson.Common.General.Localization
 {
-	public static class DateTimeLocalizationExtensions
+    public static class DateTimeLocalizationExtensions
 	{
 		public static string ToLocalizedDateString(this DateTime dateTime)
 		{

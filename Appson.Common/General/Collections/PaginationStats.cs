@@ -38,13 +38,14 @@ namespace Appson.Common.General.Collections
 
 		public static PaginationStats FromPageNumber(int totalNumberOfItems, int pageSize, int pageNumber)
 		{
-			var result = new PaginationStats();
+		    var result = new PaginationStats
+		    {
+		        _totalNumberOfItems = totalNumberOfItems,
+		        _pageSize = pageSize,
+		        _totalNumberOfPages = (totalNumberOfItems + pageSize - 1)/pageSize
+		    };
 
-			result._totalNumberOfItems = totalNumberOfItems;
-			result._pageSize = pageSize;
-			result._totalNumberOfPages = (totalNumberOfItems + pageSize - 1) / pageSize;
-
-			result._pageNumber = Math.Max(Math.Min(pageNumber, result._totalNumberOfPages), 1);
+		    result._pageNumber = Math.Max(Math.Min(pageNumber, result._totalNumberOfPages), 1);
 			result._firstItemIndex = (result._pageNumber - 1) * result._pageSize + 1;
 
 			return result;
@@ -52,28 +53,28 @@ namespace Appson.Common.General.Collections
 
 		public static PaginationStats FromStartIndex(int totalNumberOfItems, int pageSize, int startIndex)
 		{
-			var result = new PaginationStats();
+		    var result = new PaginationStats
+		    {
+		        _totalNumberOfItems = totalNumberOfItems,
+		        _pageSize = pageSize,
+		        _totalNumberOfPages = (totalNumberOfItems + pageSize - 1)/pageSize,
+		        _firstItemIndex = Math.Max(Math.Min(startIndex, totalNumberOfItems), 1),
+		        _pageNumber = (startIndex + pageSize - 2)/pageSize + 1
+		    };
 
-			result._totalNumberOfItems = totalNumberOfItems;
-			result._pageSize = pageSize;
-			result._totalNumberOfPages = (totalNumberOfItems + pageSize - 1) / pageSize;
-
-			result._firstItemIndex = Math.Max(Math.Min(startIndex, totalNumberOfItems), 1);
-			result._pageNumber = (startIndex + pageSize - 2)/pageSize + 1;
-
-			return result;
+		    return result;
 		}
 
 		public static PaginationStats FromPaginationStats(PaginationStats source)
 	    {
-            var result = new PaginationStats();
-
-            result._totalNumberOfItems = source._totalNumberOfItems;
-            result._pageSize = source._pageSize;
-	        result._totalNumberOfPages = source._totalNumberOfPages;
-
-	        result._firstItemIndex = source._firstItemIndex;
-	        result._pageNumber = source._pageNumber;
+	        var result = new PaginationStats
+	        {
+	            _totalNumberOfItems = source._totalNumberOfItems,
+	            _pageSize = source._pageSize,
+	            _totalNumberOfPages = source._totalNumberOfPages,
+	            _firstItemIndex = source._firstItemIndex,
+	            _pageNumber = source._pageNumber
+	        };
 
 	        return result;
 	    }
