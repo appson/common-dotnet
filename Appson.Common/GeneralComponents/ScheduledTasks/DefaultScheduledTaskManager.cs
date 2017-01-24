@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Appson.Common.Logging;
 using Appson.Composer;
 using log4net;
 

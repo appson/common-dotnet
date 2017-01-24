@@ -2,7 +2,6 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using Appson.Common.Cache;
 using Appson.Composer;
 using Appson.Composer.Cache;
 
@@ -31,14 +30,14 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 		private int? _maximumLifetimeSeconds;
 		private int? _idleSecondsToRemove;
 
-		protected virtual int DefaultMinimumSize { get { return 50; } }
-		// protected virtual int DefaultMaximumSize { get { return 0; } } TODO
-		protected virtual int DefaultMaintenanceFrequencySeconds { get { return 600; } }
-		protected virtual int DefaultMinimumLifetimeSeconds { get { return 600; } }
-		protected virtual int DefaultMaximumLifetimeSeconds { get { return 3600; } }
-		protected virtual int DefaultIdleSecondsToRemove { get { return 30000; } }
+		protected virtual int DefaultMinimumSize => 50;
+	    // protected virtual int DefaultMaximumSize { get { return 0; } } TODO
+		protected virtual int DefaultMaintenanceFrequencySeconds => 600;
+	    protected virtual int DefaultMinimumLifetimeSeconds => 600;
+	    protected virtual int DefaultMaximumLifetimeSeconds => 3600;
+	    protected virtual int DefaultIdleSecondsToRemove => 30000;
 
-		[ConfigurationPoint(false)]
+	    [ConfigurationPoint(false)]
 		public int MinimumSize
 		{
 			get { return _minimumSize ?? DefaultMinimumSize; }
@@ -172,13 +171,12 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 		private class CacheItem<T>
 		{
 			private readonly T _value;
-			private readonly long _creationTime;
-			private long _lastAccessTime;
+		    private long _lastAccessTime;
 
 			public CacheItem(T value)
 			{
 				_value = value;
-				_creationTime = _lastAccessTime = DateTime.UtcNow.Ticks;
+				CreationTime = _lastAccessTime = DateTime.UtcNow.Ticks;
 			}
 
 			public T Value
@@ -190,15 +188,9 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 				}
 			}
 
-			public long CreationTime
-			{
-				get { return _creationTime; }
-			}
+			public long CreationTime { get; }
 
-			public long LastAccessTime
-			{
-				get { return _lastAccessTime; }
-			}
+		    public long LastAccessTime => _lastAccessTime;
 		}
 	}
 }

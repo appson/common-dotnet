@@ -5,9 +5,9 @@ using System.Text;
 using System.Xml;
 using log4net.Config;
 
-namespace Appson.Common.Log4Net
+namespace Appson.Common.Logging
 {
-	public class Log4NetConfiguration
+    public class Log4NetConfiguration
 	{
 		public static string ConfigureFromFiles(IEnumerable<FileInfo> fileInfos)
 		{

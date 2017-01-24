@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Reflection;
+using System.ServiceModel;
+using Appson.Common.General.Utils;
 using Appson.Common.GeneralComponents.Configuration;
 using Appson.Composer;
 using log4net;

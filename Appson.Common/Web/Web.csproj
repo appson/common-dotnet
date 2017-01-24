@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEnvironmentUtil.cs" />
     <Compile Include="Attributes\BindingExceptionMessageAttribute.cs" />
     <Compile Include="Attributes\CompareToPropertyValueAttribute.cs" />
     <Compile Include="Attributes\DateAttribute.cs" />

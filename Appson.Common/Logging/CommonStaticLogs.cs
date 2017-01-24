@@ -1,6 +1,6 @@
 ﻿using log4net;
 
-namespace Appson.Common.Log4Net
+namespace Appson.Common.Logging
 {
     public static class CommonStaticLogs
     {

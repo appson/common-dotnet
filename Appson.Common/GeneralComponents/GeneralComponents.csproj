@@ -40,6 +40,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,7 +59,6 @@
     <Compile Include="Cache\IWritableCache.cs" />
     <Compile Include="Wcf\ChannelFactoryCache.cs" />
     <Compile Include="Configuration\ApplicationEnvironmentType.cs" />
-    <Compile Include="Configuration\ApplicationEnvironmentUtil.cs" />
     <Compile Include="Configuration\ApplicationRevisionInfo.cs" />
     <Compile Include="Configuration\ApplicationSettingKeys.cs" />
     <Compile Include="Configuration\ApplicationSettings.cs" />
@@ -76,6 +76,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\General\General.csproj">
+      <Project>{c8e85206-3aae-4288-8074-0bd3b4b3d818}</Project>
+      <Name>General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{c0a37f49-5e9c-476f-8b9c-eaba5f8c8ba5}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
