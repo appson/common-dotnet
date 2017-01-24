@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Appson.Common.General.Collections;
 using Lucene.Net.Search;
 
 namespace Appson.Common.Lucene.Utils

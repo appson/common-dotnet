@@ -2,7 +2,7 @@
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 
-namespace Appson.Common.EntityFramework
+namespace Appson.Common.EntityFramework.ChangeHistory
 {
     public class DbChangeHistoryGenerator
     {
@@ -13,15 +13,9 @@ namespace Appson.Common.EntityFramework
             _entries = null;
         }
 
-        public bool IsClean
-        {
-            get { return _entries == null || _entries.Count < 1; }
-        }
+        public bool IsClean => _entries == null || _entries.Count < 1;
 
-        public List<DbChangeHistoryEntry> Entries
-        {
-            get { return _entries; }
-        }
+        public List<DbChangeHistoryEntry> Entries => _entries;
 
         public void ProcessEntry(DbEntityEntry entry)
         {

@@ -1,10 +1,10 @@
-﻿using Compositional.Composer;
-using Appson.Common.DomainModel;
+﻿using Appson.Common.General.Model;
+using Appson.Composer;
 using ServiceStack;
 
-namespace Appson.Common.DomainServiceContracts
+namespace Appson.Common.Lucene.IndexMapping
 {
-	[Contract]
+    [Contract]
 	public interface IEntityContentSerializer<TContent> where TContent : class, IEntityContent
 	{
 		string Serialize(TContent entity);

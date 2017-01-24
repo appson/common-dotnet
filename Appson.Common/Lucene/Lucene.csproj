@@ -60,10 +60,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DomainServiceContracts\IEntityContentSerializer.cs" />
-    <Compile Include="DomainServiceContracts\IObjectIndexMapper.cs" />
-    <Compile Include="DomainServiceContracts\ITwoWayObjectIndexMapper.cs" />
-    <Compile Include="DomainServiceContracts\ObjectIndexMapperBase.cs" />
+    <Compile Include="IndexMapping\IEntityContentSerializer.cs" />
+    <Compile Include="IndexMapping\IObjectIndexMapper.cs" />
+    <Compile Include="IndexMapping\ITwoWayObjectIndexMapper.cs" />
+    <Compile Include="IndexMapping\ObjectIndexMapperBase.cs" />
     <Compile Include="Utils\LuceneExtensions.cs" />
     <Compile Include="IndexManagement\LuceneIndexHealthStatus.cs" />
     <Compile Include="IndexManagement\LuceneIndexManager.cs" />
@@ -79,6 +79,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GeneralComponents\GeneralComponents.csproj">
+      <Project>{849c9e83-cb2b-43f3-9579-244e3a19759e}</Project>
+      <Name>GeneralComponents</Name>
+    </ProjectReference>
     <ProjectReference Include="..\General\General.csproj">
       <Project>{c8e85206-3aae-4288-8074-0bd3b4b3d818}</Project>
       <Name>General</Name>

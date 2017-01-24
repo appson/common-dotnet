@@ -3,8 +3,8 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
-using Appson.Common.Collections;
-using Appson.Common.DomainModel;
+using Appson.Common.General.Collections;
+using Appson.Common.General.Model;
 
 namespace Appson.Common.EntityFramework
 {

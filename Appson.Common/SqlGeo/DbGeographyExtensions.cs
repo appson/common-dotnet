@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity.Spatial;
 using Appson.Common.General.Geo;
+using Appson.Common.General.Utils;
 
 namespace Appson.Common.SqlGeo
 {

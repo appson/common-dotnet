@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using Appson.Common.General.Text;
+using log4net;
 
 namespace Appson.Common.Lucene.Utils
 {

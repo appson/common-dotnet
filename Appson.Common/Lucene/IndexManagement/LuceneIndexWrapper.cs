@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using Appson.Common.GeneralComponents.Configuration;
 using Appson.Common.Lucene.PersianAnalyzer;
 using Appson.Composer;
 using log4net;
@@ -59,15 +60,9 @@ namespace Appson.Common.Lucene.IndexManagement
 		private readonly ConcurrentQueue<Exception> _writerErrors;
 		private readonly ConcurrentQueue<Exception> _searcherErrors;
 
-		private static readonly long ConsecutiveReopenDelayTicks = ApplicationEnvironmentUtil.Type == ApplicationEnvironmentType.Development
-			? TimeSpan.FromSeconds(1).Ticks
-			: TimeSpan.FromMinutes(2).Ticks;
-
+		private static readonly long ConsecutiveReopenDelayTicks = TimeSpan.FromSeconds(5).Ticks;
 		private static readonly long MinimumConsecutiveReopenDelayTicks = TimeSpan.FromSeconds(1).Ticks;
-
-		private static readonly long ReopenDelayAfterChangeTicks = ApplicationEnvironmentUtil.Type == ApplicationEnvironmentType.Development
-			? TimeSpan.FromSeconds(1).Ticks
-			: TimeSpan.FromMinutes(1).Ticks;
+		private static readonly long ReopenDelayAfterChangeTicks = TimeSpan.FromSeconds(3).Ticks;
 
 		[ComponentPlug]
 		public IApplicationSettings ApplicationSettings { get; set; }
@@ -82,7 +77,7 @@ namespace Appson.Common.Lucene.IndexManagement
 		public LuceneIndexWrapper(string id)
 		{
 			if (id.IsNullOrEmpty())
-				throw new ArgumentNullException("id");
+				throw new ArgumentNullException(nameof(id));
 
 			_id = id;
 			_settingKeyForLocation = SettingKeyForLocationFormat.Fmt(id);

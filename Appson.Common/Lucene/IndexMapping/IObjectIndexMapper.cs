@@ -1,10 +1,9 @@
 ﻿using Appson.Composer;
-using Compositional.Composer;
 using Lucene.Net.Documents;
 
-namespace Appson.Common.DomainServiceContracts
+namespace Appson.Common.Lucene.IndexMapping
 {
-	[Contract]
+    [Contract]
 	public interface IObjectIndexMapper<in T>
 	{
 		void PopulateDocument(T obj);

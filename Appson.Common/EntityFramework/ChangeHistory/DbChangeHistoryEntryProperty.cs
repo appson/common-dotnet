@@ -1,4 +1,4 @@
-﻿namespace Appson.Common.EntityFramework
+﻿namespace Appson.Common.EntityFramework.ChangeHistory
 {
     public class DbChangeHistoryEntryProperty
     {

@@ -1,6 +1,6 @@
-﻿namespace Appson.Common.EntityFramework
+﻿namespace Appson.Common.EntityFramework.ChangeHistory
 {
-	public class EntityChange
+    public class EntityChange
 	{
 		public string PropertyPath { get; set; }
 		public object OriginalValue { get; set; }

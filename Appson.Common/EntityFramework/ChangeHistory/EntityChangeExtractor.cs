@@ -2,9 +2,9 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
-namespace Appson.Common.EntityFramework
+namespace Appson.Common.EntityFramework.ChangeHistory
 {
-	public class EntityChangeExtractor
+    public class EntityChangeExtractor
 	{
 		public static List<EntityChange> ExtractChanges(DbContext context, IEnumerable<EntityChangeSource> sources)
 		{
@@ -12,7 +12,7 @@ namespace Appson.Common.EntityFramework
 
 			foreach (var source in sources)
 			{
-				if (source == null || source.Entity == null)
+				if (source?.Entity == null)
 					continue;
 
 				DbEntityEntry dbEntityEntry = context.Entry(source.Entity);

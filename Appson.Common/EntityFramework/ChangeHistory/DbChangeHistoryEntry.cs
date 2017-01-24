@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
-using Appson.Common.Model;
+using Appson.Common.General.Model;
 
-namespace Appson.Common.EntityFramework
+namespace Appson.Common.EntityFramework.ChangeHistory
 {
     public class DbChangeHistoryEntry
     {
@@ -66,25 +66,13 @@ namespace Appson.Common.EntityFramework
             return result;
         }
 
-        public bool HasAnyChanges
-        {
-            get { return _properties != null && _properties.Count > 0; }
-        }
+        public bool HasAnyChanges => _properties != null && _properties.Count > 0;
 
-        public object Entity
-        {
-            get { return _entity; }
-        }
+        public object Entity => _entity;
 
-        public EntityState State
-        {
-            get { return _state; }
-        }
+        public EntityState State => _state;
 
-        public List<DbChangeHistoryEntryProperty> Properties
-        {
-            get { return _properties.Values.ToList(); }
-        }
+        public List<DbChangeHistoryEntryProperty> Properties => _properties.Values.ToList();
 
         private void ReapplyCurrentValues()
         {
