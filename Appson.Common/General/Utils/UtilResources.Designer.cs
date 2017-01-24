@@ -22,7 +22,7 @@ namespace Appson.Common.General.Utils {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class UtilResources {
+    public class UtilResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Appson.Common.General.Utils {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Appson.Common.General.Utils.UtilResources", typeof(UtilResources).Assembly);
@@ -51,7 +51,7 @@ namespace Appson.Common.General.Utils {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Appson.Common.General.Utils {
         /// <summary>
         ///   Looks up a localized string similar to محیط تولید.
         /// </summary>
-        internal static string ApplicationEnvironmentType_Development {
+        public static string ApplicationEnvironmentType_Development {
             get {
                 return ResourceManager.GetString("ApplicationEnvironmentType_Development", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Appson.Common.General.Utils {
         /// <summary>
         ///   Looks up a localized string similar to محیط بهره برداری.
         /// </summary>
-        internal static string ApplicationEnvironmentType_Production {
+        public static string ApplicationEnvironmentType_Production {
             get {
                 return ResourceManager.GetString("ApplicationEnvironmentType_Production", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Appson.Common.General.Utils {
         /// <summary>
         ///   Looks up a localized string similar to محیط آماده سازی.
         /// </summary>
-        internal static string ApplicationEnvironmentType_Staging {
+        public static string ApplicationEnvironmentType_Staging {
             get {
                 return ResourceManager.GetString("ApplicationEnvironmentType_Staging", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Appson.Common.General.Utils {
         /// <summary>
         ///   Looks up a localized string similar to محیط تست.
         /// </summary>
-        internal static string ApplicationEnvironmentType_Test {
+        public static string ApplicationEnvironmentType_Test {
             get {
                 return ResourceManager.GetString("ApplicationEnvironmentType_Test", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Appson.Common.General.Utils {
         /// <summary>
         ///   Looks up a localized string similar to خیر.
         /// </summary>
-        internal static string Boolean_False {
+        public static string Boolean_False {
             get {
                 return ResourceManager.GetString("Boolean_False", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Appson.Common.General.Utils {
         /// <summary>
         ///   Looks up a localized string similar to بله.
         /// </summary>
-        internal static string Boolean_True {
+        public static string Boolean_True {
             get {
                 return ResourceManager.GetString("Boolean_True", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Appson.Common.General.Utils {
         /// <summary>
         ///   Looks up a localized string similar to ----.
         /// </summary>
-        internal static string SelectItem_NotSelected {
+        public static string SelectItem_NotSelected {
             get {
                 return ResourceManager.GetString("SelectItem_NotSelected", resourceCulture);
             }

@@ -2,7 +2,7 @@
 using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 using System.Web;
-using Appson.Common.Log4Net;
+using Appson.Common.Logging;
 using Appson.Common.Web.UserAgent;
 
 namespace Appson.Common.Web.Robots

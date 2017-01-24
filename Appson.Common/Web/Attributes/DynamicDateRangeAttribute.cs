@@ -4,7 +4,7 @@ using System.Globalization;
 
 namespace Appson.Common.Web.Attributes
 {
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter)]
 	public class DynamicDateRangeAttribute : ValidationAttribute
 	{
 		private readonly Func<DateTime?, bool> _maximum;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using Microsoft.Owin;
 
-namespace Appson.Common.Owin
+namespace Appson.Common.Web.Owin.RequestScopeContext
 {
     public class OwinRequestScopeContext
     {
@@ -33,19 +33,18 @@ namespace Appson.Common.Owin
 
         private readonly DateTime _utcTimestamp;
         private readonly List<UnsubscribeDisposable> _disposables;
-        private readonly object _syncObject;
 
         public IDictionary<string, object> Environment { get; private set; }
         public IOwinContext OwinContext { get; private set; }
         public ConcurrentDictionary<string, object> Items { get; private set; }
-        public DateTime Timestamp { get { return _utcTimestamp.ToLocalTime(); } }
-        public object SyncObject { get { return _syncObject; } }
+        public DateTime Timestamp => _utcTimestamp.ToLocalTime();
+        public object SyncObject { get; }
 
         public OwinRequestScopeContext(IDictionary<string, object> environment)
         {
             _utcTimestamp = DateTime.UtcNow;
             _disposables = new List<UnsubscribeDisposable>();
-            _syncObject = new object();
+            SyncObject = new object();
 
             Environment = environment;
             OwinContext = new OwinContext(environment);
@@ -55,7 +54,7 @@ namespace Appson.Common.Owin
         public IDisposable DisposeOnPipelineCompleted(IDisposable target)
         {
             if (target == null) 
-                throw new ArgumentNullException("target");
+                throw new ArgumentNullException(nameof(target));
 
             var token = new UnsubscribeDisposable(target);
             _disposables.Add(token);

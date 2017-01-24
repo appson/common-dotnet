@@ -22,7 +22,7 @@ namespace Appson.Common.General.Text {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class NumericStringUtilsResources {
+    public class NumericStringUtilsResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Appson.Common.General.Text {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Appson.Common.General.Text.NumericStringUtilsResources", typeof(NumericStringUtilsResources).Assembly);
@@ -51,7 +51,7 @@ namespace Appson.Common.General.Text {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to صفر.
         /// </summary>
-        internal static string CardinalTextual0 {
+        public static string CardinalTextual0 {
             get {
                 return ResourceManager.GetString("CardinalTextual0", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to یک.
         /// </summary>
-        internal static string CardinalTextual1 {
+        public static string CardinalTextual1 {
             get {
                 return ResourceManager.GetString("CardinalTextual1", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to ده.
         /// </summary>
-        internal static string CardinalTextual10 {
+        public static string CardinalTextual10 {
             get {
                 return ResourceManager.GetString("CardinalTextual10", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to صد.
         /// </summary>
-        internal static string CardinalTextual100 {
+        public static string CardinalTextual100 {
             get {
                 return ResourceManager.GetString("CardinalTextual100", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هزار.
         /// </summary>
-        internal static string CardinalTextual1000 {
+        public static string CardinalTextual1000 {
             get {
                 return ResourceManager.GetString("CardinalTextual1000", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to یازده.
         /// </summary>
-        internal static string CardinalTextual11 {
+        public static string CardinalTextual11 {
             get {
                 return ResourceManager.GetString("CardinalTextual11", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to دوازده.
         /// </summary>
-        internal static string CardinalTextual12 {
+        public static string CardinalTextual12 {
             get {
                 return ResourceManager.GetString("CardinalTextual12", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to سیزده.
         /// </summary>
-        internal static string CardinalTextual13 {
+        public static string CardinalTextual13 {
             get {
                 return ResourceManager.GetString("CardinalTextual13", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to چهارده.
         /// </summary>
-        internal static string CardinalTextual14 {
+        public static string CardinalTextual14 {
             get {
                 return ResourceManager.GetString("CardinalTextual14", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to پانزده.
         /// </summary>
-        internal static string CardinalTextual15 {
+        public static string CardinalTextual15 {
             get {
                 return ResourceManager.GetString("CardinalTextual15", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to شانزده.
         /// </summary>
-        internal static string CardinalTextual16 {
+        public static string CardinalTextual16 {
             get {
                 return ResourceManager.GetString("CardinalTextual16", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هفده.
         /// </summary>
-        internal static string CardinalTextual17 {
+        public static string CardinalTextual17 {
             get {
                 return ResourceManager.GetString("CardinalTextual17", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هجده.
         /// </summary>
-        internal static string CardinalTextual18 {
+        public static string CardinalTextual18 {
             get {
                 return ResourceManager.GetString("CardinalTextual18", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to نوزده.
         /// </summary>
-        internal static string CardinalTextual19 {
+        public static string CardinalTextual19 {
             get {
                 return ResourceManager.GetString("CardinalTextual19", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to دو.
         /// </summary>
-        internal static string CardinalTextual2 {
+        public static string CardinalTextual2 {
             get {
                 return ResourceManager.GetString("CardinalTextual2", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to بیست.
         /// </summary>
-        internal static string CardinalTextual20 {
+        public static string CardinalTextual20 {
             get {
                 return ResourceManager.GetString("CardinalTextual20", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to دویست.
         /// </summary>
-        internal static string CardinalTextual200 {
+        public static string CardinalTextual200 {
             get {
                 return ResourceManager.GetString("CardinalTextual200", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to سه.
         /// </summary>
-        internal static string CardinalTextual3 {
+        public static string CardinalTextual3 {
             get {
                 return ResourceManager.GetString("CardinalTextual3", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to سی.
         /// </summary>
-        internal static string CardinalTextual30 {
+        public static string CardinalTextual30 {
             get {
                 return ResourceManager.GetString("CardinalTextual30", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to سیصد.
         /// </summary>
-        internal static string CardinalTextual300 {
+        public static string CardinalTextual300 {
             get {
                 return ResourceManager.GetString("CardinalTextual300", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to چهار.
         /// </summary>
-        internal static string CardinalTextual4 {
+        public static string CardinalTextual4 {
             get {
                 return ResourceManager.GetString("CardinalTextual4", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to چهل.
         /// </summary>
-        internal static string CardinalTextual40 {
+        public static string CardinalTextual40 {
             get {
                 return ResourceManager.GetString("CardinalTextual40", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to چهارصد.
         /// </summary>
-        internal static string CardinalTextual400 {
+        public static string CardinalTextual400 {
             get {
                 return ResourceManager.GetString("CardinalTextual400", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to پنج.
         /// </summary>
-        internal static string CardinalTextual5 {
+        public static string CardinalTextual5 {
             get {
                 return ResourceManager.GetString("CardinalTextual5", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to پنجاه.
         /// </summary>
-        internal static string CardinalTextual50 {
+        public static string CardinalTextual50 {
             get {
                 return ResourceManager.GetString("CardinalTextual50", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to پانصد.
         /// </summary>
-        internal static string CardinalTextual500 {
+        public static string CardinalTextual500 {
             get {
                 return ResourceManager.GetString("CardinalTextual500", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to شش.
         /// </summary>
-        internal static string CardinalTextual6 {
+        public static string CardinalTextual6 {
             get {
                 return ResourceManager.GetString("CardinalTextual6", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to شصت.
         /// </summary>
-        internal static string CardinalTextual60 {
+        public static string CardinalTextual60 {
             get {
                 return ResourceManager.GetString("CardinalTextual60", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to ششصد.
         /// </summary>
-        internal static string CardinalTextual600 {
+        public static string CardinalTextual600 {
             get {
                 return ResourceManager.GetString("CardinalTextual600", resourceCulture);
             }
@@ -324,7 +324,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هفت.
         /// </summary>
-        internal static string CardinalTextual7 {
+        public static string CardinalTextual7 {
             get {
                 return ResourceManager.GetString("CardinalTextual7", resourceCulture);
             }
@@ -333,7 +333,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هفتاد.
         /// </summary>
-        internal static string CardinalTextual70 {
+        public static string CardinalTextual70 {
             get {
                 return ResourceManager.GetString("CardinalTextual70", resourceCulture);
             }
@@ -342,7 +342,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هفتصد.
         /// </summary>
-        internal static string CardinalTextual700 {
+        public static string CardinalTextual700 {
             get {
                 return ResourceManager.GetString("CardinalTextual700", resourceCulture);
             }
@@ -351,7 +351,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هشت.
         /// </summary>
-        internal static string CardinalTextual8 {
+        public static string CardinalTextual8 {
             get {
                 return ResourceManager.GetString("CardinalTextual8", resourceCulture);
             }
@@ -360,7 +360,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هشتاد.
         /// </summary>
-        internal static string CardinalTextual80 {
+        public static string CardinalTextual80 {
             get {
                 return ResourceManager.GetString("CardinalTextual80", resourceCulture);
             }
@@ -369,7 +369,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هشتصد.
         /// </summary>
-        internal static string CardinalTextual800 {
+        public static string CardinalTextual800 {
             get {
                 return ResourceManager.GetString("CardinalTextual800", resourceCulture);
             }
@@ -378,7 +378,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to نه.
         /// </summary>
-        internal static string CardinalTextual9 {
+        public static string CardinalTextual9 {
             get {
                 return ResourceManager.GetString("CardinalTextual9", resourceCulture);
             }
@@ -387,7 +387,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to نود.
         /// </summary>
-        internal static string CardinalTextual90 {
+        public static string CardinalTextual90 {
             get {
                 return ResourceManager.GetString("CardinalTextual90", resourceCulture);
             }
@@ -396,7 +396,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to نهصد.
         /// </summary>
-        internal static string CardinalTextual900 {
+        public static string CardinalTextual900 {
             get {
                 return ResourceManager.GetString("CardinalTextual900", resourceCulture);
             }
@@ -405,7 +405,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to اول.
         /// </summary>
-        internal static string First {
+        public static string First {
             get {
                 return ResourceManager.GetString("First", resourceCulture);
             }
@@ -414,7 +414,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to {0} ام.
         /// </summary>
-        internal static string GenericOrdinalFormat {
+        public static string GenericOrdinalFormat {
             get {
                 return ResourceManager.GetString("GenericOrdinalFormat", resourceCulture);
             }
@@ -423,7 +423,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to {0:#.##} میلیارد.
         /// </summary>
-        internal static string NumericBillions {
+        public static string NumericBillions {
             get {
                 return ResourceManager.GetString("NumericBillions", resourceCulture);
             }
@@ -432,7 +432,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to {0:#.##} میلیون.
         /// </summary>
-        internal static string NumericMillions {
+        public static string NumericMillions {
             get {
                 return ResourceManager.GetString("NumericMillions", resourceCulture);
             }
@@ -441,7 +441,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to {0:#.##}.
         /// </summary>
-        internal static string NumericOnes {
+        public static string NumericOnes {
             get {
                 return ResourceManager.GetString("NumericOnes", resourceCulture);
             }
@@ -450,7 +450,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to {0:#.##} هزار.
         /// </summary>
-        internal static string NumericThousands {
+        public static string NumericThousands {
             get {
                 return ResourceManager.GetString("NumericThousands", resourceCulture);
             }
@@ -459,7 +459,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to صفرم.
         /// </summary>
-        internal static string OrdinalTextual0 {
+        public static string OrdinalTextual0 {
             get {
                 return ResourceManager.GetString("OrdinalTextual0", resourceCulture);
             }
@@ -468,7 +468,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to یکم.
         /// </summary>
-        internal static string OrdinalTextual1 {
+        public static string OrdinalTextual1 {
             get {
                 return ResourceManager.GetString("OrdinalTextual1", resourceCulture);
             }
@@ -477,7 +477,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to دهم.
         /// </summary>
-        internal static string OrdinalTextual10 {
+        public static string OrdinalTextual10 {
             get {
                 return ResourceManager.GetString("OrdinalTextual10", resourceCulture);
             }
@@ -486,7 +486,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to صدم.
         /// </summary>
-        internal static string OrdinalTextual100 {
+        public static string OrdinalTextual100 {
             get {
                 return ResourceManager.GetString("OrdinalTextual100", resourceCulture);
             }
@@ -495,7 +495,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هزارم.
         /// </summary>
-        internal static string OrdinalTextual1000 {
+        public static string OrdinalTextual1000 {
             get {
                 return ResourceManager.GetString("OrdinalTextual1000", resourceCulture);
             }
@@ -504,7 +504,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to یازدهم.
         /// </summary>
-        internal static string OrdinalTextual11 {
+        public static string OrdinalTextual11 {
             get {
                 return ResourceManager.GetString("OrdinalTextual11", resourceCulture);
             }
@@ -513,7 +513,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to دوازدهم.
         /// </summary>
-        internal static string OrdinalTextual12 {
+        public static string OrdinalTextual12 {
             get {
                 return ResourceManager.GetString("OrdinalTextual12", resourceCulture);
             }
@@ -522,7 +522,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to سیزدهم.
         /// </summary>
-        internal static string OrdinalTextual13 {
+        public static string OrdinalTextual13 {
             get {
                 return ResourceManager.GetString("OrdinalTextual13", resourceCulture);
             }
@@ -531,7 +531,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to چهاردهم.
         /// </summary>
-        internal static string OrdinalTextual14 {
+        public static string OrdinalTextual14 {
             get {
                 return ResourceManager.GetString("OrdinalTextual14", resourceCulture);
             }
@@ -540,7 +540,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to پانزدهم.
         /// </summary>
-        internal static string OrdinalTextual15 {
+        public static string OrdinalTextual15 {
             get {
                 return ResourceManager.GetString("OrdinalTextual15", resourceCulture);
             }
@@ -549,7 +549,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to شانزدهم.
         /// </summary>
-        internal static string OrdinalTextual16 {
+        public static string OrdinalTextual16 {
             get {
                 return ResourceManager.GetString("OrdinalTextual16", resourceCulture);
             }
@@ -558,7 +558,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هفدهم.
         /// </summary>
-        internal static string OrdinalTextual17 {
+        public static string OrdinalTextual17 {
             get {
                 return ResourceManager.GetString("OrdinalTextual17", resourceCulture);
             }
@@ -567,7 +567,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هجدهم.
         /// </summary>
-        internal static string OrdinalTextual18 {
+        public static string OrdinalTextual18 {
             get {
                 return ResourceManager.GetString("OrdinalTextual18", resourceCulture);
             }
@@ -576,7 +576,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to نوزدهم.
         /// </summary>
-        internal static string OrdinalTextual19 {
+        public static string OrdinalTextual19 {
             get {
                 return ResourceManager.GetString("OrdinalTextual19", resourceCulture);
             }
@@ -585,7 +585,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to دوم.
         /// </summary>
-        internal static string OrdinalTextual2 {
+        public static string OrdinalTextual2 {
             get {
                 return ResourceManager.GetString("OrdinalTextual2", resourceCulture);
             }
@@ -594,7 +594,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to بیستم.
         /// </summary>
-        internal static string OrdinalTextual20 {
+        public static string OrdinalTextual20 {
             get {
                 return ResourceManager.GetString("OrdinalTextual20", resourceCulture);
             }
@@ -603,7 +603,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to دویستم.
         /// </summary>
-        internal static string OrdinalTextual200 {
+        public static string OrdinalTextual200 {
             get {
                 return ResourceManager.GetString("OrdinalTextual200", resourceCulture);
             }
@@ -612,7 +612,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to سوم.
         /// </summary>
-        internal static string OrdinalTextual3 {
+        public static string OrdinalTextual3 {
             get {
                 return ResourceManager.GetString("OrdinalTextual3", resourceCulture);
             }
@@ -621,7 +621,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to سی ام.
         /// </summary>
-        internal static string OrdinalTextual30 {
+        public static string OrdinalTextual30 {
             get {
                 return ResourceManager.GetString("OrdinalTextual30", resourceCulture);
             }
@@ -630,7 +630,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to سیصدم.
         /// </summary>
-        internal static string OrdinalTextual300 {
+        public static string OrdinalTextual300 {
             get {
                 return ResourceManager.GetString("OrdinalTextual300", resourceCulture);
             }
@@ -639,7 +639,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to چهارم.
         /// </summary>
-        internal static string OrdinalTextual4 {
+        public static string OrdinalTextual4 {
             get {
                 return ResourceManager.GetString("OrdinalTextual4", resourceCulture);
             }
@@ -648,7 +648,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to چهلم.
         /// </summary>
-        internal static string OrdinalTextual40 {
+        public static string OrdinalTextual40 {
             get {
                 return ResourceManager.GetString("OrdinalTextual40", resourceCulture);
             }
@@ -657,7 +657,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to چهارصدم.
         /// </summary>
-        internal static string OrdinalTextual400 {
+        public static string OrdinalTextual400 {
             get {
                 return ResourceManager.GetString("OrdinalTextual400", resourceCulture);
             }
@@ -666,7 +666,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to پنجم.
         /// </summary>
-        internal static string OrdinalTextual5 {
+        public static string OrdinalTextual5 {
             get {
                 return ResourceManager.GetString("OrdinalTextual5", resourceCulture);
             }
@@ -675,7 +675,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to پنجاهم.
         /// </summary>
-        internal static string OrdinalTextual50 {
+        public static string OrdinalTextual50 {
             get {
                 return ResourceManager.GetString("OrdinalTextual50", resourceCulture);
             }
@@ -684,7 +684,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to پانصدم.
         /// </summary>
-        internal static string OrdinalTextual500 {
+        public static string OrdinalTextual500 {
             get {
                 return ResourceManager.GetString("OrdinalTextual500", resourceCulture);
             }
@@ -693,7 +693,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to ششم.
         /// </summary>
-        internal static string OrdinalTextual6 {
+        public static string OrdinalTextual6 {
             get {
                 return ResourceManager.GetString("OrdinalTextual6", resourceCulture);
             }
@@ -702,7 +702,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to شصتم.
         /// </summary>
-        internal static string OrdinalTextual60 {
+        public static string OrdinalTextual60 {
             get {
                 return ResourceManager.GetString("OrdinalTextual60", resourceCulture);
             }
@@ -711,7 +711,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to ششصدم.
         /// </summary>
-        internal static string OrdinalTextual600 {
+        public static string OrdinalTextual600 {
             get {
                 return ResourceManager.GetString("OrdinalTextual600", resourceCulture);
             }
@@ -720,7 +720,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هفتم.
         /// </summary>
-        internal static string OrdinalTextual7 {
+        public static string OrdinalTextual7 {
             get {
                 return ResourceManager.GetString("OrdinalTextual7", resourceCulture);
             }
@@ -729,7 +729,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هفتادم.
         /// </summary>
-        internal static string OrdinalTextual70 {
+        public static string OrdinalTextual70 {
             get {
                 return ResourceManager.GetString("OrdinalTextual70", resourceCulture);
             }
@@ -738,7 +738,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هفتصدم.
         /// </summary>
-        internal static string OrdinalTextual700 {
+        public static string OrdinalTextual700 {
             get {
                 return ResourceManager.GetString("OrdinalTextual700", resourceCulture);
             }
@@ -747,7 +747,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هشتم.
         /// </summary>
-        internal static string OrdinalTextual8 {
+        public static string OrdinalTextual8 {
             get {
                 return ResourceManager.GetString("OrdinalTextual8", resourceCulture);
             }
@@ -756,7 +756,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هشتادم.
         /// </summary>
-        internal static string OrdinalTextual80 {
+        public static string OrdinalTextual80 {
             get {
                 return ResourceManager.GetString("OrdinalTextual80", resourceCulture);
             }
@@ -765,7 +765,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to هشتصدم.
         /// </summary>
-        internal static string OrdinalTextual800 {
+        public static string OrdinalTextual800 {
             get {
                 return ResourceManager.GetString("OrdinalTextual800", resourceCulture);
             }
@@ -774,7 +774,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to نهم.
         /// </summary>
-        internal static string OrdinalTextual9 {
+        public static string OrdinalTextual9 {
             get {
                 return ResourceManager.GetString("OrdinalTextual9", resourceCulture);
             }
@@ -783,7 +783,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to نودم.
         /// </summary>
-        internal static string OrdinalTextual90 {
+        public static string OrdinalTextual90 {
             get {
                 return ResourceManager.GetString("OrdinalTextual90", resourceCulture);
             }
@@ -792,7 +792,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to نهصدم.
         /// </summary>
-        internal static string OrdinalTextual900 {
+        public static string OrdinalTextual900 {
             get {
                 return ResourceManager.GetString("OrdinalTextual900", resourceCulture);
             }
@@ -801,7 +801,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to  و .
         /// </summary>
-        internal static string TextualJointer {
+        public static string TextualJointer {
             get {
                 return ResourceManager.GetString("TextualJointer", resourceCulture);
             }
@@ -810,7 +810,7 @@ namespace Appson.Common.General.Text {
         /// <summary>
         ///   Looks up a localized string similar to منهای {0}.
         /// </summary>
-        internal static string TextualNegativeFormat {
+        public static string TextualNegativeFormat {
             get {
                 return ResourceManager.GetString("TextualNegativeFormat", resourceCulture);
             }

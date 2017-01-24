@@ -143,8 +143,8 @@ namespace Appson.Common.Web.Extensions
 			Dependencies = dependencies;
 		}
 
-		public string Path { get; private set; }
-		public StyleLibrary[] Dependencies { get; private set; }
+		public string Path { get; }
+		public StyleLibrary[] Dependencies { get; }
 	}
 
 	#endregion

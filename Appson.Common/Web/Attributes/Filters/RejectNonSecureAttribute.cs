@@ -3,7 +3,7 @@ using System.Web.Mvc;
 
 namespace Appson.Common.Web.Attributes.Filters
 {
-	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = false)]
+	[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
 	public class RejectNonSecureAttribute : RequireHttpsAttribute
 	{
 		protected override void HandleNonHttpsRequest(AuthorizationContext filterContext)

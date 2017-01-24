@@ -1,4 +1,6 @@
-﻿namespace Appson.Common.Owin
+﻿using Appson.Common.General.Utils;
+
+namespace Appson.Common.Web.Owin.RequestScopeContext
 {
     public static class OwinRequestScopeContextExtensions
     {

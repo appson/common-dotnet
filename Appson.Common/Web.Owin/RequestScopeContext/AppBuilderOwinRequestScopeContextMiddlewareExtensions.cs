@@ -1,6 +1,6 @@
 ﻿using Owin;
 
-namespace Appson.Common.Owin
+namespace Appson.Common.Web.Owin.RequestScopeContext
 {
     public static class AppBuilderOwinRequestScopeContextMiddlewareExtensions
     {

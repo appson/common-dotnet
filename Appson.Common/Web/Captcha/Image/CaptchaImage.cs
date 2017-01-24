@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Globalization;
-using Appson.Common.Security;
+using Appson.Common.General.Security;
 
 namespace Appson.Common.Web.Captcha.Image
 {
@@ -33,8 +33,7 @@ namespace Appson.Common.Web.Captcha.Image
 				}
 				finally
 				{
-					if (font != null)
-						font.Dispose();
+				    font?.Dispose();
 				}
 			}
 		}
@@ -145,11 +144,7 @@ namespace Appson.Common.Web.Captcha.Image
 		/// </summary>
 		private string RandomFontFamily()
 		{
-			string[] strArray = FontWhitelist.Split(new[]
-				                                        {
-					                                        ';'
-				                                        });
-			
+			string[] strArray = FontWhitelist.Split(';');
 			return strArray[CryptoRandomNumberUtil.GetInt32(0, strArray.Length - 1)];
 		}
 

@@ -4,7 +4,7 @@ using System.Web.Mvc;
 
 namespace Appson.Common.Web.Attributes
 {
-	[AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
+	[AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
 	public class SkipValidationIfAnotherValueMatchesAttribute : SkipValidationIfAttribute
 	{
 		public string ValueProviderKey { get; set; }

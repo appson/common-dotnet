@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace Appson.Common.Web.Attributes
 {
-	[AttributeUsage(AttributeTargets.All, Inherited = false, AllowMultiple = false)]
+	[AttributeUsage(AttributeTargets.All, Inherited = false)]
 	public class BindingExceptionMessageAttribute : Attribute
 	{
 		public string ErrorMessage { get; set; }

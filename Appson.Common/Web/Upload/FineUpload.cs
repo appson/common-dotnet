@@ -14,7 +14,7 @@ namespace Appson.Common.Web.Upload
 			if (autoCreateDirectory)
 			{
 				var directory = new FileInfo(destination).Directory;
-				if (directory != null) directory.Create();
+			    directory?.Create();
 			}
 
 			using (var file = new FileStream(destination, overwrite ? FileMode.Create : FileMode.CreateNew))

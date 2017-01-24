@@ -1,6 +1,6 @@
 ﻿using System.Resources;
 
-namespace Appson.Common.Web.Extensions
+namespace Appson.Common.General.Localization
 {
 	public static class EnumExtensions
 	{
@@ -17,7 +17,7 @@ namespace Appson.Common.Web.Extensions
 		public static string Label<TEnum>(this TEnum? enumObject, ResourceManager resourceManager = null)
 			where TEnum : struct
 		{
-			return enumObject.HasValue ? enumObject.Value.Label(resourceManager) : null;
+			return enumObject?.Label(resourceManager);
 		}
 	}
 }

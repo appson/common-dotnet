@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data.Entity.Spatial;
 using System.Globalization;
 using System.Linq;
 using System.Web.Mvc;
@@ -16,7 +15,6 @@ namespace Appson.Common.Web.Validation
 			ModelBinders.Binders.DefaultBinder = new ExtendedModelBinder();
 			ModelBinders.Binders.Add(typeof(DateTime), new DateTimeModelBinder());
 			ModelBinders.Binders.Add(typeof(DateTime?), new DateTimeModelBinder());
-            ModelBinders.Binders.Add(typeof(DbGeography), new DbGeographyModelBinder());
 
             ModelBinders.Binders.Add(typeof(Byte), new NumericModelBinder(s => Convert.ToByte(s, CultureInfo.InvariantCulture)));
             ModelBinders.Binders.Add(typeof(Byte?), new NumericModelBinder(s => Convert.ToByte(s, CultureInfo.InvariantCulture)));

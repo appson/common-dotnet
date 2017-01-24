@@ -13,7 +13,7 @@ namespace Appson.Common.Web.Attributes
 	/// 
 	/// Determining if a regular expression match is valid or not is also overridable.
 	/// </summary>
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter)]
 	public class ExtendedRegularExpressionAttribute : ValidationAttribute
 	{
 		public ExtendedRegularExpressionAttribute(string pattern)
@@ -28,11 +28,10 @@ namespace Appson.Common.Web.Attributes
 			AllowPartialMatch = allowPartialMatch;
 		}
 
-		public string Pattern { [TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")]
-		get; private set; }
+		public string Pattern { [TargetedPatchingOptOut("Performance critical to inline this type of method across NGen image boundaries")] get; }
 
 		private Regex Regex { get; set; }
-		private bool AllowPartialMatch { get; set; }
+		private bool AllowPartialMatch { get; }
 
 		public override bool IsValid(object value)
 		{

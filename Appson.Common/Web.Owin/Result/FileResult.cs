@@ -5,27 +5,22 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 
-namespace Appson.Common.Web.Result
+namespace Appson.Common.Web.Owin.Result
 {
-    public class BinaryResult : IHttpActionResult
+    public class FileResult : IHttpActionResult
     {
-        private readonly Stream _stream;
+        private readonly string _filePath;
         private readonly string _contentType;
 
-        public BinaryResult(Stream stream, string contentType = null)
+        public FileResult(string filePath, string contentType = null)
         {
-            if (stream == null) 
-                throw new ArgumentNullException("stream");
+            if (filePath == null) throw new ArgumentNullException(nameof(filePath));
 
-            _stream = stream;
+            _filePath = filePath;
             _contentType = contentType;
-        }
-
-        public BinaryResult(byte[] bytes, string contentType = null)
-            : this(new MemoryStream(bytes), contentType)
-        {
         }
 
         public Task<HttpResponseMessage> ExecuteAsync(CancellationToken cancellationToken)
@@ -34,11 +29,14 @@ namespace Appson.Common.Web.Result
             {
                 var response = new HttpResponseMessage(HttpStatusCode.OK)
                 {
-                    Content = new StreamContent(_stream)
+                    Content = new StreamContent(File.OpenRead(_filePath))
                 };
 
-                response.Content.Headers.ContentType = new MediaTypeHeaderValue(_contentType ?? "application/octet-stream");
+                var contentType = _contentType ?? MimeMapping.GetMimeMapping(Path.GetExtension(_filePath));
+                response.Content.Headers.ContentType = new MediaTypeHeaderValue(contentType);
+
                 return response;
+
             }, cancellationToken);
         }
     }

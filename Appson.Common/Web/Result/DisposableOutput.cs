@@ -3,7 +3,7 @@ using System.IO;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Appson.Common.Web
+namespace Appson.Common.Web.Result
 {
 	public class DisposableOutput : IDisposable
 	{
@@ -14,7 +14,7 @@ namespace Appson.Common.Web
 		public DisposableOutput(ViewContext viewContext, string startHtml, string endHtml)
 		{
             if (viewContext == null) 
-                throw new ArgumentNullException("viewContext"); 
+                throw new ArgumentNullException(nameof(viewContext)); 
  
             _writer = viewContext.Writer;
 			_endHtml = endHtml;

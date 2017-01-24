@@ -8,7 +8,7 @@ namespace Appson.Common.Web.Validation
 {
 	public class LocalizedClientDataTypeModelValidatorProvider : AssociatedValidatorProvider
 	{
-		private static readonly HashSet<Type> numericTypes = new HashSet<Type>(new[] {
+		private static readonly HashSet<Type> NumericTypes = new HashSet<Type>(new[] {
 			typeof (byte), typeof (sbyte),
 			typeof (short), typeof (ushort),
 			typeof (int), typeof (uint),
@@ -18,7 +18,7 @@ namespace Appson.Common.Web.Validation
 
 		public static void Setup()
 		{
-			var cdProvider = ModelValidatorProviders.Providers.SingleOrDefault(p => p.GetType().Equals(typeof(ClientDataTypeModelValidatorProvider)));
+			var cdProvider = ModelValidatorProviders.Providers.SingleOrDefault(p => p.GetType() == typeof(ClientDataTypeModelValidatorProvider));
 			if (cdProvider != null)
 			{
 				ModelValidatorProviders.Providers.Remove(cdProvider);
@@ -31,11 +31,11 @@ namespace Appson.Common.Web.Validation
 		{
 			if (metadata == null)
 			{
-				throw new ArgumentNullException("metadata");
+				throw new ArgumentNullException(nameof(metadata));
 			}
 			if (context == null)
 			{
-				throw new ArgumentNullException("context");
+				throw new ArgumentNullException(nameof(context));
 			}
 
 			Type type = metadata.ModelType;
@@ -49,7 +49,7 @@ namespace Appson.Common.Web.Validation
 		private static bool IsNumericType(Type type)
 		{
 			Type underlyingType = Nullable.GetUnderlyingType(type);
-			return numericTypes.Contains(underlyingType ?? type);
+			return NumericTypes.Contains(underlyingType ?? type);
 		}
 
 		#region Nested type: NumericModelValidator

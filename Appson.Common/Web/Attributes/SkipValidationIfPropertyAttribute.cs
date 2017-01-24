@@ -4,7 +4,7 @@ using System.Web.Mvc;
 
 namespace Appson.Common.Web.Attributes
 {
-	[AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
+	[AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
 	public class SkipValidationIfPropertyAttribute : SkipValidationIfAttribute
 	{
 		private readonly string _propertyName;
@@ -18,7 +18,7 @@ namespace Appson.Common.Web.Attributes
 			_targetValue = targetValue;
 
 			if (propertyName == null)
-				throw new ArgumentNullException("propertyName");
+				throw new ArgumentNullException(nameof(propertyName));
 		}
 
 		#region Overrides of SkipValidationIfAttribute

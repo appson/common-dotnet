@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Appson.Common.Owin
+namespace Appson.Common.Web.Owin.RequestScopeContext
 {
     using AppFunc = Func<IDictionary<string, object>, Task>;
 

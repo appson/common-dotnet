@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using Appson.Common.General;
+using Appson.Common.General.Text;
+using Appson.Common.General.Utils;
 using Appson.Common.Owin;
-using Appson.Common.Text;
 using Microsoft.Owin;
 
-namespace Appson.Common.Web
+namespace Appson.Common.Web.Owin
 {
     public static class CorrelationIdUtils
     {
-        private const string OwinEnironmentKey = "jj.CorrelationId";
+        private const string OwinEnironmentKey = "Appson.CorrelationId";
 
         public static void EnsureCorrelationId(this IOwinContext context)
         {

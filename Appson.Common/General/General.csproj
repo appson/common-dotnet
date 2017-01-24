@@ -95,6 +95,7 @@
     <Compile Include="Text\StringUtils.cs" />
     <Compile Include="Utils\CsvUtils.cs" />
     <Compile Include="Utils\DisposableExtensions.cs" />
+    <Compile Include="Localization\EnumExtensions.cs" />
     <Compile Include="Utils\GuidUtils.cs" />
     <Compile Include="Utils\ObjectExtensions.cs" />
     <Compile Include="Utils\ObjectUtils.cs" />
@@ -111,16 +112,17 @@
   <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Localization\TimeSpanLocalizationResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>TimeSpanLocalizationResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Text\NumericStringUtilsResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>NumericStringUtilsResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Utils\UtilResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>UtilResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

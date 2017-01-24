@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using Appson.Common.Text;
+using Appson.Common.General.Text;
 
 namespace Appson.Common.Web.Attributes
 {
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter)]
     public class EmailAddressAttribute : ValidationAttribute
     {
         public EmailAddressAttribute(bool allowPartialMatch = false)

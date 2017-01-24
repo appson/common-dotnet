@@ -14,19 +14,12 @@ namespace Appson.Common.Web.Multipart
     /// </summary>
     public class InMemoryMultipartFormDataStreamProvider : MultipartStreamProvider
     {
-        private readonly NameValueCollection _formData = new NameValueCollection(StringComparer.OrdinalIgnoreCase);
         private readonly Collection<bool> _isFormData = new Collection<bool>();
         private readonly Collection<InMemoryUploadedFile> _fileData = new Collection<InMemoryUploadedFile>();
 
-        public NameValueCollection FormData
-        {
-            get { return _formData; }
-        }
+        public NameValueCollection FormData { get; } = new NameValueCollection(StringComparer.OrdinalIgnoreCase);
 
-        public Collection<InMemoryUploadedFile> FileData
-        {
-            get { return _fileData; }
-        }
+        public Collection<InMemoryUploadedFile> FileData => _fileData;
 
         public override Stream GetStream(HttpContent parent, HttpContentHeaders headers)
         {
@@ -35,7 +28,7 @@ namespace Appson.Common.Web.Multipart
             if (contentDisposition != null)
             {
                 // If we have a file name then write contents out to AWS stream. Otherwise just write to MemoryStream
-                if (!String.IsNullOrEmpty(contentDisposition.FileName))
+                if (!string.IsNullOrEmpty(contentDisposition.FileName))
                 {
                     // We won't post process files as form data
                     _isFormData.Add(false);
@@ -72,7 +65,7 @@ namespace Appson.Common.Web.Multipart
                     HttpContent formContent = Contents[index];
                     // Extract name from Content-Disposition header. We know from earlier that the header is present.
                     ContentDispositionHeaderValue contentDisposition = formContent.Headers.ContentDisposition;
-                    string formFieldName = UnquoteToken(contentDisposition.Name) ?? String.Empty;
+                    string formFieldName = UnquoteToken(contentDisposition.Name) ?? string.Empty;
 
                     // Read the contents as string data and add to form data
                     string formFieldValue = await formContent.ReadAsStringAsync();

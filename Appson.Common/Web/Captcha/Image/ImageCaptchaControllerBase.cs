@@ -5,23 +5,17 @@ using System.IO;
 using System.Text;
 using System.Web.Mvc;
 using System.Web.Security;
-using Appson.Common.Security;
+using Appson.Common.General.Security;
 
 namespace Appson.Common.Web.Captcha.Image
 {
 	public abstract class ImageCaptchaControllerBase : Controller
 	{
-		protected virtual string CaptchaCharacters
-		{
-			get { return CaptchaConstants.Digits; }
-		}
+		protected virtual string CaptchaCharacters => CaptchaConstants.Digits;
 
-		protected virtual int CaptchaLength
-		{
-			get { return CaptchaConstants.DefaultCaptchaLength; }
-		}
+	    protected virtual int CaptchaLength => CaptchaConstants.DefaultCaptchaLength;
 
-		public ActionResult ViewImage()
+	    public ActionResult ViewImage()
 		{
 			var token = new CaptchaImageToken(GenerateRandomText());
 			var protectedTokenBytes = MachineKey.Protect(token.ToBytes(), typeof(CaptchaImageToken).Name);

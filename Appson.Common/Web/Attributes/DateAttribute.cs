@@ -14,15 +14,5 @@ namespace Appson.Common.Web.Attributes
 		{
 
 		}
-
-		public override bool IsValid(object value)
-		{
-			return base.IsValid(value);
-		}
-
-		protected override ValidationResult IsValid(object value, ValidationContext validationContext)
-		{
-			return base.IsValid(value, validationContext);
-		}
 	}
 }

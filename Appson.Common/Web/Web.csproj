@@ -30,8 +30,56 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.5.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.4.5.4\lib\net45\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +88,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationEnvironmentUtil.cs" />
+    <Compile Include="Utils\ApplicationEnvironmentUtil.cs" />
     <Compile Include="Attributes\BindingExceptionMessageAttribute.cs" />
     <Compile Include="Attributes\CompareToPropertyValueAttribute.cs" />
     <Compile Include="Attributes\DateAttribute.cs" />
@@ -58,45 +106,34 @@
     <Compile Include="Attributes\SkipValidationIfAttribute.cs" />
     <Compile Include="Attributes\SkipValidationIfEqualsAttribute.cs" />
     <Compile Include="Attributes\SkipValidationIfPropertyAttribute.cs" />
-    <Compile Include="Attributes\StrictPhoneNumberAttribute.cs" />
     <Compile Include="Attributes\ValidationExtensionAttribute.cs" />
     <Compile Include="Captcha\CaptchaConstants.cs" />
-    <Compile Include="Captcha\CaptchaResources.Designer.cs" />
+    <Compile Include="Captcha\CaptchaResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaptchaResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Captcha\Image\CaptchaImage.cs" />
     <Compile Include="Captcha\Image\CaptchaImageToken.cs" />
     <Compile Include="Captcha\Image\ImageCaptchaControllerBase.cs" />
     <Compile Include="Captcha\SpamPreventionHtmlHelpers.cs" />
     <Compile Include="Captcha\ValidateCaptchaAttribute.cs" />
-    <Compile Include="Composer\ComposerOwinContextExtensions.cs" />
-    <Compile Include="Composer\IWebApiDependencyResolverContract.cs" />
-    <Compile Include="Composer\OwinContextComponentCache.cs" />
-    <Compile Include="Composer\WebApiComposerDependencyResolver.cs" />
-    <Compile Include="Composer\WebApiComposerWebUtil.cs" />
-    <Compile Include="CorrelationIdUtils.cs" />
-    <Compile Include="CurrentUICulture.cs" />
-    <Compile Include="DisposableOutput.cs" />
+    <Compile Include="Utils\CurrentUiCulture.cs" />
+    <Compile Include="Result\DisposableOutput.cs" />
     <Compile Include="Extensions\AjaxRequestExtensions.cs" />
     <Compile Include="Extensions\CheckBoxHtmlExtensions.cs" />
     <Compile Include="Extensions\CssExtensions.cs" />
-    <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\HtmlStringExtensions.cs" />
     <Compile Include="Extensions\RadioButtonHtmlExtensions.cs" />
-    <Compile Include="Extensions\RadioButtonItems.cs" />
+    <Compile Include="Model\RadioButtonItems.cs" />
     <Compile Include="Extensions\ScriptExtensions.cs" />
     <Compile Include="Extensions\SelectHtmlExtensions.cs" />
-    <Compile Include="HtmlStringUtil.cs" />
+    <Compile Include="Utils\HtmlStringUtil.cs" />
     <Compile Include="Model\CheckboxListItem.cs" />
     <Compile Include="Multipart\InMemoryMultipartFormDataStreamProvider.cs" />
     <Compile Include="Multipart\InMemoryUploadedFile.cs" />
     <Compile Include="Multipart\MultipartFormDataUtil.cs" />
-    <Compile Include="Owin\AppBuilderOwinRequestScopeContextMiddlewareExtensions.cs" />
-    <Compile Include="Owin\OwinRequestScopeContext.cs" />
-    <Compile Include="Owin\OwinRequestScopeContextExtensions.cs" />
-    <Compile Include="Owin\OwinRequestScopeContextMiddleware.cs" />
-    <Compile Include="Owin\UnsubscribeDisposable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Result\BinaryResult.cs" />
-    <Compile Include="Result\FileResult.cs" />
     <Compile Include="Result\ServiceStackJsonResult.cs" />
     <Compile Include="Result\TransferResult.cs" />
     <Compile Include="Robots\CrawlerDetectorUtil.cs" />
@@ -117,10 +154,28 @@
     <Compile Include="Validation\NumericModelBinder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Captcha\CaptchaResources.resx" />
+    <EmbeddedResource Include="Captcha\CaptchaResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CaptchaResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Owin\source.txt" />
+    <ProjectReference Include="..\GeneralComponents\GeneralComponents.csproj">
+      <Project>{849c9e83-cb2b-43f3-9579-244e3a19759e}</Project>
+      <Name>GeneralComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\General\General.csproj">
+      <Project>{c8e85206-3aae-4288-8074-0bd3b4b3d818}</Project>
+      <Name>General</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{c0a37f49-5e9c-476f-8b9c-eaba5f8c8ba5}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

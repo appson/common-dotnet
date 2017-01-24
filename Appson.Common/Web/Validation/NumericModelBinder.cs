@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
-using Appson.Common.Text;
+using Appson.Common.General.Text;
 
 namespace Appson.Common.Web.Validation
 {
@@ -11,7 +11,7 @@ namespace Appson.Common.Web.Validation
         public NumericModelBinder(Func<string, object> convertFunc)
 	    {
             if (convertFunc == null)
-                throw new ArgumentNullException("convertFunc");
+                throw new ArgumentNullException(nameof(convertFunc));
 
 	        _convertFunc = convertFunc;
 	    }
@@ -32,7 +32,7 @@ namespace Appson.Common.Web.Validation
                 bindingContext.ModelState.Add(bindingContext.ModelName, modelState);
             }
 
-			if (valueResult == null || string.IsNullOrWhiteSpace(valueResult.AttemptedValue))
+			if (string.IsNullOrWhiteSpace(valueResult?.AttemptedValue))
 				return null;
 
 			object actualValue = null;

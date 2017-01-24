@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Appson.Common.Web
+namespace Appson.Common.Web.Model
 {
 	public class RadioButtonItems<T>
 	{
@@ -30,10 +30,7 @@ namespace Appson.Common.Web
 
 		private void UpdatedSelectedItems()
 		{
-			if (ListItems == null)
-				return;
-
-			ListItems.ForEach(li => li.Selected = Equals(li.Value, SelectedValue));
+		    ListItems?.ForEach(li => li.Selected = Equals(li.Value, SelectedValue));
 		}
 	}
 

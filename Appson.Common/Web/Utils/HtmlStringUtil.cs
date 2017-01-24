@@ -1,8 +1,9 @@
 ﻿using System.Linq;
 using System.Web;
 using System.Web.Security.AntiXss;
+using Appson.Common.General.Text;
 
-namespace Appson.Common.General.Text
+namespace Appson.Common.Web.Utils
 {
     public static class HtmlStringUtil
 	{

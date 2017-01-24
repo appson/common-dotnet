@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Resources;
 using System.Web.Mvc;
+using Appson.Common.General.Localization;
+using Appson.Common.General.Utils;
 
 namespace Appson.Common.Web.Extensions
 {
@@ -28,7 +30,7 @@ namespace Appson.Common.Web.Extensions
 		                                                                ResourceManager resourceManager = null)
 			where TEnum : struct
 		{
-			return EnumSelectListInternal<TEnum>(enumItems, resourceManager);
+			return EnumSelectListInternal(enumItems, resourceManager);
 		}
 
 		public static IEnumerable<SelectListItem> SelectListItems<TEntity>(this IEnumerable<TEntity> source,
@@ -70,7 +72,8 @@ namespace Appson.Common.Web.Extensions
                 result.Add(new SelectListItem
                            {
                                Value = minutes.ToString(),
-                               Text = string.Format("{0:D2}:{1:D2}", ts.Hours, ts.Minutes)
+                               // ReSharper disable once LocalizableElement
+                               Text = $"{ts.Hours:D2}:{ts.Minutes:D2}"
                            });
 	        }
 
@@ -94,7 +97,7 @@ namespace Appson.Common.Web.Extensions
 	        IEnumerable<SelectListItem> result = enumItems.Select(e => new SelectListItem
 	                                                                   {
 	                                                                       Value = e.ToString(),
-	                                                                       Text = e.Label<TEnum>(resourceManager)
+	                                                                       Text = e.Label(resourceManager)
 	                                                                   });
 
 	        return result;

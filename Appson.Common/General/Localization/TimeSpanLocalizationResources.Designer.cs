@@ -22,7 +22,7 @@ namespace Appson.Common.General.Localization {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class TimeSpanLocalizationResources {
+    public class TimeSpanLocalizationResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Appson.Common.General.Localization {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Appson.Common.General.Localization.TimeSpanLocalizationResources", typeof(TimeSpanLocalizationResources).Assembly);
@@ -51,7 +51,7 @@ namespace Appson.Common.General.Localization {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to {0} پیش.
         /// </summary>
-        internal static string Ago {
+        public static string Ago {
             get {
                 return ResourceManager.GetString("Ago", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to {0} روز.
         /// </summary>
-        internal static string Days {
+        public static string Days {
             get {
                 return ResourceManager.GetString("Days", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to {0} ساعت.
         /// </summary>
-        internal static string Hours {
+        public static string Hours {
             get {
                 return ResourceManager.GetString("Hours", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to  و .
         /// </summary>
-        internal static string Joiner {
+        public static string Joiner {
             get {
                 return ResourceManager.GetString("Joiner", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to {0} بعد.
         /// </summary>
-        internal static string Later {
+        public static string Later {
             get {
                 return ResourceManager.GetString("Later", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to {0} دقیقه.
         /// </summary>
-        internal static string Minutes {
+        public static string Minutes {
             get {
                 return ResourceManager.GetString("Minutes", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to {0} ماه.
         /// </summary>
-        internal static string Months {
+        public static string Months {
             get {
                 return ResourceManager.GetString("Months", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to یک روز.
         /// </summary>
-        internal static string OneDay {
+        public static string OneDay {
             get {
                 return ResourceManager.GetString("OneDay", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to یک ساعت.
         /// </summary>
-        internal static string OneHour {
+        public static string OneHour {
             get {
                 return ResourceManager.GetString("OneHour", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to یک دقیقه.
         /// </summary>
-        internal static string OneMinute {
+        public static string OneMinute {
             get {
                 return ResourceManager.GetString("OneMinute", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to یک ماه.
         /// </summary>
-        internal static string OneMonth {
+        public static string OneMonth {
             get {
                 return ResourceManager.GetString("OneMonth", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to یک ثانیه.
         /// </summary>
-        internal static string OneSecod {
+        public static string OneSecod {
             get {
                 return ResourceManager.GetString("OneSecod", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to یک هفته.
         /// </summary>
-        internal static string OneWeek {
+        public static string OneWeek {
             get {
                 return ResourceManager.GetString("OneWeek", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to یک سال.
         /// </summary>
-        internal static string OneYear {
+        public static string OneYear {
             get {
                 return ResourceManager.GetString("OneYear", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to همان لحظه.
         /// </summary>
-        internal static string SameMoment {
+        public static string SameMoment {
             get {
                 return ResourceManager.GetString("SameMoment", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to {0} ثانیه.
         /// </summary>
-        internal static string Seconds {
+        public static string Seconds {
             get {
                 return ResourceManager.GetString("Seconds", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to نامشخص.
         /// </summary>
-        internal static string Unknown {
+        public static string Unknown {
             get {
                 return ResourceManager.GetString("Unknown", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to {0} هفته.
         /// </summary>
-        internal static string Weeks {
+        public static string Weeks {
             get {
                 return ResourceManager.GetString("Weeks", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to {0} سال.
         /// </summary>
-        internal static string Years {
+        public static string Years {
             get {
                 return ResourceManager.GetString("Years", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace Appson.Common.General.Localization {
         /// <summary>
         ///   Looks up a localized string similar to صفر.
         /// </summary>
-        internal static string ZeroDuration {
+        public static string ZeroDuration {
             get {
                 return ResourceManager.GetString("ZeroDuration", resourceCulture);
             }

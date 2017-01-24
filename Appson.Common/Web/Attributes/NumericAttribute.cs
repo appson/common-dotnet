@@ -11,7 +11,7 @@ namespace Appson.Common.Web.Attributes
 	/// The actual server-side validation is performed in the model binder,
 	/// based on the type of the target property.
 	/// </summary>
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter)]
 	public class NumericAttribute : ValidationAttribute
 	{
 //		private static string CreatePattern(bool allowDecimal)

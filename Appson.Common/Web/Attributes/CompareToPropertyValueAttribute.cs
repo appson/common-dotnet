@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace Appson.Common.Web.Attributes
 {
-	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
+	[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter)]
 	public class CompareToPropertyValueAttribute : ValidationAttribute
 	{
 		private readonly string _propertyName;
@@ -17,7 +17,7 @@ namespace Appson.Common.Web.Attributes
 			_comparisonType = comparisonType;
 
 			if (propertyName == null)
-				throw new ArgumentNullException("propertyName");
+				throw new ArgumentNullException(nameof(propertyName));
 		}
 
 		protected override ValidationResult IsValid(object value, ValidationContext validationContext)
@@ -39,7 +39,7 @@ namespace Appson.Common.Web.Attributes
 
 		public override string FormatErrorMessage(string name)
 		{
-			return string.Format(CultureInfo.CurrentCulture, ErrorMessageString, (object)name);
+			return string.Format(CultureInfo.CurrentCulture, ErrorMessageString, name);
 		}
 	}
 }

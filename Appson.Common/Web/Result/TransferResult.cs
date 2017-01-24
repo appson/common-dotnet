@@ -6,7 +6,7 @@ namespace Appson.Common.Web.Result
 {
 	public class TransferResult : ActionResult
 	{
-		public string Url { get; private set; }
+		public string Url { get; }
 
 		public TransferResult(string url)
 		{
@@ -16,7 +16,7 @@ namespace Appson.Common.Web.Result
 		public override void ExecuteResult(ControllerContext context)
 		{
 			if (context == null)
-				throw new ArgumentNullException("context");
+				throw new ArgumentNullException(nameof(context));
 
 			var httpContext = HttpContext.Current;
 

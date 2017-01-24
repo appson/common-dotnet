@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
-using Appson.Common.Localization;
+using Appson.Common.General.Localization;
 
 namespace Appson.Common.Web.Validation
 {

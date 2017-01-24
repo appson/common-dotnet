@@ -3,7 +3,7 @@ using System.Web.Mvc;
 
 namespace Appson.Common.Web.Attributes
 {
-	[AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
+	[AttributeUsage(AttributeTargets.Property, AllowMultiple = true)]
 	public class SkipValidationIfValueEqualsAttribute : SkipValidationIfAttribute
 	{
 		private readonly object _skipValue;

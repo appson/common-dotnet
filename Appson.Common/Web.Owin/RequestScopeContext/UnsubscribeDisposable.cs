@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Appson.Common.Owin
+namespace Appson.Common.Web.Owin.RequestScopeContext
 {
     internal class UnsubscribeDisposable : IDisposable
     {

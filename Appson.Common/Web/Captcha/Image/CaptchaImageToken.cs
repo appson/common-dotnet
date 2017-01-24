@@ -16,7 +16,7 @@ namespace Appson.Common.Web.Captcha.Image
 		public CaptchaImageToken(string imageContent)
 		{
 			if (string.IsNullOrWhiteSpace(imageContent))
-				throw new ArgumentNullException("imageContent");
+				throw new ArgumentNullException(nameof(imageContent));
 
 			ImageContent = imageContent;
 			Timestamp = DateTime.Now.Ticks;
@@ -36,11 +36,13 @@ namespace Appson.Common.Web.Captcha.Image
 			if (bytes == null || bytes.Length <= 8)
 				return null;
 
-			var result = new CaptchaImageToken();
-			result.Timestamp = BitConverter.ToInt64(bytes, 0);
-			result.ImageContent = Encoding.UTF8.GetString(bytes, 8, bytes.Length - 8);
+		    var result = new CaptchaImageToken
+		    {
+		        Timestamp = BitConverter.ToInt64(bytes, 0),
+		        ImageContent = Encoding.UTF8.GetString(bytes, 8, bytes.Length - 8)
+		    };
 
-			return result;
+		    return result;
 		}
 	}
 }
