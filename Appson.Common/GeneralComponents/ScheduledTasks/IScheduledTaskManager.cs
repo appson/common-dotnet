@@ -1,8 +1,9 @@
-﻿using Compositional.Composer;
+﻿
+using Appson.Composer;
 
-namespace Appson.Common.ScheduledTasks
+namespace Appson.Common.GeneralComponents.ScheduledTasks
 {
-	[Contract]
+    [Contract]
 	public interface IScheduledTaskManager
 	{
 		void IterateTask(string key, bool isManuallyTriggered = false);

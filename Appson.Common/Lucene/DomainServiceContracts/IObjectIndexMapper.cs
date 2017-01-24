@@ -1,4 +1,5 @@
-﻿using Compositional.Composer;
+﻿using Appson.Composer;
+using Compositional.Composer;
 using Lucene.Net.Documents;
 
 namespace Appson.Common.DomainServiceContracts

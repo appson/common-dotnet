@@ -1,4 +1,4 @@
-﻿using Appson.Common.Validation;
+﻿using Appson.Common.General.Validation;
 using PhoneNumbers;
 
 namespace Appson.Common.PhoneNumbers
@@ -93,25 +93,25 @@ namespace Appson.Common.PhoneNumbers
 			return phoneNumberUtil.GetNumberType(input);
 		}
 
-	    public static ValidatedResult<string> ValidateAndFormat(string number, bool allowNationalNumberOnly, bool allowSmsTargetOnly)
+	    public static ApiValidatedResult<string> ValidateAndFormat(string number, bool allowNationalNumberOnly, bool allowSmsTargetOnly)
 	    {
 	        if (string.IsNullOrWhiteSpace(number))
-	            return ValidatedResult<string>.Failure(ValidationErrorInputIsNullOrEmpty);
+	            return ApiValidatedResult<string>.Failure(ValidationErrorInputIsNullOrEmpty);
 
             if (!IsPossibleNumber(number))
-                return ValidatedResult<string>.Failure(ValidationErrorInputIsNotAPossiblePhoneNumber);
+                return ApiValidatedResult<string>.Failure(ValidationErrorInputIsNotAPossiblePhoneNumber);
 
             var parsedNumber = ParseAndValidate(number);
             if (parsedNumber == null)
-                return ValidatedResult<string>.Failure(ValidationErrorInputIsNotAValidPhoneNumber);
+                return ApiValidatedResult<string>.Failure(ValidationErrorInputIsNotAValidPhoneNumber);
 
 	        if (allowNationalNumberOnly && !IsNationalNumber(parsedNumber))
-	            return ValidatedResult<string>.Failure(ValidationErrorInputIsNotANationalNumber);
+	            return ApiValidatedResult<string>.Failure(ValidationErrorInputIsNotANationalNumber);
 
             if (allowSmsTargetOnly && !CanReceiveSms(parsedNumber))
-                return ValidatedResult<string>.Failure(ValidationErrorInputIsNotAValidSmsTarget);
+                return ApiValidatedResult<string>.Failure(ValidationErrorInputIsNotAValidSmsTarget);
 
-	        return ValidatedResult<string>.Success(Format(parsedNumber));
+	        return ApiValidatedResult<string>.Success(Format(parsedNumber));
 	    }
 
 	    public static bool IsNationalNumber(PhoneNumber phoneNumber)

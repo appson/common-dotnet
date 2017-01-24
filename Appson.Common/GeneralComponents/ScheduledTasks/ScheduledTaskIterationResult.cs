@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Appson.Common.ScheduledTasks
+namespace Appson.Common.GeneralComponents.ScheduledTasks
 {
 	public class ScheduledTaskIterationResult
 	{
@@ -12,7 +12,7 @@ namespace Appson.Common.ScheduledTasks
 		public static ScheduledTaskIterationResult Error(string errorText, string progress = null, string result = null)
 		{
 			if (string.IsNullOrWhiteSpace(errorText))
-				throw new ArgumentNullException("errorText");
+				throw new ArgumentNullException(nameof(errorText));
 
 			return new ScheduledTaskIterationResult {ErrorText = errorText, Progress = progress, ResultText = result};
 		}
@@ -20,7 +20,7 @@ namespace Appson.Common.ScheduledTasks
 		public static ScheduledTaskIterationResult Success(string progress, string result = null, bool thereIsMoreWorkToDo = false)
 		{
 			if (progress == null)
-				throw new ArgumentNullException("progress");
+				throw new ArgumentNullException(nameof(progress));
 
 		    return new ScheduledTaskIterationResult {ErrorText = null, Progress = progress, ResultText = result, ThereIsMoreWorkToDo = thereIsMoreWorkToDo};
 		}

@@ -1,8 +1,9 @@
-﻿using Compositional.Composer;
+﻿
+using Appson.Composer;
 
-namespace Appson.Common.Cache
+namespace Appson.Common.GeneralComponents.Cache
 {
-	[Contract]
+    [Contract]
 	public interface ICacheItemLoader<in TKey, out TValue>
 	{
 		TValue Load(TKey key);

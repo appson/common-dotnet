@@ -1,8 +1,9 @@
-﻿using Compositional.Composer;
+﻿
+using Appson.Composer;
 
-namespace Appson.Common.Cache
+namespace Appson.Common.GeneralComponents.Cache
 {
-	[Contract]
+    [Contract]
 	public interface ICacheKeyMapper<out TKey, in TValue>
 	{
 		TKey MapKey(TValue value);

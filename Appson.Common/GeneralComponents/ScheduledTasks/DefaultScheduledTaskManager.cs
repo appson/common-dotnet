@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Compositional.Composer;
-using Appson.Common.Log4Net;
+using Appson.Composer;
 using log4net;
 
-namespace Appson.Common.ScheduledTasks
+namespace Appson.Common.GeneralComponents.ScheduledTasks
 {
 	[Component]
 	public class DefaultScheduledTaskManager : IScheduledTaskManager

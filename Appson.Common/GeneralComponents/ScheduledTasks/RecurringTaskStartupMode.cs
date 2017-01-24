@@ -1,6 +1,6 @@
-﻿namespace Appson.Common.ScheduledTasks
+﻿namespace Appson.Common.GeneralComponents.ScheduledTasks
 {
-	public enum RecurringTaskStartupMode
+    public enum RecurringTaskStartupMode
 	{
 		Disabled = 0,
 		Manual = 1,

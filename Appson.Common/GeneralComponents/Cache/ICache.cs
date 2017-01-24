@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using Compositional.Composer;
+using Appson.Composer;
 
-namespace Appson.Common.Cache
+namespace Appson.Common.GeneralComponents.Cache
 {
-	[Contract]
+    [Contract]
 	public interface ICache<in TKey, out TValue>
 	{
 		void InvalidateAll();

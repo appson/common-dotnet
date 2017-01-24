@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Appson.Common.Configuration
+namespace Appson.Common.GeneralComponents.Configuration
 {
     public static class ApplicationSettingKeys
     {
@@ -12,12 +12,6 @@ namespace Appson.Common.Configuration
                 Keys.Add(key);
         }
 
-        public static string[] RegisteredKeys
-        {
-            get
-            {
-                return Keys.ToArray();
-            }
-        }
+        public static string[] RegisteredKeys => Keys.ToArray();
     }
 }

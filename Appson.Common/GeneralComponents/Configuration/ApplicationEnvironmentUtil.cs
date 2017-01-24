@@ -2,10 +2,11 @@
 using System.Configuration;
 using System.Web;
 using System.Web.WebPages;
+using Appson.Common.Configuration;
 
-namespace Appson.Common.Configuration
+namespace Appson.Common.GeneralComponents.Configuration
 {
-	public static class ApplicationEnvironmentUtil
+    public static class ApplicationEnvironmentUtil
 	{
 		public static ApplicationEnvironmentType Type
 		{

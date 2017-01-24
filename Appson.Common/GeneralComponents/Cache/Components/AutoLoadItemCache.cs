@@ -2,12 +2,13 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using Compositional.Composer;
-using Compositional.Composer.Cache;
+using Appson.Common.Cache;
+using Appson.Composer;
+using Appson.Composer.Cache;
 
-namespace Appson.Common.Cache.Components
+namespace Appson.Common.GeneralComponents.Cache.Components
 {
-	[Component]
+    [Component]
 	[ComponentCache(typeof(DefaultComponentCache))]
 	[IgnoredOnAssemblyRegistration]
 	public class AutoLoadItemCache<TKey, TValue> : IItemCache<TKey, TValue>

@@ -60,6 +60,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainServiceContracts\IEntityContentSerializer.cs" />
+    <Compile Include="DomainServiceContracts\IObjectIndexMapper.cs" />
+    <Compile Include="DomainServiceContracts\ITwoWayObjectIndexMapper.cs" />
+    <Compile Include="DomainServiceContracts\ObjectIndexMapperBase.cs" />
     <Compile Include="Utils\LuceneExtensions.cs" />
     <Compile Include="IndexManagement\LuceneIndexHealthStatus.cs" />
     <Compile Include="IndexManagement\LuceneIndexManager.cs" />

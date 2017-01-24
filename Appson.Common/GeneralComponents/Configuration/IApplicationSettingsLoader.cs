@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Compositional.Composer;
+using Appson.Composer;
 
-namespace Appson.Common.Configuration
+namespace Appson.Common.GeneralComponents.Configuration
 {
     [Contract]
     public interface IApplicationSettingsLoader

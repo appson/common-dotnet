@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Reflection;
-using System.ServiceModel;
-using Compositional.Composer;
-using Appson.Common.Configuration;
+using Appson.Common.GeneralComponents.Configuration;
+using Appson.Composer;
 using log4net;
 
-namespace Appson.Common.Wcf
+namespace Appson.Common.GeneralComponents.Wcf
 {
     [Contract]
     [Component]

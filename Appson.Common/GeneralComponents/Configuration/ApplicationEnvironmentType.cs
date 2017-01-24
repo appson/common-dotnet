@@ -1,6 +1,6 @@
-﻿namespace Appson.Common.Configuration
+﻿namespace Appson.Common.GeneralComponents.Configuration
 {
-	public enum ApplicationEnvironmentType
+    public enum ApplicationEnvironmentType
 	{
 		Development,
 		Test,

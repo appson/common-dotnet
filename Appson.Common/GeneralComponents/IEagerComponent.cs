@@ -1,6 +1,6 @@
-﻿using Compositional.Composer;
+﻿using Appson.Composer;
 
-namespace Appson.Common.Components
+namespace Appson.Common.GeneralComponents
 {
     [Contract]
     public interface IEagerComponent

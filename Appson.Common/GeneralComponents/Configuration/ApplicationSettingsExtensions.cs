@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Appson.Common.Configuration
+namespace Appson.Common.GeneralComponents.Configuration
 {
     public static class ApplicationSettingsExtensions
     {
