@@ -16,5 +16,8 @@
     </description>
     <copyright>Copyright appson.tech 2017</copyright>
     <tags>appson common log logging log4net</tags>
+    <dependencies>
+      <dependency id="Appson.Common.General" version="0.9.1" />
+    </dependencies>
   </metadata>
 </package>
