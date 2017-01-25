@@ -1,8 +1,9 @@
 ﻿using System.Data.Entity.Spatial;
-using Appson.Common.Spatial;
+using Appson.Common.General.Utils;
+using Appson.Common.SqlGeo;
 using ServiceStack.Text;
 
-namespace Appson.Common.Serialization
+namespace Appson.Common.CodeSnippets.ServiceStack
 {
 	public static class JsSerializationConfigUtil
 	{

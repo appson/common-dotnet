@@ -1,7 +1,7 @@
 ﻿using System;
 using Appson.Common.General.Text;
 using Appson.Common.General.Utils;
-using Appson.Common.Owin;
+using Appson.Common.Web.Owin.RequestScopeContext;
 using Microsoft.Owin;
 
 namespace Appson.Common.Web.Owin

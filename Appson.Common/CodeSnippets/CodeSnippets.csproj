@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0894555E-0CC7-426E-970E-0AC77545E6A1}</ProjectGuid>
+    <ProjectGuid>{6F5189E5-19A8-43FA-AC6D-DFE0D9E476DB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Appson.Common.Web</RootNamespace>
-    <AssemblyName>Appson.Common.Web</AssemblyName>
+    <RootNamespace>Appson.Common.CodeSnippets</RootNamespace>
+    <AssemblyName>Appson.Common.CodeSnippets</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
@@ -48,16 +56,17 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -88,76 +97,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Utils\ApplicationEnvironmentUtil.cs" />
-    <Compile Include="Attributes\BindingExceptionMessageAttribute.cs" />
-    <Compile Include="Attributes\CompareToPropertyValueAttribute.cs" />
-    <Compile Include="Attributes\DateAttribute.cs" />
-    <Compile Include="Attributes\DynamicDateRangeAttribute.cs" />
-    <Compile Include="Attributes\EmailAddressAttribute.cs" />
-    <Compile Include="Attributes\ExtendedRegularExpressionAttribute.cs" />
-    <Compile Include="Attributes\Filters\RejectNonSecureAttribute.cs" />
-    <Compile Include="Attributes\Filters\RejectNonSecureInProductionAttribute.cs" />
-    <Compile Include="Attributes\MethodSelector\AcceptParameterAttribute.cs" />
-    <Compile Include="Attributes\MethodSelector\SubmitButtonAttribute.cs" />
-    <Compile Include="Attributes\NumericAttribute.cs" />
-    <Compile Include="Attributes\PossiblePhoneNumberAttribute.cs" />
-    <Compile Include="Attributes\PropertyValidationComparisonUtil.cs" />
-    <Compile Include="Attributes\SkipValidationIfAnotherValueMatchesAttribute.cs" />
-    <Compile Include="Attributes\SkipValidationIfAttribute.cs" />
-    <Compile Include="Attributes\SkipValidationIfEqualsAttribute.cs" />
-    <Compile Include="Attributes\SkipValidationIfPropertyAttribute.cs" />
-    <Compile Include="Attributes\ValidationExtensionAttribute.cs" />
-    <Compile Include="Captcha\CaptchaConstants.cs" />
-    <Compile Include="Captcha\CaptchaResources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CaptchaResources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Captcha\Image\CaptchaImage.cs" />
-    <Compile Include="Captcha\Image\CaptchaImageToken.cs" />
-    <Compile Include="Captcha\Image\ImageCaptchaControllerBase.cs" />
-    <Compile Include="Captcha\SpamPreventionHtmlHelpers.cs" />
-    <Compile Include="Captcha\ValidateCaptchaAttribute.cs" />
-    <Compile Include="Utils\CurrentUiCulture.cs" />
-    <Compile Include="Result\DisposableOutput.cs" />
-    <Compile Include="Extensions\AjaxRequestExtensions.cs" />
-    <Compile Include="Extensions\CheckBoxHtmlExtensions.cs" />
-    <Compile Include="Extensions\CssExtensions.cs" />
-    <Compile Include="Extensions\HtmlStringExtensions.cs" />
-    <Compile Include="Extensions\RadioButtonHtmlExtensions.cs" />
-    <Compile Include="Model\RadioButtonItems.cs" />
-    <Compile Include="Extensions\ScriptExtensions.cs" />
-    <Compile Include="Extensions\SelectHtmlExtensions.cs" />
-    <Compile Include="Utils\HtmlStringUtil.cs" />
-    <Compile Include="Model\CheckboxListItem.cs" />
-    <Compile Include="Multipart\InMemoryMultipartFormDataStreamProvider.cs" />
-    <Compile Include="Multipart\InMemoryUploadedFile.cs" />
-    <Compile Include="Multipart\MultipartFormDataUtil.cs" />
+    <Compile Include="Mvc\DbGeographyModelBinder.cs" />
+    <Compile Include="ServiceStack\JsSerializationConfigUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Result\ServiceStackJsonResult.cs" />
-    <Compile Include="Result\TransferResult.cs" />
-    <Compile Include="Robots\CrawlerDetectorUtil.cs" />
-    <Compile Include="Robots\InteractiveSessionAckUtil.cs" />
-    <Compile Include="Routing\GreedyRoute.cs" />
-    <Compile Include="Routing\GreedyRouteSegment.cs" />
-    <Compile Include="Routing\RegexRoute.cs" />
-    <Compile Include="Routing\RouteUrl.cs" />
-    <Compile Include="Routing\RouteValueDictionaryExtensions.cs" />
-    <Compile Include="Session\SessionStateExtensions.cs" />
-    <Compile Include="Session\SubSessionContext.cs" />
-    <Compile Include="Upload\FineUpload.cs" />
-    <Compile Include="UserAgent\HttpBrowserCapabilitiesUtil.cs" />
-    <Compile Include="Validation\DateTimeModelBinder.cs" />
-    <Compile Include="Validation\ExtendedModelBinder.cs" />
-    <Compile Include="Validation\LocalizedClientDataTypeModelValidatorProvider.cs" />
-    <Compile Include="Validation\NumericModelBinder.cs" />
+    <Compile Include="ServiceStack\ServiceStackTextFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Captcha\CaptchaResources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>CaptchaResources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeneralComponents\GeneralComponents.csproj">
@@ -172,9 +122,10 @@
       <Project>{c0a37f49-5e9c-476f-8b9c-eaba5f8c8ba5}</Project>
       <Name>Logging</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\SqlGeo\SqlGeo.csproj">
+      <Project>{7ca56e4b-e81e-43ef-809a-b61ec6bf2885}</Project>
+      <Name>SqlGeo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

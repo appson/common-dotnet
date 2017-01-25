@@ -2,7 +2,7 @@
 using System.Data.Entity.Spatial;
 using System.Web.Mvc;
 
-namespace Appson.Common.Web.Validation
+namespace Appson.Common.CodeSnippets.Mvc
 {
 	public class DbGeographyModelBinder : IModelBinder
 	{

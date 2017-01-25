@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ServiceStack.Text;
 
-namespace JahanJooy.Common.Formatters
+namespace Appson.Common.CodeSnippets.ServiceStack
 {
 	public class ServiceStackTextFormatter : MediaTypeFormatter
 	{
@@ -31,7 +31,7 @@ namespace JahanJooy.Common.Formatters
 		public override bool CanReadType(Type type)
 		{
 			if (type == null)
-				throw new ArgumentNullException("type");
+				throw new ArgumentNullException(nameof(type));
 			
 			return true;
 		}
@@ -39,7 +39,7 @@ namespace JahanJooy.Common.Formatters
 		public override bool CanWriteType(Type type)
 		{
 			if (type == null)
-				throw new ArgumentNullException("type");
+				throw new ArgumentNullException(nameof(type));
 			
 			return true;
 		}
