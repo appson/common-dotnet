@@ -62,7 +62,6 @@
     <Compile Include="ChangeHistory\EntityChangeExtractor.cs" />
     <Compile Include="ChangeHistory\EntityChangeSource.cs" />
     <Compile Include="ExtendedDbContext.cs" />
-    <Compile Include="ExtendedIdentityDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryExtensions.cs" />
   </ItemGroup>
