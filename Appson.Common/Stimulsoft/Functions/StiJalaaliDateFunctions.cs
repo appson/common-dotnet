@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace JahanJooy.Stimulsoft.Common.Functions
+namespace Appson.Common.Stimulsoft.Functions
 {
     public static class StiJalaaliDateFunctions
     {

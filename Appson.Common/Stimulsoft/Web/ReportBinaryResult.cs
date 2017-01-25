@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Stimulsoft.Report;
 
-namespace JahanJooy.Stimulsoft.Common.Web
+namespace Appson.Common.Stimulsoft.Web
 {
     public class ReportBinaryResult : IHttpActionResult
     {
@@ -19,7 +19,7 @@ namespace JahanJooy.Stimulsoft.Common.Web
         public ReportBinaryResult(StiReport report, StiExportFormat format = StiExportFormat.Pdf, bool rendered = false)
         {
             if (report == null)
-                throw new ArgumentNullException("report");
+                throw new ArgumentNullException(nameof(report));
 
             _report = report;
             _format = format;

@@ -1,8 +1,8 @@
 ﻿using System;
-using JahanJooy.Stimulsoft.Common.Functions;
+using Appson.Common.Stimulsoft.Functions;
 using Stimulsoft.Report.Dictionary;
 
-namespace JahanJooy.Stimulsoft.Common
+namespace Appson.Common.Stimulsoft
 {
     public static class StiCommonUtils
     {
