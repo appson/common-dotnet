@@ -109,7 +109,9 @@
     <Compile Include="Validation\ApiValidationResult.cs" />
     <Compile Include="Validation\ApiValidatedResult.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="General.nuspec" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Localization\TimeSpanLocalizationResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="EntityFramework.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

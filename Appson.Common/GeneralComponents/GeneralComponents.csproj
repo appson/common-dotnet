@@ -75,6 +75,7 @@
     <Compile Include="ScheduledTasks\ScheduledTaskIterationResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="GeneralComponents.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Appson.Common.Web</id>
+    <version>0.9.1</version>
+    <title>Appson Common - Web</title>
+    <summary>Common utilities and extensions for ASP.NET and ASP.NET MVC libraries</summary>
+    <authors>appson</authors>
+    <owners>appson</owners>
+    <licenseUrl>https://github.com/appson/common-dotnet</licenseUrl>
+    <projectUrl>https://github.com/appson/common-dotnet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Appson Common libraries for .NET is a set of utilities and extensions that are 
+      used frequently in different projects.
+    </description>
+    <copyright>Copyright appson.tech 2017</copyright>
+    <tags>appson common web mvc aspnet asp-net</tags>
+  </metadata>
+</package>

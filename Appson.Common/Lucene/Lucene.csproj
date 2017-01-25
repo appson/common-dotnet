@@ -76,6 +76,7 @@
     <Compile Include="Utils\UserSearchQueryUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Lucene.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

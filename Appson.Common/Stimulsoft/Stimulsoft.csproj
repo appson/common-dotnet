@@ -74,6 +74,7 @@
     <Compile Include="Web\ReportBinaryResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Stimulsoft.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
