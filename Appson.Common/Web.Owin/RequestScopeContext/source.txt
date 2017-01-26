@@ -1,0 +1,3 @@
+﻿
+The source code initially copied from the following GitHub project:
+https://github.com/neuecc/OwinRequestScopeContext

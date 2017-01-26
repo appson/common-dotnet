@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66AC80A4-B9F3-4C9D-83EF-EC59A6984F07}</ProjectGuid>
+    <ProjectGuid>{C8DF930D-EDF3-4396-B6D1-C16CD844B96E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Appson.Common.Threading</RootNamespace>
-    <AssemblyName>Appson.Common.Threading</AssemblyName>
+    <RootNamespace>Appson.Common.EntityFramework</RootNamespace>
+    <AssemblyName>Appson.Common.EntityFramework</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,7 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,12 +53,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeHistory\DbChangeHistoryEntry.cs" />
+    <Compile Include="ChangeHistory\DbChangeHistoryEntryProperty.cs" />
+    <Compile Include="ChangeHistory\DbChangeHistoryGenerator.cs" />
+    <Compile Include="DbSetExtensions.cs" />
+    <Compile Include="ChangeHistory\EntityChange.cs" />
+    <Compile Include="ChangeHistory\EntityChangeCollection.cs" />
+    <Compile Include="ChangeHistory\EntityChangeExtractor.cs" />
+    <Compile Include="ChangeHistory\EntityChangeSource.cs" />
+    <Compile Include="ExtendedDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThrottlerOptions.cs" />
-    <Compile Include="ThrottlerThread.cs" />
+    <Compile Include="QueryExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Threading.nuspec" />
+    <None Include="App.config" />
+    <None Include="EntityFramework.nuspec" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\General\General.csproj">

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Appson.Common.Threading</id>
+    <version>0.9.1</version>
+    <title>Appson Common - Threading</title>
+    <summary>Common threading utilities and extensions</summary>
+    <authors>appson</authors>
+    <owners>appson</owners>
+    <licenseUrl>https://github.com/appson/common-dotnet</licenseUrl>
+    <projectUrl>https://github.com/appson/common-dotnet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Appson Common libraries for .NET is a set of utilities and extensions that are 
+      used frequently in different projects.
+    </description>
+    <copyright>Copyright appson.tech 2017</copyright>
+    <tags>appson common thread throttle threading</tags>
+    <dependencies>
+      <dependency id="Appson.Common.General" version="0.9.1" />
+    </dependencies>
+  </metadata>
+</package>

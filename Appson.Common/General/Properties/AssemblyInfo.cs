@@ -1,18 +1,18 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Appson.Common.Threading")]
+[assembly: AssemblyTitle("Appson.Common.General")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Appson")]
-[assembly: AssemblyProduct("Appson.Common.Threading")]
+[assembly: AssemblyProduct("Appson.Common.General")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("66ac80a4-b9f3-4c9d-83ef-ec59a6984f07")]
+[assembly: Guid("c8e85206-3aae-4288-8074-0bd3b4b3d818")]
 
 [assembly: AssemblyVersion("0.9.1")]
 [assembly: AssemblyFileVersion("0.9.1")]

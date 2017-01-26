@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8E85206-3AAE-4288-8074-0BD3B4B3D818}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Appson.Common.General</RootNamespace>
+    <AssemblyName>Appson.Common.General</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\CollectionExtensions.cs" />
+    <Compile Include="Collections\EnumerableExtensions.cs" />
+    <Compile Include="Collections\LinkedDictionary.cs" />
+    <Compile Include="Collections\PagedList.cs" />
+    <Compile Include="Collections\PaginationStats.cs" />
+    <Compile Include="Collections\QueueExtensions.cs" />
+    <Compile Include="Collections\ReadOnlyDictionary.cs" />
+    <Compile Include="Collections\StackExtensions.cs" />
+    <Compile Include="Geo\GoogleMapsUtil.cs" />
+    <Compile Include="Geo\LatLng.cs" />
+    <Compile Include="Geo\LatLngBounds.cs" />
+    <Compile Include="Geo\LatLngPath.cs" />
+    <Compile Include="Localization\DateTimeLocalizationExtensions.cs" />
+    <Compile Include="Localization\DateTimeLocalizationUtils.cs" />
+    <Compile Include="Localization\EnumLocalizationUtils.cs" />
+    <Compile Include="Localization\TimeSpanLocalizationExtensions.cs" />
+    <Compile Include="Localization\TimeSpanLocalizationResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeSpanLocalizationResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\TimeSpanLocalizationUtils.cs" />
+    <Compile Include="Model\IChangeHistoryEntity.cs" />
+    <Compile Include="Model\ICreationTime.cs" />
+    <Compile Include="Model\IEntityContent.cs" />
+    <Compile Include="Model\IEntityContentContainer.cs" />
+    <Compile Include="Model\IIndexedEntity.cs" />
+    <Compile Include="Model\ILastModificationTime.cs" />
+    <Compile Include="Model\ISimpleIDEntity.cs" />
+    <Compile Include="Model\IStateTime.cs" />
+    <Compile Include="Model\PagedListOutput.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\CryptoRandomNumberUtil.cs" />
+    <Compile Include="Streams\ManifestResourceUtil.cs" />
+    <Compile Include="Text\Base32.cs" />
+    <Compile Include="Text\Base32Url.cs" />
+    <Compile Include="Text\Base64Url.cs" />
+    <Compile Include="Text\DigitLocalizationUtils.cs" />
+    <Compile Include="Text\EmailUtils.cs" />
+    <Compile Include="Text\NumericStringUtils.cs" />
+    <Compile Include="Text\NumericStringUtilsResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NumericStringUtilsResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Text\PersianCharacterNormalizer.cs" />
+    <Compile Include="Text\RegexCache.cs" />
+    <Compile Include="Text\RegexExtensions.cs" />
+    <Compile Include="Text\RegexUtils.cs" />
+    <Compile Include="Text\SmsMessageUtils.cs" />
+    <Compile Include="Text\StringBuilderExtensions.cs" />
+    <Compile Include="Text\StringExtensions.cs" />
+    <Compile Include="Text\StringUtils.cs" />
+    <Compile Include="Utils\CsvUtils.cs" />
+    <Compile Include="Utils\DisposableExtensions.cs" />
+    <Compile Include="Localization\EnumExtensions.cs" />
+    <Compile Include="Utils\GuidUtils.cs" />
+    <Compile Include="Utils\ObjectExtensions.cs" />
+    <Compile Include="Utils\ObjectUtils.cs" />
+    <Compile Include="Utils\RandomUtil.cs" />
+    <Compile Include="Utils\UtilResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UtilResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Validation\ApiValidationError.cs" />
+    <Compile Include="Validation\ApiValidationResult.cs" />
+    <Compile Include="Validation\ApiValidatedResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="General.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\TimeSpanLocalizationResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TimeSpanLocalizationResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Text\NumericStringUtilsResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>NumericStringUtilsResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\UtilResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UtilResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

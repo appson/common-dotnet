@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66AC80A4-B9F3-4C9D-83EF-EC59A6984F07}</ProjectGuid>
+    <ProjectGuid>{C0A37F49-5E9C-476F-8B9C-EABA5F8C8BA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Appson.Common.Threading</RootNamespace>
-    <AssemblyName>Appson.Common.Threading</AssemblyName>
+    <RootNamespace>Appson.Common.Logging</RootNamespace>
+    <AssemblyName>Appson.Common.Logging</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,18 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonStaticLogs.cs" />
+    <Compile Include="Log4NetConfiguration.cs" />
+    <Compile Include="LogUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThrottlerOptions.cs" />
-    <Compile Include="ThrottlerThread.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Threading.nuspec" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\General\General.csproj">
-      <Project>{c8e85206-3aae-4288-8074-0bd3b4b3d818}</Project>
-      <Name>General</Name>
-    </ProjectReference>
+    <None Include="Logging.nuspec" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

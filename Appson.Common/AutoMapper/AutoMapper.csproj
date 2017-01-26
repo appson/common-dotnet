@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66AC80A4-B9F3-4C9D-83EF-EC59A6984F07}</ProjectGuid>
+    <ProjectGuid>{9294A3E3-4CDA-464D-8736-EE7D0546EB3E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Appson.Common.Threading</RootNamespace>
-    <AssemblyName>Appson.Common.Threading</AssemblyName>
+    <RootNamespace>Appson.Common.AutoMapper</RootNamespace>
+    <AssemblyName>Appson.Common.AutoMapper</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,12 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoMapperConfigAttribute.cs" />
+    <Compile Include="AutoMapperConfigurationExtensions.cs" />
+    <Compile Include="AutoMapperConfigurator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThrottlerOptions.cs" />
-    <Compile Include="ThrottlerThread.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Threading.nuspec" />
+    <None Include="AutoMapper.nuspec" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\General\General.csproj">
