@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Appson.Composer, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Appson.Composer.Base.1.1.0\lib\net40-client\Appson.Composer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Appson.Composer.Implementation, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Appson.Composer.Implementation.1.1.0\lib\net40-client\Appson.Composer.Implementation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
       <Private>True</Private>
@@ -53,6 +61,10 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,15 +73,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Composer\ComposerOwinContextExtensions.cs" />
     <Compile Include="CorrelationIdUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestScopeContext\AppBuilderOwinRequestScopeContextMiddlewareExtensions.cs" />
+    <Compile Include="Composer\OwinContextComponentCache.cs" />
     <Compile Include="RequestScopeContext\OwinRequestScopeContext.cs" />
     <Compile Include="RequestScopeContext\OwinRequestScopeContextExtensions.cs" />
     <Compile Include="RequestScopeContext\OwinRequestScopeContextMiddleware.cs" />
     <Compile Include="RequestScopeContext\UnsubscribeDisposable.cs" />
+    <Compile Include="Composer\IWebApiDependencyResolverContract.cs" />
+    <Compile Include="Composer\WebApiComposerDependencyResolver.cs" />
     <Compile Include="Result\BinaryResult.cs" />
     <Compile Include="Result\FileResult.cs" />
+    <Compile Include="Composer\WebApiComposerWebUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="RequestScopeContext\source.txt" />
