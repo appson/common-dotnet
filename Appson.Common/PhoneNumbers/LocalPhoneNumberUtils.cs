@@ -111,7 +111,7 @@ namespace Appson.Common.PhoneNumbers
             if (allowSmsTargetOnly && !CanReceiveSms(parsedNumber))
                 return ApiValidatedResult<string>.Failure(ValidationErrorInputIsNotAValidSmsTarget);
 
-	        return ApiValidatedResult<string>.Success(Format(parsedNumber));
+	        return ApiValidatedResult<string>.Ok(Format(parsedNumber));
 	    }
 
 	    public static bool IsNationalNumber(PhoneNumber phoneNumber)
