@@ -8,7 +8,7 @@ namespace Appson.Common.General.Validation
 	{
 		public T Result { get; set; }
 
-		public new static ApiValidatedResult<T> Success(T result)
+		public static ApiValidatedResult<T> Ok(T result)
 		{
 			return new ApiValidatedResult<T> { Errors = null, Result = result};
 		}
