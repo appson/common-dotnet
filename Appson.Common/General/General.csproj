@@ -64,6 +64,7 @@
     <Compile Include="Localization\TimeSpanLocalizationUtils.cs" />
     <Compile Include="Model\IChangeHistoryEntity.cs" />
     <Compile Include="Model\ICreationTime.cs" />
+    <Compile Include="Model\IDecimalIdEntity.cs" />
     <Compile Include="Model\IEntityContent.cs" />
     <Compile Include="Model\IEntityContentContainer.cs" />
     <Compile Include="Model\IIndexedEntity.cs" />
