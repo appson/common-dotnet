@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Appson.Common.AspNetIdentity</id>
+    <version>0.9.1</version>
+    <title>Appson Common - ASP.NET Identity</title>
+    <summary>Common utilities and extensions for EntityFramework library</summary>
+    <authors>appson</authors>
+    <owners>appson</owners>
+    <licenseUrl>https://github.com/appson/common-dotnet</licenseUrl>
+    <projectUrl>https://github.com/appson/common-dotnet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Appson Common libraries for .NET is a set of utilities and extensions that are 
+      used frequently in different projects.
+    </description>
+    <copyright>Copyright appson.tech 2017</copyright>
+    <tags>appson common identity aspnet aspnet-identity</tags>
+    <dependencies>
+      <dependency id="Appson.Common.General" version="0.9.2" />
+      <dependency id="Appson.Common.EntityFramework" version="0.9.1" />
+      <dependency id="Appson.Common.Web.Owin" version="0.9.2" />
+    </dependencies>
+  </metadata>
+</package>
