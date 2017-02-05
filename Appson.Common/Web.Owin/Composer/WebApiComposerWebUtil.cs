@@ -1,7 +1,6 @@
 ﻿
 using System.Web.Http;
 using Appson.Composer;
-using Appson.Composer.WebApi.Resolver;
 
 namespace Appson.Common.Web.Owin.Composer
 {

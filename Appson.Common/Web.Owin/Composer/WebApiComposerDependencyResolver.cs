@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Dependencies;
 using Appson.Composer;
-using Appson.Composer.WebApi.Resolver;
 
 namespace Appson.Common.Web.Owin.Composer
 {
