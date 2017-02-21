@@ -89,7 +89,7 @@
     <Compile Include="Composer\WebApiComposerWebUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RequestScopeContext\source.txt" />
+    <None Include="RequestScopeContext\source.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\General\General.csproj">
