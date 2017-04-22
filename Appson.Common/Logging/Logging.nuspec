@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Appson.Common.Logging</id>
-    <version>0.9.1</version>
+    <version>0.9.4</version>
     <title>Appson Common - Logging</title>
     <summary>Common utilities and extensions for logging</summary>
     <authors>appson</authors>
@@ -17,7 +17,7 @@
     <copyright>Copyright appson.tech 2017</copyright>
     <tags>appson common log logging log4net</tags>
     <dependencies>
-      <dependency id="Appson.Common.General" version="0.9.1" />
+      <dependency id="Appson.Common.General" version="0.9.4" />
     </dependencies>
   </metadata>
 </package>

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Appson.Common.Stimulsoft</id>
-    <version>0.9.1</version>
+    <version>0.9.4</version>
     <title>Appson Common - Stimulsoft</title>
     <summary>Common utilities and extensions for Stimulsoft's Stimulreport library</summary>
     <authors>appson</authors>
