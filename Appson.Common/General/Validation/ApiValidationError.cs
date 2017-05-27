@@ -40,5 +40,6 @@ namespace Appson.Common.General.Validation
 		public string PropertyPath { get; set; }
 		public string ErrorKey { get; set; }
 		public List<string> ErrorParameters { get; set; }
+        public string LocalizedMessage { get; set; }
 	}
 }

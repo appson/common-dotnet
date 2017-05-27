@@ -9,6 +9,12 @@ namespace Appson.Common.General.Validation
 		public bool Success { get; set; }
 		public List<ApiValidationError> Errors { get; set; }
 
+        /// <summary>
+        /// A general message for the result.
+        /// Can be used to provide a gradual migration path from BadRequest(message) results in ApiController
+        /// </summary>
+        public string Message { get; set; }
+
 		public static ApiValidationResult Ok()
 		{
 			return new ApiValidationResult {Success = true, Errors = null};
