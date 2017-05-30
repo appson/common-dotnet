@@ -23,31 +23,32 @@ namespace Appson.Common.Threading.Tests.Throttler
             var second = -1;
             var count = 0;
 
-            var timer = new System.Timers.Timer(5000);
-            timer.Elapsed += (sender, args) =>
+            Task.Run(() =>
             {
-                Write($"{Environment.NewLine}changing throttler state: ");
-                ChangeThrottlerState(throttler);
-                WriteLine($"throttler is now {throttler.State.ToString()}");
-            };
-            timer.Enabled = true;
-            timer.Start();
+                while (true)
+                {
+                    if (second != DateTime.Now.Second)
+                    {
+                        second = DateTime.Now.Second;
+                        WriteLine($" - {count} times");
+                        Write($"{second:D2}: ");
+                        count = 0;
+                    }
 
+
+                    throttler.Throttle();
+                    count++;
+                }
+                // ReSharper disable once FunctionNeverReturns
+            });
             while (true)
             {
-                if (second != DateTime.Now.Second)
-                {
-                    second = DateTime.Now.Second;
-                    WriteLine($" - {count} times");
-                    Write($"{second:D2}: ");
-                    count = 0;
-                }
-
-
-                throttler.Throttle();
-                count++;
+                var command = ReadKey(true);
+                if (command.Key != ConsoleKey.Enter) continue;
+                Write($"{Environment.NewLine}changing throttler state: ");
+                ChangeThrottlerState(throttler);
+                WriteLine($"throttler is now {throttler.State}");
             }
-            // ReSharper disable once FunctionNeverReturns
         }
 
         private static void ChangeThrottlerState(ThrottlerThread throttler)

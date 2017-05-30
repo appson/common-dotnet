@@ -9,7 +9,7 @@ namespace Appson.Common.Threading.Tests.Throttler
         {
             WriteLine("Please select throttler test scenario:");
             WriteLine("    1. simple test");
-            WriteLine("    2. pausable test");
+            WriteLine("    2. pausable test (use \"Enter\" to pause/unpause the throttler)");
             WriteLine();
 
             var choice = ReadLine();
