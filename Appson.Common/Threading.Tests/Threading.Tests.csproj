@@ -49,6 +49,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Throttler\ThrottlerMenu.cs" />
+    <Compile Include="Throttler\EnumerableThrottlingTest.cs" />
     <Compile Include="Throttler\ThrottlerSimpleTest.cs" />
   </ItemGroup>
   <ItemGroup>

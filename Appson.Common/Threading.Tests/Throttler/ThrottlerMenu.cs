@@ -1,5 +1,4 @@
-﻿using Appson.Common.Threading.Tests.General;
-using static System.Console;
+﻿using static System.Console;
 
 namespace Appson.Common.Threading.Tests.Throttler
 {
@@ -9,6 +8,7 @@ namespace Appson.Common.Threading.Tests.Throttler
         {
             WriteLine("Please select throttler test scenario:");
             WriteLine("    1. simple test");
+            WriteLine("    2. throttled Enumerable test");
             WriteLine();
 
             var choice = ReadLine();
@@ -16,6 +16,9 @@ namespace Appson.Common.Threading.Tests.Throttler
             {
                 case "1":
                     new ThrottlerSimpleTest().Run();
+                    break;
+                case "2":
+                    new EnumerableThrottlingTest().Run();
                     break;
             }
         }
