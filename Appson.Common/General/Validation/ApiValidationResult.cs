@@ -8,28 +8,40 @@ namespace Appson.Common.General.Validation
 {
     public class ApiValidationResult
 	{
-		public bool Success { get; set; }
-		public List<ApiValidationError> Errors { get; set; }
+	    #region Properties
 
-	    public ApiValidationResult()
+	    public bool Success { get; set; }
+	    public List<ApiValidationError> Errors { get; set; }
+
+	    /// <summary>
+	    /// A general message for the result.
+	    /// Can be used to provide a gradual migration path from BadRequest(message) results in ApiController
+	    /// </summary>
+	    public string Message { get; set; }
+
+	    #endregion
+
+        #region Constructors
+
+        public ApiValidationResult()
 	    {
 	        Success = true;
 	        Errors = null;
 	    }
 
-        public ApiValidationResult(ApiValidationError error)
+	    public ApiValidationResult(ApiValidationError error)
 	    {
 	        if (error == null)
 	        {
 	            Success = true;
 	            Errors = null;
-            }
+	        }
 	        else
 	        {
 	            Success = false;
 	            Errors = new List<ApiValidationError> {error};
 	        }
-        }
+	    }
 
 	    public ApiValidationResult(IEnumerable<ApiValidationError> errors)
 	    {
@@ -44,69 +56,67 @@ namespace Appson.Common.General.Validation
 	        Success = Errors.Any();
 	    }
 
-	    /// <summary>
-        /// A general message for the result.
-        /// Can be used to provide a gradual migration path from BadRequest(message) results in ApiController
-        /// </summary>
-        public string Message { get; set; }
+	    #endregion
 
-		public static ApiValidationResult Ok()
-		{
-			return new ApiValidationResult();
-		}
+	    #region Construction helpers
+
+	    public static ApiValidationResult Ok()
+	    {
+	        return new ApiValidationResult();
+	    }
 
 	    public static ApiValidationResult Failure()
 	    {
 	        return new ApiValidationResult {Success = false};
 	    }
 
-		public static ApiValidationResult Failure(ApiValidationError error)
-		{
-            if (error == null)
-                throw new ArgumentNullException(nameof(error));
+	    public static ApiValidationResult Failure(ApiValidationError error)
+	    {
+	        if (error == null)
+	            throw new ArgumentNullException(nameof(error));
 
-			return new ApiValidationResult(error);
-		}
+	        return new ApiValidationResult(error);
+	    }
 
-		public static ApiValidationResult Failure(IEnumerable<ApiValidationError> errors)
-		{
-            if (errors == null)
-                throw new ArgumentNullException(nameof(errors));
+	    public static ApiValidationResult Failure(IEnumerable<ApiValidationError> errors)
+	    {
+	        if (errors == null)
+	            throw new ArgumentNullException(nameof(errors));
 
-			return new ApiValidationResult {Success = false, Errors = errors.ToList()};
-		}
+	        return new ApiValidationResult {Success = false, Errors = errors.ToList()};
+	    }
 		
-		public static ApiValidationResult Failure(string errorKey)
-		{
-            if (errorKey.IsNullOrWhitespace())
-                throw new ArgumentNullException(nameof(errorKey));
+	    public static ApiValidationResult Failure(string errorKey)
+	    {
+	        if (errorKey.IsNullOrWhitespace())
+	            throw new ArgumentNullException(nameof(errorKey));
 
-			return new ApiValidationResult(new ApiValidationError(errorKey));
-		}
+	        return new ApiValidationResult(new ApiValidationError(errorKey));
+	    }
 
-		public static ApiValidationResult Failure(string errorKey, IEnumerable<string> errorParameters)
-		{
-		    if (errorKey.IsNullOrWhitespace())
-		        throw new ArgumentNullException(nameof(errorKey));
+	    public static ApiValidationResult Failure(string errorKey, IEnumerable<string> errorParameters)
+	    {
+	        if (errorKey.IsNullOrWhitespace())
+	            throw new ArgumentNullException(nameof(errorKey));
 
-			return new ApiValidationResult(new ApiValidationError(errorKey, errorParameters));
-		}
+	        return new ApiValidationResult(new ApiValidationError(errorKey, errorParameters));
+	    }
 
-		public static ApiValidationResult Failure(string propertyPath, string errorKey)
-		{
-		    if (errorKey.IsNullOrWhitespace())
-		        throw new ArgumentNullException(nameof(errorKey));
+	    public static ApiValidationResult Failure(string propertyPath, string errorKey)
+	    {
+	        if (errorKey.IsNullOrWhitespace())
+	            throw new ArgumentNullException(nameof(errorKey));
 
-			return new ApiValidationResult(new ApiValidationError(propertyPath, errorKey));
-		}
+	        return new ApiValidationResult(new ApiValidationError(propertyPath, errorKey));
+	    }
 
-		public static ApiValidationResult Failure(string propertyPath, string errorKey, IEnumerable<string> errorParameters)
-		{
-		    if (errorKey.IsNullOrWhitespace())
-		        throw new ArgumentNullException(nameof(errorKey));
+	    public static ApiValidationResult Failure(string propertyPath, string errorKey, IEnumerable<string> errorParameters)
+	    {
+	        if (errorKey.IsNullOrWhitespace())
+	            throw new ArgumentNullException(nameof(errorKey));
 
-		    return new ApiValidationResult(new ApiValidationError(propertyPath, errorKey, errorParameters));
-		}
+	        return new ApiValidationResult(new ApiValidationError(propertyPath, errorKey, errorParameters));
+	    }
 
 	    public static ApiValidationResult Aggregate(params ApiValidationError[] errors)
 	    {
@@ -129,54 +139,60 @@ namespace Appson.Common.General.Validation
 
 	        return result;
 	    }
+	    
+	    #endregion
 
-        public ApiValidationResult Append(ApiValidationResult other)
+	    #region Modification methods
+
+	    public ApiValidationResult Append(ApiValidationResult other)
 	    {
 	        if (other == null)
 	            return this;
 
 	        Success &= other.Success;
 
-            if (other.Errors != null)
-            {
-                EnsureErrorsPropertyIsNotNull();
-                Errors.AddRange(other.Errors.Where(e => e != null));
-            }
+	        if (other.Errors != null)
+	        {
+	            EnsureErrorsPropertyIsNotNull();
+	            Errors.AddRange(other.Errors.Where(e => e != null));
+	        }
 
 	        return this;
 	    }
 
-        public ApiValidationResult Append(ApiValidationError error)
-        {
-            if (error != null)
-            {
-                EnsureErrorsPropertyIsNotNull();
-                Errors.Add(error);
-                Success = false;
-            }
+	    public ApiValidationResult Append(ApiValidationError error)
+	    {
+	        if (error != null)
+	        {
+	            EnsureErrorsPropertyIsNotNull();
+	            Errors.Add(error);
+	            Success = false;
+	        }
 
-            return this;
-        }
+	        return this;
+	    }
 
-        public ApiValidationResult Append(string errorKey)
-        {
-            return Append(new ApiValidationError(errorKey));
-        }
+	    public ApiValidationResult Append(string errorKey)
+	    {
+	        return Append(new ApiValidationError(errorKey));
+	    }
 
-        public ApiValidationResult Append(string errorKey, IEnumerable<string> errorParameters)
-        {
-            return Append(new ApiValidationError(errorKey, errorParameters));
-        }
+	    public ApiValidationResult Append(string errorKey, IEnumerable<string> errorParameters)
+	    {
+	        return Append(new ApiValidationError(errorKey, errorParameters));
+	    }
 
-        public ApiValidationResult Append(string propertyPath, string errorKey)
-        {
-            return Append(new ApiValidationError(propertyPath, errorKey));
-        }
+	    public ApiValidationResult Append(string propertyPath, string errorKey)
+	    {
+	        return Append(new ApiValidationError(propertyPath, errorKey));
+	    }
 
-        public ApiValidationResult Append(string propertyPath, string errorKey, IEnumerable<string> errorParameters)
-        {
-            return Append(new ApiValidationError(propertyPath, errorKey, errorParameters));
-        }
+	    public ApiValidationResult Append(string propertyPath, string errorKey, IEnumerable<string> errorParameters)
+	    {
+	        return Append(new ApiValidationError(propertyPath, errorKey, errorParameters));
+	    }
+	    
+	    #endregion
 
         public ApiValidatedResult<T> ToFailedValidatedResult<T>()
         {
@@ -188,7 +204,7 @@ namespace Appson.Common.General.Validation
             return ApiValidatedResult<T>.Failure(Errors);
         }
 
-	    private void EnsureErrorsPropertyIsNotNull()
+	    protected void EnsureErrorsPropertyIsNotNull()
 	    {
 	        if (Errors == null)
                 Errors = new List<ApiValidationError>();
