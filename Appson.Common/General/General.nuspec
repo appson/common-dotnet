@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Appson.Common.General</id>
-    <version>0.9.7</version>
+    <version>0.9.8</version>
     <title>Appson Common - General</title>
     <summary>Common utilities and extensions for .NET Framework</summary>
     <authors>appson</authors>

@@ -53,7 +53,7 @@ namespace Appson.Common.General.Validation
 	        }
 
 	        Errors = errors.Where(e => e != null).ToList();
-	        Success = Errors.Any();
+	        Success = !Errors.Any();
 	    }
 
 	    #endregion
