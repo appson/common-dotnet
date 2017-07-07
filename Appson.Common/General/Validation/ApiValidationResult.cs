@@ -52,7 +52,7 @@ namespace Appson.Common.General.Validation
 	            return;
 	        }
 
-	        Errors = errors.Where(e => e != null).ToList();
+	        Errors = errors.SafeWhere(e => e != null).SafeToList();
 	        Success = !Errors.Any();
 	    }
 
@@ -83,7 +83,7 @@ namespace Appson.Common.General.Validation
 	        if (errors == null)
 	            throw new ArgumentNullException(nameof(errors));
 
-	        return new ApiValidationResult {Success = false, Errors = errors.ToList()};
+	        return new ApiValidationResult {Success = false, Errors = errors.SafeToList()};
 	    }
 		
 	    public static ApiValidationResult Failure(string errorKey)
@@ -135,7 +135,7 @@ namespace Appson.Common.General.Validation
 	            return Ok();
 
 	        var result = new ApiValidationResult();
-	        results.ForEach(r => result.Append(r));
+	        results.SafeForEach(r => result.Append(r));
 
 	        return result;
 	    }

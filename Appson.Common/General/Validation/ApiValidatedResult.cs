@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Appson.Common.General.Collections;
 using Appson.Common.General.Text;
 
@@ -65,7 +64,7 @@ namespace Appson.Common.General.Validation
             if (errors == null)
                 throw new ArgumentNullException(nameof(errors));
 
-            return new ApiValidatedResult<T> { Errors = errors.ToList() };
+            return new ApiValidatedResult<T> { Errors = errors.SafeToList() };
         }
 
 	    public new static ApiValidatedResult<T> Failure(string errorKey)
@@ -106,7 +105,7 @@ namespace Appson.Common.General.Validation
 	            return Ok();
 
 	        var result = new ApiValidatedResult<T>();
-	        errors.ForEach(e => result.Append(e));
+	        errors.SafeForEach(e => result.Append(e));
 
 	        return result;
 	    }
@@ -117,7 +116,7 @@ namespace Appson.Common.General.Validation
 	            return Ok();
 
 	        var result = new ApiValidatedResult<T>();
-	        results.ForEach(r => result.Append(r));
+	        results.SafeForEach(r => result.Append(r));
 
 	        return result;
 	    }
