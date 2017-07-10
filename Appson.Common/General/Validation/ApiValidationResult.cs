@@ -53,7 +53,7 @@ namespace Appson.Common.General.Validation
 	        }
 
 	        Errors = errors.SafeWhere(e => e != null).SafeToList();
-	        Success = !Errors.Any();
+	        Success = !Errors.SafeAny();
 	    }
 
 	    #endregion
@@ -83,7 +83,7 @@ namespace Appson.Common.General.Validation
 	        if (errors == null)
 	            throw new ArgumentNullException(nameof(errors));
 
-	        return new ApiValidationResult {Success = false, Errors = errors.SafeToList()};
+	        return new ApiValidationResult(errors) {Success = false};
 	    }
 		
 	    public static ApiValidationResult Failure(string errorKey)

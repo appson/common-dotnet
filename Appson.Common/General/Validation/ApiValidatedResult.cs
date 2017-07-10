@@ -64,7 +64,7 @@ namespace Appson.Common.General.Validation
             if (errors == null)
                 throw new ArgumentNullException(nameof(errors));
 
-            return new ApiValidatedResult<T> { Errors = errors.SafeToList() };
+            return new ApiValidatedResult<T>(errors);
         }
 
 	    public new static ApiValidatedResult<T> Failure(string errorKey)
