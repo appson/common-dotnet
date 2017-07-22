@@ -17,7 +17,10 @@
     <copyright>Copyright appson.tech 2017</copyright>
     <tags>appson common web webapi web-api owin</tags>
     <dependencies>
-      <dependency id="Appson.Common.General" version="0.9.4" />
+      <dependency id="Appson.Common.General" version="0.9.10" />
+      <dependency id="Appson.Composer.Base" version="1.1.1" />
+      <dependency id="Appson.Composer.Implementation" version="1.1.1" />
+      <dependency id="Owin" version="1.0" />
     </dependencies>
   </metadata>
 </package>

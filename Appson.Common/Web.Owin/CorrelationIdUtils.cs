@@ -3,12 +3,22 @@ using Appson.Common.General.Text;
 using Appson.Common.General.Utils;
 using Appson.Common.Web.Owin.RequestScopeContext;
 using Microsoft.Owin;
+using Owin;
 
 namespace Appson.Common.Web.Owin
 {
     public static class CorrelationIdUtils
     {
         private const string OwinEnironmentKey = "Appson.CorrelationId";
+
+        public static void UseCorrelationId(this IAppBuilder app)
+        {
+            app.Use(async (context, next) =>
+            {
+                context.EnsureCorrelationId();
+                await next.Invoke();
+            });
+        }
 
         public static void EnsureCorrelationId(this IOwinContext context)
         {
