@@ -31,9 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PhoneNumbers, Version=7.7.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\libphonenumber-csharp.7.7.4\lib\PhoneNumbers.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="PhoneNumbers, Version=8.7.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\libphonenumber-csharp.8.7.0.1\lib\net40\PhoneNumbers.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,8 +48,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PhoneNumbers.nuspec" />
     <None Include="packages.config" />
+    <None Include="PhoneNumbers.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\General\General.csproj">
