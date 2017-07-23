@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Appson.Common.Web.Owin</id>
-    <version>0.9.4</version>
+    <version>0.10.1</version>
     <title>Appson Common - Web.Owin</title>
     <summary>Common utilities and extensions for Owin and ASP.NET WebAPI library</summary>
     <authors>appson</authors>
@@ -17,10 +17,7 @@
     <copyright>Copyright appson.tech 2017</copyright>
     <tags>appson common web webapi web-api owin</tags>
     <dependencies>
-      <dependency id="Appson.Common.General" version="0.9.10" />
-      <dependency id="Appson.Composer.Base" version="1.1.1" />
-      <dependency id="Appson.Composer.Implementation" version="1.1.1" />
-      <dependency id="Owin" version="1.0" />
+      <dependency id="Appson.Common.General" version="0.10.1" />
     </dependencies>
   </metadata>
 </package>

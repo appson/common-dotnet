@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Appson.Common.SqlGeo</id>
-    <version>0.9.4</version>
+    <version>0.10.1</version>
     <title>Appson Common - SqlGeo</title>
     <summary>Common utilities and extensions for SQL's geography types and Entity Framework related types</summary>
     <authors>appson</authors>
@@ -17,7 +17,7 @@
     <copyright>Copyright appson.tech 2017</copyright>
     <tags>appson common sql geo geography geometry dbgeography</tags>
     <dependencies>
-      <dependency id="Appson.Common.General" version="0.9.4" />
+      <dependency id="Appson.Common.General" version="0.10.1" />
     </dependencies>
   </metadata>
 </package>
