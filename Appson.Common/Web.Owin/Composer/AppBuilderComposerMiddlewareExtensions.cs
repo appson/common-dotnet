@@ -7,7 +7,7 @@ namespace Appson.Common.Web.Owin.Composer
 {
     public static class AppBuilderComposerMiddlewareExtensions
     {
-        public static IComponentContext UseRequestScopeContext(this IAppBuilder app, HttpConfiguration configuration = null)
+        public static IComponentContext UseComposer(this IAppBuilder app, HttpConfiguration configuration = null)
         {
             var composer = ComposerOwinUtil.ComponentContext ??
                            ComposerOwinUtil.Setup(configuration ?? GlobalConfiguration.Configuration);

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Appson.Common.Web.Owin</id>
-    <version>0.10.1</version>
+    <version>0.10.2</version>
     <title>Appson Common - Web.Owin</title>
     <summary>Common utilities and extensions for Owin and ASP.NET WebAPI library</summary>
     <authors>appson</authors>
