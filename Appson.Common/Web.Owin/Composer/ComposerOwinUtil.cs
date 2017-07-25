@@ -24,8 +24,6 @@ namespace Appson.Common.Web.Owin.Composer
 
         public static void Setup(ComponentContext composer, HttpConfiguration configuration)
         {
-            ComponentContext = composer;
-
             composer.RegisterAssembly(Assembly.GetExecutingAssembly());
             SetResolver(composer, configuration);
 
