@@ -8,25 +8,19 @@ namespace Appson.Common.Web.Owin.Composer
 {
     public static class ComposerOwinUtil
     {
-        public static IComponentContext ComponentContext
-        {
-            get => OwinRequestScopeContext.Current.GetComponentContext();
-            private set => OwinRequestScopeContext.Current.SetComponentContext(value);
-        }
+        public static IComponentContext ComponentContext => OwinRequestScopeContext.Current.GetComponentContext();
 
-        public static IComponentContext Setup(HttpConfiguration configuration)
+        public static IComponentContext Setup()
         {
             var componentContext = new ComponentContext();
-            Setup(componentContext, configuration);
+            Setup(componentContext);
 
             return componentContext;
         }
 
-        public static void Setup(ComponentContext composer, HttpConfiguration configuration)
+        public static void Setup(ComponentContext composer)
         {
             composer.RegisterAssembly(Assembly.GetExecutingAssembly());
-            SetResolver(composer, configuration);
-
             composer.ProcessApplicationConfiguration();
         }
 
