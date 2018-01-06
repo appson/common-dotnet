@@ -109,7 +109,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 				var creationTimeLimit = DateTime.UtcNow.Ticks - MaximumLifetimeSeconds*TicksPerSecond;
 				
 				var item = _cacheData.GetOrAdd(key, k => new CacheItem<TValue>(ItemLoader.Load(k)));
-				if (item.LastAccessTime < creationTimeLimit)
+				if (item.CreationTime < creationTimeLimit)
 				{
 					CacheItem<TValue> removedValue;
 					_cacheData.TryRemove(key, out removedValue);
