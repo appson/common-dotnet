@@ -30,7 +30,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 		private int? _maximumLifetimeSeconds;
 		private int? _idleSecondsToRemove;
 
-		protected virtual int DefaultMinimumSize => 50;
+        protected virtual int DefaultMinimumSize => 50;
 	    // protected virtual int DefaultMaximumSize { get { return 0; } } TODO
 		protected virtual int DefaultMaintenanceFrequencySeconds => 600;
 	    protected virtual int DefaultMinimumLifetimeSeconds => 600;
@@ -104,10 +104,10 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 		{
 			get
 			{
-				var creationTimeLimit = DateTime.UtcNow.Ticks - MaximumLifetimeSeconds*10000000;
+				var creationTimeLimit = DateTime.UtcNow.Ticks - MaximumLifetimeSeconds*TimeSpan.TicksPerSecond;
 				
 				var item = _cacheData.GetOrAdd(key, k => new CacheItem<TValue>(ItemLoader.Load(k)));
-				if (item.LastAccessTime < creationTimeLimit)
+				if (item.CreationTime < creationTimeLimit)
 				{
 					CacheItem<TValue> removedValue;
 					_cacheData.TryRemove(key, out removedValue);
@@ -148,7 +148,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 		{
 			if ((MaintenanceFrequencySeconds <= 0) || 
 				(_cacheData.Count < MinimumSize) ||
-				(_lastMaintenance + MaintenanceFrequencySeconds*10000000 > DateTime.UtcNow.Ticks))
+				(_lastMaintenance + MaintenanceFrequencySeconds*TimeSpan.TicksPerSecond > DateTime.UtcNow.Ticks))
 				return;
 
 			PerformMaintenance();
@@ -158,8 +158,8 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 		{
 			_lastMaintenance = DateTime.UtcNow.Ticks;
 
-			var creationTimeLimit = DateTime.UtcNow.Ticks - MinimumLifetimeSeconds*10000000;
-			var lastAccessLimit = DateTime.UtcNow.Ticks - IdleSecondsToRemove*10000000;
+			var creationTimeLimit = DateTime.UtcNow.Ticks - MinimumLifetimeSeconds*TimeSpan.TicksPerSecond;
+			var lastAccessLimit = DateTime.UtcNow.Ticks - IdleSecondsToRemove*TimeSpan.TicksPerSecond;
 
 			var keysToRemove = _cacheData.Where(item => item.Value.CreationTime < creationTimeLimit && item.Value.LastAccessTime < lastAccessLimit).Select(item => item.Key).ToList();
 
