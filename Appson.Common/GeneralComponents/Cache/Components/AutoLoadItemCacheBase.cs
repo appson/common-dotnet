@@ -1,24 +1,18 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using Appson.Composer;
-using Appson.Composer.Cache;
 
 namespace Appson.Common.GeneralComponents.Cache.Components
 {
-    [Component]
-	[ComponentCache(typeof(DefaultComponentCache))]
-	[IgnoredOnAssemblyRegistration]
-	public class AutoLoadItemCache<TKey, TValue> : IItemCache<TKey, TValue>
+    public abstract class AutoLoadItemCacheBase<TKey, TValue>
 	{
-		private readonly ConcurrentDictionary<TKey, CacheItem<TValue>> _cacheData;
+		protected readonly ConcurrentDictionary<TKey, CacheItem<TValue>> _cacheData;
 		private long _lastMaintenance;
 
 		#region Plugs and Configuration points
-
-		[ComponentPlug]
-		public ICacheItemLoader<TKey, TValue> ItemLoader { get; set; }
 
 		[ComponentPlug]
 		public ICacheValueCopier<TValue> Copier { get; set; } 
@@ -85,7 +79,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 
 		#region Initialization
 
-		public AutoLoadItemCache()
+		public AutoLoadItemCacheBase()
 		{
 			_cacheData = new ConcurrentDictionary<TKey, CacheItem<TValue>>();
 			_lastMaintenance = DateTime.UtcNow.Ticks;
@@ -100,29 +94,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 			_cacheData.Clear();
 		}
 
-		public TValue this[TKey key]
-		{
-			get
-			{
-				var creationTimeLimit = DateTime.UtcNow.Ticks - MaximumLifetimeSeconds*TimeSpan.TicksPerSecond;
-				
-				var item = _cacheData.GetOrAdd(key, k => new CacheItem<TValue>(ItemLoader.Load(k)));
-				if (item.CreationTime < creationTimeLimit)
-				{
-					CacheItem<TValue> removedValue;
-					_cacheData.TryRemove(key, out removedValue);
-					
-					item = _cacheData.GetOrAdd(key, k => new CacheItem<TValue>(ItemLoader.Load(k)));
-				}
-
-				var result = item.Value;
-
-				CheckForMaintenance();
-				return Copier.Copy(result);
-			}
-		}
-
-		#endregion
+	    #endregion
 
 	    #region Implementation of IItemCache<in TKey,out TValue>
 
@@ -144,7 +116,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 
 	    #endregion
 
-	    private void CheckForMaintenance()
+	    protected void CheckForMaintenance()
 		{
 			if ((MaintenanceFrequencySeconds <= 0) || 
 				(_cacheData.Count < MinimumSize) ||
@@ -168,7 +140,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 				_cacheData.TryRemove(key, out removedValue);
 		}
 
-		private class CacheItem<T>
+		protected class CacheItem<T>
 		{
 			private readonly T _value;
 		    private long _lastAccessTime;

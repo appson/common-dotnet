@@ -1,5 +1,4 @@
-﻿
-using Appson.Composer;
+﻿using Appson.Composer;
 
 namespace Appson.Common.GeneralComponents.Cache
 {
