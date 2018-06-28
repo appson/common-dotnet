@@ -9,9 +9,8 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 {
     public abstract class AutoLoadItemCacheBase<TKey, TValue>
 	{
-		protected readonly ConcurrentDictionary<TKey, CacheItem<TValue>> _cacheData;
-		private long _lastMaintenance;
-
+		protected long _lastMaintenance;
+        
 		#region Plugs and Configuration points
 
 		[ComponentPlug]
@@ -79,66 +78,12 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 
 		#region Initialization
 
-		public AutoLoadItemCacheBase()
+	    protected AutoLoadItemCacheBase()
 		{
-			_cacheData = new ConcurrentDictionary<TKey, CacheItem<TValue>>();
 			_lastMaintenance = DateTime.UtcNow.Ticks;
 		}
 
 		#endregion
-
-		#region Implementation of ICache<in TKey,out TValue>
-
-		public void InvalidateAll()
-		{
-			_cacheData.Clear();
-		}
-
-	    #endregion
-
-	    #region Implementation of IItemCache<in TKey,out TValue>
-
-	    public void InvalidateItem(TKey key)
-	    {
-	        CacheItem<TValue> item;
-
-            if (_cacheData.ContainsKey(key))
-                _cacheData.TryRemove(key, out item);
-	    }
-
-	    public void InvalidateItems(IEnumerable<TKey> keys)
-	    {
-	        foreach (var key in keys)
-	        {
-	            InvalidateItem(key);
-	        }
-	    }
-
-	    #endregion
-
-	    protected void CheckForMaintenance()
-		{
-			if ((MaintenanceFrequencySeconds <= 0) || 
-				(_cacheData.Count < MinimumSize) ||
-				(_lastMaintenance + MaintenanceFrequencySeconds*TimeSpan.TicksPerSecond > DateTime.UtcNow.Ticks))
-				return;
-
-			PerformMaintenance();
-		}
-
-		private void PerformMaintenance()
-		{
-			_lastMaintenance = DateTime.UtcNow.Ticks;
-
-			var creationTimeLimit = DateTime.UtcNow.Ticks - MinimumLifetimeSeconds*TimeSpan.TicksPerSecond;
-			var lastAccessLimit = DateTime.UtcNow.Ticks - IdleSecondsToRemove*TimeSpan.TicksPerSecond;
-
-			var keysToRemove = _cacheData.Where(item => item.Value.CreationTime < creationTimeLimit && item.Value.LastAccessTime < lastAccessLimit).Select(item => item.Key).ToList();
-
-			CacheItem<TValue> removedValue;
-			foreach(var key in keysToRemove)
-				_cacheData.TryRemove(key, out removedValue);
-		}
 
 		protected class CacheItem<T>
 		{

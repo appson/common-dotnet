@@ -1,37 +1,100 @@
 ﻿using System;
-using Appson.Common.GeneralComponents.Cache;
-using Appson.Common.GeneralComponents.Cache.Components;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
 using Appson.Composer;
 using Appson.Composer.Cache;
 
-[Component]
-[ComponentCache(typeof(DefaultComponentCache))]
-[IgnoredOnAssemblyRegistration]
-public class AutoLoadItemCache<TKey, TValue> : AutoLoadItemCacheBase<TKey, TValue>, IItemCache<TKey, TValue>
+namespace Appson.Common.GeneralComponents.Cache.Components
 {
-    [ComponentPlug]
-    public ICacheItemLoader<TKey, TValue> ItemLoader { get; set; }
-
-    public TValue this[TKey key]
+    [Component]
+    [ComponentCache(typeof(DefaultComponentCache))]
+    [IgnoredOnAssemblyRegistration]
+    public class AutoLoadItemCache<TKey, TValue> : AutoLoadItemCacheBase<TKey, TValue>, IItemCache<TKey, TValue>
     {
-        get
+        private readonly ConcurrentDictionary<TKey, CacheItem<TValue>> _cacheData;
+
+        [ComponentPlug]
+        public ICacheItemLoader<TKey, TValue> ItemLoader { get; set; }
+
+        protected AutoLoadItemCache()
         {
-            var creationTimeLimit = DateTime.UtcNow.Ticks - MaximumLifetimeSeconds * 10000000;
+            _cacheData = new ConcurrentDictionary<TKey, CacheItem<TValue>>();
+        }
 
-            var item = _cacheData.GetOrAdd(key, k => new CacheItem<TValue>(ItemLoader.Load(k)));
-            if (item.LastAccessTime < creationTimeLimit)
+        #region Implementation of ICache<in TKey,out TValue>
+
+        public void InvalidateAll()
+        {
+            _cacheData.Clear();
+        }
+
+        public TValue this[TKey key]
+        {
+            get
             {
-                CacheItem<TValue> removedValue;
-                _cacheData.TryRemove(key, out removedValue);
+                var creationTimeLimit = DateTime.UtcNow.Ticks - MaximumLifetimeSeconds * 10000000;
 
-                item = _cacheData.GetOrAdd(key, k => new CacheItem<TValue>(ItemLoader.Load(k)));
+                var item = _cacheData.GetOrAdd(key, k => new CacheItem<TValue>(ItemLoader.Load(k)));
+                if (item.LastAccessTime < creationTimeLimit)
+                {
+                    CacheItem<TValue> removedValue;
+                    _cacheData.TryRemove(key, out removedValue);
+
+                    item = _cacheData.GetOrAdd(key, k => new CacheItem<TValue>(ItemLoader.Load(k)));
+                }
+
+                var result = item.Value;
+
+
+                CheckForMaintenance();
+                return Copier.Copy(result);
             }
+        }
+        #endregion
 
-            var result = item.Value;
+        #region Implementation of IItemCache<in TKey,out TValue>
 
+        public void InvalidateItem(TKey key)
+        {
+            CacheItem<TValue> item;
 
-            CheckForMaintenance();
-            return Copier.Copy(result);
+            if (_cacheData.ContainsKey(key))
+                _cacheData.TryRemove(key, out item);
+        }
+
+        public void InvalidateItems(IEnumerable<TKey> keys)
+        {
+            foreach (var key in keys)
+            {
+                InvalidateItem(key);
+            }
+        }
+
+        #endregion
+
+        private void CheckForMaintenance()
+        {
+            if ((MaintenanceFrequencySeconds <= 0) ||
+                (_cacheData.Count < MinimumSize) ||
+                (_lastMaintenance + MaintenanceFrequencySeconds * 10000000 > DateTime.UtcNow.Ticks))
+                return;
+
+            PerformMaintenance();
+        }
+
+        private void PerformMaintenance()
+        {
+            _lastMaintenance = DateTime.UtcNow.Ticks;
+
+            var creationTimeLimit = DateTime.UtcNow.Ticks - MinimumLifetimeSeconds * 10000000;
+            var lastAccessLimit = DateTime.UtcNow.Ticks - IdleSecondsToRemove * 10000000;
+
+            var keysToRemove = _cacheData.Where(item => item.Value.CreationTime < creationTimeLimit && item.Value.LastAccessTime < lastAccessLimit).Select(item => item.Key).ToList();
+
+            CacheItem<TValue> removedValue;
+            foreach (var key in keysToRemove)
+                _cacheData.TryRemove(key, out removedValue);
         }
     }
 }
