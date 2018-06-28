@@ -17,7 +17,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
         [ComponentPlug]
         public ICacheItemLoader<TKey, TValue> ItemLoader { get; set; }
 
-        protected AutoLoadItemCache()
+        public AutoLoadItemCache()
         {
             _cacheData = new ConcurrentDictionary<TKey, CacheItem<TValue>>();
         }

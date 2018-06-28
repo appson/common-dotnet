@@ -78,7 +78,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 
 		#region Initialization
 
-	    protected AutoLoadItemCacheBase()
+	    public AutoLoadItemCacheBase()
 		{
 			_lastMaintenance = DateTime.UtcNow.Ticks;
 		}
