@@ -32,10 +32,10 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 
         public async Task<TValue> GetItem(TKey key)
         {
-                var creationTimeLimit = DateTime.UtcNow.Ticks - MaximumLifetimeSeconds * 10000000;
+                var creationTimeLimit = DateTime.UtcNow.Ticks - MaximumLifetimeSeconds * TimeSpan.TicksPerSecond;
 
                 var item = await _cacheData.GetOrAdd(key, async k => new CacheItem<TValue>(await ItemLoader.Load(k)));
-                if (item.LastAccessTime < creationTimeLimit)
+                if (item.CreationTime < creationTimeLimit)
                 {
                     Task<CacheItem<TValue>> removedValue;
                     _cacheData.TryRemove(key, out removedValue);
@@ -74,7 +74,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
         {
             if ((MaintenanceFrequencySeconds <= 0) ||
                 (_cacheData.Count < MinimumSize) ||
-                (_lastMaintenance + MaintenanceFrequencySeconds * 10000000 > DateTime.UtcNow.Ticks))
+                (_lastMaintenance + MaintenanceFrequencySeconds * TimeSpan.TicksPerSecond > DateTime.UtcNow.Ticks))
                 return;
 
             PerformMaintenance();
@@ -84,8 +84,8 @@ namespace Appson.Common.GeneralComponents.Cache.Components
         {
             _lastMaintenance = DateTime.UtcNow.Ticks;
 
-            var creationTimeLimit = DateTime.UtcNow.Ticks - MinimumLifetimeSeconds * 10000000;
-            var lastAccessLimit = DateTime.UtcNow.Ticks - IdleSecondsToRemove * 10000000;
+            var creationTimeLimit = DateTime.UtcNow.Ticks - MinimumLifetimeSeconds * TimeSpan.TicksPerSecond;
+            var lastAccessLimit = DateTime.UtcNow.Ticks - IdleSecondsToRemove * TimeSpan.TicksPerSecond;
 
             var keysToRemove = _cacheData.Where(itemTask =>
             {
