@@ -11,14 +11,14 @@ namespace Appson.Common.GeneralComponents.Cache.Components
     [Component]
     [ComponentCache(typeof(DefaultComponentCache))]
     [IgnoredOnAssemblyRegistration]
-    public class AutoLoadAsyncItemCache<TKey, TValue> : AutoLoadItemCacheBase<TKey, TValue>, IAsyncItemCache<TKey, TValue>
+    public class AsyncAutoLoadItemCache<TKey, TValue> : AutoLoadItemCacheBase<TKey, TValue>, IAsyncItemCache<TKey, TValue>
     {
         private readonly ConcurrentDictionary<TKey, Task<CacheItem<TValue>>> _cacheData;
 
         [ComponentPlug]
         public IAsyncCacheItemLoader<TKey, TValue> ItemLoader { get; set; }
 
-        public AutoLoadAsyncItemCache()
+        public AsyncAutoLoadItemCache()
         {
             _cacheData = new ConcurrentDictionary<TKey, Task<CacheItem<TValue>>>();
         }

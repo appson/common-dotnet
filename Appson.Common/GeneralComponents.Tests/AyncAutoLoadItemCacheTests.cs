@@ -9,9 +9,9 @@ using Moq;
 namespace Appson.Common.GeneralComponents.Tests
 {
     [TestClass]
-    public class AutoLoadAsyncItemCacheTests
+    public class AyncAutoLoadItemCacheTests
     {
-        private AutoLoadAsyncItemCache<string, int> _cache;
+        private AsyncAutoLoadItemCache<string, int> _cache;
         private const int CacheItemValue = 0;
         private Mock<IAsyncCacheItemLoader<string, int>> _mockItemLoader;
         private Mock<ICacheValueCopier<int>> _mockCopier;
@@ -27,7 +27,7 @@ namespace Appson.Common.GeneralComponents.Tests
             _mockCopier = new Mock<ICacheValueCopier<int>>();
             _mockCopier.Setup(copier => copier.Copy(It.IsAny<int>())).Returns(CacheItemValue);
 
-            _cache = new AutoLoadAsyncItemCache<string, int>
+            _cache = new AsyncAutoLoadItemCache<string, int>
             {
                 ItemLoader = _mockItemLoader.Object,
                 Copier = _mockCopier.Object,

@@ -61,7 +61,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoLoadAsyncItemCacheTests.cs" />
+    <Compile Include="AyncAutoLoadItemCacheTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

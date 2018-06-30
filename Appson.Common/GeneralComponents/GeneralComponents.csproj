@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cache\Components\AutoLoadAsyncItemCache.cs" />
+    <Compile Include="Cache\Components\AsyncAutoLoadItemCache.cs" />
     <Compile Include="Cache\Components\AutoLoadCache.cs" />
     <Compile Include="Cache\Components\AutoLoadItemCache.cs" />
     <Compile Include="Cache\Components\AutoLoadItemCacheBase.cs" />
