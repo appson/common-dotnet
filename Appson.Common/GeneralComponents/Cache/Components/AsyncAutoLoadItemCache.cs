@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Appson.Composer;
 using Appson.Composer.Cache;
 
@@ -10,46 +11,42 @@ namespace Appson.Common.GeneralComponents.Cache.Components
     [Component]
     [ComponentCache(typeof(DefaultComponentCache))]
     [IgnoredOnAssemblyRegistration]
-    public class AutoLoadItemCache<TKey, TValue> : AutoLoadItemCacheBase<TKey, TValue>, IItemCache<TKey, TValue>
+    public class AsyncAutoLoadItemCache<TKey, TValue> : AutoLoadItemCacheBase<TKey, TValue>, IAsyncItemCache<TKey, TValue>
     {
-        private readonly ConcurrentDictionary<TKey, CacheItem<TValue>> _cacheData;
+        private readonly ConcurrentDictionary<TKey, Task<CacheItem<TValue>>> _cacheData;
 
         [ComponentPlug]
-        public ICacheItemLoader<TKey, TValue> ItemLoader { get; set; }
+        public IAsyncCacheItemLoader<TKey, TValue> ItemLoader { get; set; }
 
-        public AutoLoadItemCache()
+        public AsyncAutoLoadItemCache()
         {
-            _cacheData = new ConcurrentDictionary<TKey, CacheItem<TValue>>();
+            _cacheData = new ConcurrentDictionary<TKey, Task<CacheItem<TValue>>>();
         }
 
-        #region Implementation of ICache<in TKey,out TValue>
+        #region Implementation of IAsyncCache<in TKey,out TValue>
 
         public void InvalidateAll()
         {
             _cacheData.Clear();
         }
 
-        public TValue this[TKey key]
+        public async Task<TValue> GetItem(TKey key)
         {
-            get
-            {
                 var creationTimeLimit = DateTime.UtcNow.Ticks - MaximumLifetimeSeconds * TimeSpan.TicksPerSecond;
 
-                var item = _cacheData.GetOrAdd(key, k => new CacheItem<TValue>(ItemLoader.Load(k)));
+                var item = await _cacheData.GetOrAdd(key, async k => new CacheItem<TValue>(await ItemLoader.Load(k)));
                 if (item.CreationTime < creationTimeLimit)
                 {
-                    CacheItem<TValue> removedValue;
+                    Task<CacheItem<TValue>> removedValue;
                     _cacheData.TryRemove(key, out removedValue);
 
-                    item = _cacheData.GetOrAdd(key, k => new CacheItem<TValue>(ItemLoader.Load(k)));
+                    item = await _cacheData.GetOrAdd(key, async k => new CacheItem<TValue>(await ItemLoader.Load(k)));
                 }
 
                 var result = item.Value;
 
-
                 CheckForMaintenance();
                 return Copier.Copy(result);
-            }
         }
         #endregion
 
@@ -57,7 +54,7 @@ namespace Appson.Common.GeneralComponents.Cache.Components
 
         public void InvalidateItem(TKey key)
         {
-            CacheItem<TValue> item;
+            Task<CacheItem<TValue>> item;
 
             if (_cacheData.ContainsKey(key))
                 _cacheData.TryRemove(key, out item);
@@ -90,9 +87,14 @@ namespace Appson.Common.GeneralComponents.Cache.Components
             var creationTimeLimit = DateTime.UtcNow.Ticks - MinimumLifetimeSeconds * TimeSpan.TicksPerSecond;
             var lastAccessLimit = DateTime.UtcNow.Ticks - IdleSecondsToRemove * TimeSpan.TicksPerSecond;
 
-            var keysToRemove = _cacheData.Where(item => item.Value.CreationTime < creationTimeLimit && item.Value.LastAccessTime < lastAccessLimit).Select(item => item.Key).ToList();
+            var keysToRemove = _cacheData.Where(itemTask =>
+            {
+                var item = itemTask.Value.Result;
+                return item.CreationTime < creationTimeLimit &&
+                           item.LastAccessTime < lastAccessLimit;
+            }).Select(item => item.Key).ToList();
 
-            CacheItem<TValue> removedValue;
+            Task<CacheItem<TValue>> removedValue;
             foreach (var key in keysToRemove)
                 _cacheData.TryRemove(key, out removedValue);
         }

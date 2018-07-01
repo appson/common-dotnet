@@ -48,8 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\Components\AsyncAutoLoadItemCache.cs" />
     <Compile Include="Cache\Components\AutoLoadCache.cs" />
     <Compile Include="Cache\Components\AutoLoadItemCache.cs" />
+    <Compile Include="Cache\Components\AutoLoadItemCacheBase.cs" />
+    <Compile Include="Cache\IAsyncCache.cs" />
+    <Compile Include="Cache\IAsyncCacheItemLoader.cs" />
     <Compile Include="Cache\ICache.cs" />
     <Compile Include="Cache\ICacheItemLoader.cs" />
     <Compile Include="Cache\ICacheKeyMapper.cs" />

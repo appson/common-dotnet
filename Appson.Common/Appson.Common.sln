@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{66AC80A4-B9F3-4C9D-83EF-EC59A6984F07}"
 EndProject
@@ -32,6 +32,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSnippets", "CodeSnippets\CodeSnippets.csproj", "{6F5189E5-19A8-43FA-AC6D-DFE0D9E476DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetIdentity", "AspNetIdentity\AspNetIdentity.csproj", "{082F1FD7-2EE7-4970-ABA9-3726511A8C59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneralComponents.Tests", "GeneralComponents.Tests\GeneralComponents.Tests.csproj", "{A9FE9C19-373E-436D-A72D-685020E78630}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,8 +101,15 @@ Global
 		{082F1FD7-2EE7-4970-ABA9-3726511A8C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{082F1FD7-2EE7-4970-ABA9-3726511A8C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{082F1FD7-2EE7-4970-ABA9-3726511A8C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9FE9C19-373E-436D-A72D-685020E78630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9FE9C19-373E-436D-A72D-685020E78630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9FE9C19-373E-436D-A72D-685020E78630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9FE9C19-373E-436D-A72D-685020E78630}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43709822-E15F-4718-8888-5A868D4726DF}
 	EndGlobalSection
 EndGlobal
