@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Appson.Common.GeneralComponents.Cache.Components
+namespace Appson.Common.GeneralComponents.Cache
 {
     public interface IAsyncCacheItemLoader<in TKey, TValue>
     {
