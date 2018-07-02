@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using Appson.Common.General.Collections;
 
 namespace Appson.Common.General.Validation
 {
@@ -25,14 +25,14 @@ namespace Appson.Common.General.Validation
 		public ApiValidationError(string errorKey, IEnumerable<string> errorParameters)
 		{
 			ErrorKey = errorKey;
-			ErrorParameters = errorParameters.ToList();
+			ErrorParameters = errorParameters.SafeToList();
 		}
 
 		public ApiValidationError(string propertyPath, string errorKey, IEnumerable<string> errorParameters)
 		{
 			PropertyPath = propertyPath;
 			ErrorKey = errorKey;
-			ErrorParameters = errorParameters.ToList();
+			ErrorParameters = errorParameters.SafeToList();
 		}
 
 		#endregion

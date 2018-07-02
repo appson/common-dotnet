@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Appson.Common.Web</id>
-    <version>0.9.4</version>
+    <version>0.10.1</version>
     <title>Appson Common - Web</title>
     <summary>Common utilities and extensions for ASP.NET and ASP.NET MVC libraries</summary>
     <authors>appson</authors>
@@ -17,9 +17,9 @@
     <copyright>Copyright appson.tech 2017</copyright>
     <tags>appson common web mvc aspnet asp-net</tags>
     <dependencies>
-      <dependency id="Appson.Common.General" version="0.9.4" />
-      <dependency id="Appson.Common.GeneralComponents" version="0.9.4" />
-      <dependency id="Appson.Common.Logging" version="0.9.4" />
+      <dependency id="Appson.Common.General" version="0.10.1" />
+      <dependency id="Appson.Common.GeneralComponents" version="0.10.1" />
+      <dependency id="Appson.Common.Logging" version="0.10.1" />
     </dependencies>
   </metadata>
 </package>

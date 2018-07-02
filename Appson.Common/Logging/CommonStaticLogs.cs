@@ -7,5 +7,7 @@ namespace Appson.Common.Logging
         public static readonly ILog Debug = LogManager.GetLogger("Debug");
         public static readonly ILog ScheduledTask = LogManager.GetLogger("ScheduledTask");
 	    public static readonly ILog UserAgent = LogManager.GetLogger("UserAgent");
+        public static readonly ILog ErrorDetails = LogManager.GetLogger("ErrorDetails");
+        public static readonly ILog AccessLog = LogManager.GetLogger("AccessLog");
     }
 }

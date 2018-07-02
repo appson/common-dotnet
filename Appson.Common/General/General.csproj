@@ -49,6 +49,7 @@
     <Compile Include="Collections\QueueExtensions.cs" />
     <Compile Include="Collections\ReadOnlyDictionary.cs" />
     <Compile Include="Collections\StackExtensions.cs" />
+    <Compile Include="ExceptionUtils\ExceptionDetailUtils.cs" />
     <Compile Include="Geo\GoogleMapsUtil.cs" />
     <Compile Include="Geo\LatLng.cs" />
     <Compile Include="Geo\LatLngBounds.cs" />

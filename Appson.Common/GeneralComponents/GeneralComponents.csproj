@@ -31,13 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Appson.Composer, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Appson.Composer.Base.1.1.0\lib\net40-client\Appson.Composer.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Appson.Composer, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Appson.Composer.Base.1.2.1\lib\net40-client\Appson.Composer.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=2.0.7.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,8 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\Components\AsyncAutoLoadItemCache.cs" />
     <Compile Include="Cache\Components\AutoLoadCache.cs" />
     <Compile Include="Cache\Components\AutoLoadItemCache.cs" />
+    <Compile Include="Cache\Components\AutoLoadItemCacheBase.cs" />
+    <Compile Include="Cache\IAsyncCache.cs" />
+    <Compile Include="Cache\IAsyncCacheItemLoader.cs" />
     <Compile Include="Cache\ICache.cs" />
     <Compile Include="Cache\ICacheItemLoader.cs" />
     <Compile Include="Cache\ICacheKeyMapper.cs" />

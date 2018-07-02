@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Appson.Common.GeneralComponents</id>
-    <version>0.9.4</version>
+    <version>0.10.2</version>
     <title>Appson Common - GeneralComponents</title>
     <summary>Commonly used components and contracts, built on Appson Composer</summary>
     <authors>appson</authors>
@@ -14,11 +14,11 @@
       Appson Common libraries for .NET is a set of utilities and extensions that are 
       used frequently in different projects.
     </description>
-    <copyright>Copyright appson.tech 2017</copyright>
+    <copyright>Copyright appson.tech 2018</copyright>
     <tags>appson common components composer</tags>
     <dependencies>
-      <dependency id="Appson.Common.General" version="0.9.4" />
-      <dependency id="Appson.Common.Logging" version="0.9.4" />
+      <dependency id="Appson.Common.General" version="0.10.1" />
+      <dependency id="Appson.Common.Logging" version="0.10.1" />
     </dependencies>
   </metadata>
 </package>
