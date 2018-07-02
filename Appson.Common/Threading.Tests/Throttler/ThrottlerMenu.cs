@@ -9,7 +9,7 @@ namespace Appson.Common.Threading.Tests.Throttler
         {
             WriteLine("Please select throttler test scenario:");
             WriteLine("    1. simple test");
-            WriteLine("    2. pausable test (use \"Enter\" to pause/unpause the throttler)");
+            WriteLine("    2. Enumerable thorttling test");
             WriteLine();
 
             var choice = ReadLine();
@@ -19,7 +19,7 @@ namespace Appson.Common.Threading.Tests.Throttler
                     new ThrottlerSimpleTest().Run();
                     break;
                 case "2":
-                    new ThrottlerPausableTest().Run();
+                    new EnumerableThrottlingTest().Run();
                     break;
             }
         }
